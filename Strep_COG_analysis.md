@@ -1,5 +1,9 @@
+# streptococcus COG category analysis
+```
 import pandas as pd
+```
 
+                     
 
 ```python
 pwd
