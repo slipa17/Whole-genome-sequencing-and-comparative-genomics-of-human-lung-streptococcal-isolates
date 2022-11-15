@@ -1,8 +1,8 @@
 # To download biological sequence data from NCBI
 
-```
+
 (base) slipakanungo@Slipas-MacBook-Pro ncbi % conda create -n ncbi_datasets
-```
+
 
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
