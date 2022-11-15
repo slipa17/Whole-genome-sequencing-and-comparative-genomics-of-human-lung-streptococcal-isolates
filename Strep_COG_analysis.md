@@ -468,7 +468,7 @@ how='left' or how='right
 
 
 
-
+# Substituting NaN in the merged dataframe with 0
 
 ```python
 merge5.fillna(0)
