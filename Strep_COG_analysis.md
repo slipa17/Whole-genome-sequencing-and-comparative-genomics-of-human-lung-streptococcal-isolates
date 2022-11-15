@@ -28,6 +28,7 @@ os.getcwd()
 
 
 
+# setting the directory
 
     '/Users/slipakanungo'
 
@@ -37,7 +38,7 @@ os.getcwd()
 ```python
 os.chdir("/Users/slipakanungo/Documents/Comparative_genomics/Python/")
 ```
-# read the csv file
+# reading the csv file
 
 ```python
 strain = pd.read_csv("name of the file.csv")
