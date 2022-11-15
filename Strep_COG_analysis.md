@@ -40,9 +40,9 @@ os.chdir("/Users/slipakanungo/Documents/Comparative_genomics/Python/")
 
 
 ```python
-P2D11 = pd.read_csv("P2D11_COG.csv")
-P2D11
-frequency1 = P2D11["P2D11"].value_counts(ascending=True).sort_index()
+strain = pd.read_csv("name of the file.csv")
+strain
+frequency1 = strain["name of the category inside the csv file"].value_counts(ascending=True).sort_index()
 frequency1
 df1 = pd.DataFrame(frequency1)
 df1
@@ -51,115 +51,7 @@ df1
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>P2D11</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>-</th>
-      <td>73</td>
-    </tr>
-    <tr>
-      <th>A</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>C</th>
-      <td>55</td>
-    </tr>
-    <tr>
-      <th>D</th>
-      <td>39</td>
-    </tr>
-    <tr>
-      <th>E</th>
-      <td>158</td>
-    </tr>
-    <tr>
-      <th>F</th>
-      <td>85</td>
-    </tr>
-    <tr>
-      <th>G</th>
-      <td>102</td>
-    </tr>
-    <tr>
-      <th>H</th>
-      <td>56</td>
-    </tr>
-    <tr>
-      <th>I</th>
-      <td>35</td>
-    </tr>
-    <tr>
-      <th>J</th>
-      <td>164</td>
-    </tr>
-    <tr>
-      <th>K</th>
-      <td>144</td>
-    </tr>
-    <tr>
-      <th>L</th>
-      <td>135</td>
-    </tr>
-    <tr>
-      <th>M</th>
-      <td>127</td>
-    </tr>
-    <tr>
-      <th>N</th>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>O</th>
-      <td>55</td>
-    </tr>
-    <tr>
-      <th>P</th>
-      <td>113</td>
-    </tr>
-    <tr>
-      <th>Q</th>
-      <td>18</td>
-    </tr>
-    <tr>
-      <th>S</th>
-      <td>358</td>
-    </tr>
-    <tr>
-      <th>T</th>
-      <td>70</td>
-    </tr>
-    <tr>
-      <th>U</th>
-      <td>39</td>
-    </tr>
-    <tr>
-      <th>V</th>
-      <td>78</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 
 
