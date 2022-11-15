@@ -726,7 +726,7 @@ import matplotlib.pyplot as plt
     <module 'matplotlib.pyplot' from '/Users/slipakanungo/opt/anaconda3/lib/python3.9/site-packages/matplotlib/pyplot.py'>
 
 
-
+# Plotting the heatmap
 
 ```python
 plt.figure(figsize=(9,9))
@@ -741,7 +741,7 @@ plt.show()
 ![png](output_17_0.png)
     
 
-
+# Re-arranging the merged coloumns
 
 ```python
 new_columns = ['P2E5','P3E5','P2D11','T369_3','P3B4','P3D4']
