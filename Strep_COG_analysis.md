@@ -53,7 +53,7 @@ frequency1
 ```
 frequency1: name of the object
 
-# converting into a data frame
+# converting a frequency table into a data frame
 ```
 df1 = pd.DataFrame(frequency1)
 df1
