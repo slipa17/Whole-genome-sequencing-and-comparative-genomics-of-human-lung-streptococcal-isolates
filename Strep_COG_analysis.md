@@ -467,14 +467,30 @@ how='left' or how='right
 
 
 
+# reading the csv file
+
 ```python
-P3B4 = pd.read_csv("P3B4_COG.csv")
-P3B4
-frequency3 = P3B4["P3B4"].value_counts(ascending=True).sort_index()
+strain = pd.read_csv("name of the file.csv")
+strain
+```
+strain: name of the microbial isolates
+
+
+# get a frequency table with value counts
+
+```
+frequency3 = strain["name of the category inside the csv file"].value_counts(ascending=True).sort_index()
 frequency3
+```
+frequency3: name of the object
+
+# converting a frequency table into a data frame
+
+```
 df3 = pd.DataFrame(frequency3)
 df3
 ```
+df3: name of the object
 
 
 
@@ -595,6 +611,7 @@ df3
 
 
 
+# Merging both the data frames
 
 ```python
 merge2 = pd.merge(merge1,df3,left_index=True,right_index=True,how='right')
@@ -767,14 +784,31 @@ merge2
 
 
 
+# reading the csv file
+
 ```python
-P3D4 = pd.read_csv("P3D4_COG.csv")
-P3D4
-frequency4 = P3D4["P3D4"].value_counts(ascending=True).sort_index()
+strain = pd.read_csv("name of the file.csv")
+strain
+```
+strain: name of the microbial isolates
+
+
+# get a frequency table with value counts
+
+```
+frequency4 = strain["name of the category inside the csv file"].value_counts(ascending=True).sort_index()
 frequency4
+```
+frequency4: name of the object
+
+# converting a frequency table into a data frame
+
+```
 df4 = pd.DataFrame(frequency4)
 df4
 ```
+df4: name of the object
+
 
 
 
@@ -894,7 +928,7 @@ df4
 </div>
 
 
-
+# Merging both the data frames
 
 ```python
 merge3 = pd.merge(merge2,df4,left_index=True,right_index=True,how='right')
