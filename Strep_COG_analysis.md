@@ -516,10 +516,10 @@ merge5.fillna(0)
     <tr>
       <th>A</th>
       <td>1.0</td>
-      <td>NaN</td>
+      <td>0.0</td>
       <td>1</td>
       <td>1</td>
-      <td>NaN</td>
+      <td>0.0</td>
       <td>1</td>
     </tr>
     <tr>
@@ -695,8 +695,8 @@ merge5.fillna(0)
     </tr>
     <tr>
       <th>W</th>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>4</td>
       <td>2</td>
       <td>1.0</td>
@@ -705,6 +705,7 @@ merge5.fillna(0)
   </tbody>
 </table>
 </div>
+
 
 ```python
 merge5.to_csv('COG.csv')
