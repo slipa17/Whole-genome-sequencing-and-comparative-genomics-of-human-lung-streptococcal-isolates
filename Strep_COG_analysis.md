@@ -707,6 +707,8 @@ merge5.fillna(0)
 </div>
 
 
+# Exporting the particular csv file to the main folder
+
 ```python
 merge5.to_csv('COG.csv')
 ```
