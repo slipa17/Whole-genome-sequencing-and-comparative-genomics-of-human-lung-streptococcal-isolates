@@ -43,7 +43,7 @@ os.chdir("/Users/slipakanungo/Documents/Comparative_genomics/Python/")
 strain = pd.read_csv("name of the file.csv")
 strain
 ```
-# strain: name of the microbial isolates
+strain: name of the microbial isolates
 
 # get a frequency table with value counts
 ```
