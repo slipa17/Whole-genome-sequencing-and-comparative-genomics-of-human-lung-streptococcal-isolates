@@ -51,11 +51,14 @@ strain: name of the microbial isolates
 frequency1 = strain["name of the category inside the csv file"].value_counts(ascending=True).sort_index()
 frequency1
 ```
+frequency1: name of the object
+
 # converting into a data frame
 ```
 df1 = pd.DataFrame(frequency1)
 df1
 ```
+df1: name of the object
 
 
 
