@@ -37,13 +37,21 @@ os.getcwd()
 ```python
 os.chdir("/Users/slipakanungo/Documents/Comparative_genomics/Python/")
 ```
-
+# read the csv file
 
 ```python
 strain = pd.read_csv("name of the file.csv")
 strain
+```
+# strain: name of the microbial isolates
+
+# get a frequency table with value counts
+```
 frequency1 = strain["name of the category inside the csv file"].value_counts(ascending=True).sort_index()
 frequency1
+```
+# converting into a data frame
+```
 df1 = pd.DataFrame(frequency1)
 df1
 ```
