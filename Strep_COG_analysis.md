@@ -471,7 +471,7 @@ how='left' or how='right
 
 
 ```python
-merge5.fillna(0)
+merge1.fillna(0)
 ```
 
 
