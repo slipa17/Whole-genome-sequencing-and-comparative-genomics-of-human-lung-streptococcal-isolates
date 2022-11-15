@@ -177,16 +177,30 @@ df1: name of the object
 
 
 
-
+# reading the csv file
 
 ```python
-P2E5 = pd.read_csv("P2E5_COG.csv")
-P2E5
-frequency2 = P2E5["P2E5"].value_counts(ascending=True).sort_index()
+strain = pd.read_csv("name of the file.csv")
+strain
+```
+strain: name of the microbial isolates
+
+
+# get a frequency table with value counts
+
+```
+frequency2 = strain["name of the category inside the csv file"].value_counts(ascending=True).sort_index()
 frequency2
+```
+frequency2: name of the object
+
+# converting a frequency table into a data frame
+
+```
 df2 = pd.DataFrame(frequency2)
 df2
 ```
+df2: name of the object
 
 
 
@@ -298,7 +312,7 @@ df2
 </div>
 
 
-
+# Merging both the data frames
 
 ```python
 merge1 = pd.merge(df1,df2,left_index=True,right_index=True,how='left')
