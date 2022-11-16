@@ -1,4 +1,9 @@
+# Setting the working directory
+
+```
 setwd("~/Documents/Comparative_genomics/R") 
+```
+
 P2D11 <-read.csv("P2D11_COG.csv") 
 P2D11 <-table(P2D11$P2D11_COG) 
 View(P2D11) 
