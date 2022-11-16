@@ -9,8 +9,11 @@ setwd("~/Documents/Comparative_genomics/R")
 ```
 P2D11 <-read.csv("P2D11_COG.csv")
 ```
+# get a frequency table with value counts
 
-P2D11 <-table(P2D11$P2D11_COG) 
+```
+P2D11 <-table(P2D11$P2D11_COG)
+```
 View(P2D11) 
 P2E5 <- read.csv("P2E5_COG.csv") 
 P2E5 <- table(P2E5$P2E5_COG)
