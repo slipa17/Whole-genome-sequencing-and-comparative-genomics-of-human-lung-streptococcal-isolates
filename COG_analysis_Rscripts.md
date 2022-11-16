@@ -7,14 +7,15 @@ setwd("~/Documents/Comparative_genomics/R")
 # reading the csv file
 
 ```
-P2D11 <-read.csv("P2D11_COG.csv")
+strain <-read.csv("name of the csv file.csv")
 ```
 # get a frequency table with value counts
 
 ```
-P2D11 <-table(P2D11$P2D11_COG)
+strain <-table(name of the category inside the csv file$name of the csv file)
+View(strain)
 ```
-View(P2D11) 
+
 P2E5 <- read.csv("P2E5_COG.csv") 
 P2E5 <- table(P2E5$P2E5_COG)
 View(P2E5) 
