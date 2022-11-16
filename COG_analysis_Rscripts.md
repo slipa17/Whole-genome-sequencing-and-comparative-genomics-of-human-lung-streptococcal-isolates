@@ -15,10 +15,19 @@ strain <-read.csv("name of the csv file.csv")
 strain <-table(name of the category inside the csv file$name of the csv file)
 View(strain)
 ```
+# reading the csv file
 
-P2E5 <- read.csv("P2E5_COG.csv") 
-P2E5 <- table(P2E5$P2E5_COG)
-View(P2E5) 
+```
+strain <-read.csv("name of the csv file.csv")
+``` 
+
+# get a frequency table with value counts
+
+```
+strain <-table(name of the category inside the csv file$name of the csv file)
+View(strain)
+```
+
 x1.df = merge(P2D11, P2E5, by.x = "Var1", "Freq", by.y ="Var1", "Freq", all.x = TRUE, all.y =TRUE) 
 View(x1.df) 
 P3B4 <-read.csv("P3B4_COG.csv") 
