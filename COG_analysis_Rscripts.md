@@ -7,25 +7,34 @@ setwd("~/Documents/Comparative_genomics/R")
 # reading the csv file
 
 ```
-strain <-read.csv("name of the csv file.csv")
+name you want to give <- read.csv(the csv file you want to read)
 ```
-# get a frequency table with value counts
+# To count the frequency of the individual items present inside the data frame
 
 ```
-strain <-table(name of the category inside the csv file$name of the csv file)
-View(strain)
+the given name <- table(the name given of the file$the particular cell it wants to count the frequency)
 ```
+# To view the particular table
+
+```
+View(the given name)
+```
+
 # reading the csv file
 
 ```
-strain <-read.csv("name of the csv file.csv")
-``` 
+name you want to give <- read.csv(the csv file you want to read)
+```
 
-# get a frequency table with value counts
+# To count the frequency of the individual items present inside the data frame
 
 ```
-strain <-table(name of the category inside the csv file$name of the csv file)
-View(strain)
+the given name <- table(the name given of the file$the particular cell it wants to count the frequency)
+```
+# To view the particular table
+
+```
+View(the given name)
 ```
 
 x1.df = merge(P2D11, P2E5, by.x = "Var1", "Freq", by.y ="Var1", "Freq", all.x = TRUE, all.y =TRUE) 
