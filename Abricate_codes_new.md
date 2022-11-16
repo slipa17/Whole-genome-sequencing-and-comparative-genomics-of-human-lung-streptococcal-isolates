@@ -6,7 +6,13 @@
 (base) slipakanungo@Slipas-MBP Genomics % cd ..
 (base) slipakanungo@Slipas-MBP Data_analysis % cd ..
 (base) slipakanungo@Slipas-MBP Documents % cd ..
+
+# Installing abricate
+
+```
 (base) slipakanungo@Slipas-MBP ~ % conda install -c conda-forge -c bioconda -c defaults abricate
+```
+
 Collecting package metadata (current_repodata.json): done
 Solving environment: failed with initial frozen solve. Retrying with flexible solve.
 Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
