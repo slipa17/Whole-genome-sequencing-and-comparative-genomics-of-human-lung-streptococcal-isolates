@@ -1,11 +1,11 @@
 
  # To append strain name to the FASTA headers
           
-         ```
+         
           * Set up the directory containing the respective (.faa files), then run the command
            
            sed 's/>.*/&_file/' file.faa > output_file_name.faa
-           ```
+           
 
 
  # To concatenate the file
