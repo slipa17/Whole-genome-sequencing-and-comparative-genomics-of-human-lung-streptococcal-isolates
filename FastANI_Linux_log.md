@@ -4,20 +4,13 @@
 conda create -n foo -c conda-forge -c bioconda fastani
 ```
 
-# To activate this environment, use
+# To activate foo environment
 
      $ conda activate foo
 
-# To deactivate an active environment, use
+# To deactivate an active environment
 
      $ conda deactivate
-
-
-# To activate foo environment:
-
-   ```
-   conda activate foo
-   ```
 
      
 # For one-one genome:
@@ -292,7 +285,6 @@ Query = [P2D11.fasta]
      
      pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --feature_plotstyle arrow     
     ```
-    
      -o : output_file_name
         
                 
