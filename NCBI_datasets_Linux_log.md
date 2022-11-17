@@ -40,7 +40,8 @@ brew install unzip
 
 # Then unzip the file ncbi_dataset.zip from the provided directory:
 
-```unzip ncbi_dataset.zip
+```
+unzip ncbi_dataset.zip
 ```
  
   
