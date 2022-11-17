@@ -1,4 +1,4 @@
-# To install fastani packages:
+# To install fastani packages
 
 ```
 conda create -n foo -c conda-forge -c bioconda fastani
