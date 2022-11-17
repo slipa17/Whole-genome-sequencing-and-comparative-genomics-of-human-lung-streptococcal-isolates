@@ -40,7 +40,9 @@ dataframe_name = merge(strain1, strain2, by.x = "Var1", "Freq", by.y = "Var1", "
 
 # Substituting 'NA' with '0'
 
+```
 dataframe_name[is.na(dataframe_name)] <- 0 
+```
 
 # Removing the serial numbers(1,2,3....)in the new merged file and display only the COG categories
 
