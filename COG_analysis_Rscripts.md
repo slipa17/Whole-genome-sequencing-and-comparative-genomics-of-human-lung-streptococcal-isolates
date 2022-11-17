@@ -36,7 +36,7 @@ strain2 <- table(strain2$strain2_COG)
 ```
 View(strain2)
 ```
-# To merge both the data_frame files
+# To merge both the dataframe files
 
 ```
 dataframe_name = merge(strain1, strain2, by.x = "Var1", "Freq", by.y = "Var1", "Freq", all.x = TRUE, all.y =TRUE)
