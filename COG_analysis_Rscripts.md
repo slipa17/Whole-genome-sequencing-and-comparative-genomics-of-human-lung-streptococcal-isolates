@@ -7,76 +7,110 @@ setwd("~/Documents/Comparative_genomics/R")
 # reading the csv file
 
 ```
-name you want to give <- read.csv(the csv file you want to read)
+strain1 <- read.csv("strain1_COG.csv")
 ```
 # To count the frequency of the individual items present inside the data frame
 
 ```
-the given name <- table(the name given of the file$the particular cell it wants to count the frequency)
+strain1 <- table(strain1$strain1_COG)
 ```
 # To view the particular table
 
 ```
-View(the given name)
+View(strain1)
 ```
 
 # reading the csv file
 
 ```
-name you want to give <- read.csv(the csv file you want to read)
+strain2 <- read.csv("strain2_COG.csv")
 ```
 
 # To count the frequency of the individual items present inside the data frame
 
 ```
-the given name <- table(the name given of the file$the particular cell it wants to count the frequency)
+strain2 <- table(strain2$strain2_COG)
 ```
 # To view the particular table
 
 ```
-View(the given name)
+View(strain2)
+```
+# To merge both the data_frame files
+
+```
+dataframe_name = merge(strain1, strain2, by.x = "Var1", "Freq", by.y = "Var1", "Freq", all.x = TRUE, all.y =TRUE)
+```
+# To view the particular table
+
+```
+View(dataframe_name) 
 ```
 
-x1.df = merge(P2D11, P2E5, by.x = "Var1", "Freq", by.y ="Var1", "Freq", all.x = TRUE, all.y =TRUE) 
-View(x1.df) 
-P3B4 <-read.csv("P3B4_COG.csv") 
-P3B4 <-table(P3B4$P3B4_COG) 
-View(P3B4) 
-x2.df = merge(x1.df, P3B4, by.x = "Var1", "Freq", by.y = "Var1", "Freq", all.x = TRUE, all.y =TRUE) 
-View(x2.df) 
-P3D4 <- read.csv("P3D4_COG.csv") 
-P3D4 <- table(P3D4$P3D4_COG)
-View(P3D4) 
-P3E5 <- read.csv("P3E5_COG.csv") 
-P3E5 <-table(P3E5$P3E5_COG) 
-View(P3E5) 
-x5.df = merge(P3D4, P3E5, by.x = "Var1", "Freq", by.y = "Var1", "Freq", all.x = TRUE, all.y =TRUE)
-View(x5.df)
-T369_3 <- read.csv("T369_3_COG.csv") 
-T369_3 <- table(T369_3$T369_3_COG)
-View(T369_3)
-x6.df = merge(x5.df, T369_3, by.x = "Var1", "Freq", by.y ="Var1", "Freq", all.x = TRUE, all.y =TRUE) 
-View(x6.df) 
-x7.df =merge(x2.df, x6.df, by.x = "Var1", "Freq", by.y = "Var1", "Freq", all.x= TRUE, all.y =TRUE) 
-View(x7.df) 
-x7.df[is.na(x7.df)] <- 0 
-View(x7.df)
-write.csv(x7.df,"COG.csv", row.names = TRUE) 
-rownames(x7.df) <-x7.df[,1] 
-View(rownames(x7.df)) 
-x7.df <- x7.df[,-c(1)]
-View(x7.df)
-colnames(x7.df) = c("P2D11", "P2E5", "P3B4", "P3D4", "P3E5", "T369_3") 
-View(colnames(x7.df))
-x7.df <- as.matrix(x7.df) 
-View(x7.df) 
-heatmap(x7.df)
-write.csv(x7.df,"COG_heatmap.csv", row.names = TRUE) 
-head(x7.df)
-str(x7.df) 
+# Substituting 'NA' with '0'
+
+dataframe_name[is.na(dataframe_name)] <- 0 
+
+# Removing the serial numbers(1,2,3....)in the new merged file and display only the COG categories
+
+```
+rownames(dataframe_name) <-dataframe_name[,1]
+```
+
+# To remove the extra COG coloumn:(use minus symbol(-) with the required coloumn to be removed)
+
+```
+dataframe_name <- dataframe_name[,-c(1)]
+```
+# To rename the coloumns in the dataframe:
+
+```
+colnames(dataframe_name) = c("strain1", "strain2", "strain3", "strain4", "strain5", "strain6") 
+```
+
+# For heatmap, you have to convert the dataframe into the matrix form
+
+```
+dataframe_name <- as.matrix(dataframe_name) 
+```
+
+# To draw the heatmap: 
+
+```
+heatmap(dataframe_name)
+```
+# To export the required dataframe to the main folder
+
+```
+write.csv(dataframe_name,"new_file_name.csv", row.names = TRUE) 
+```
+
+# To view the header of the dataframe
+
+```head(dataframe_name)
+```
+# To view the structure of the dataframe
+
+```
+str(dataframe_name)
+```
+
+# To create elegant data visualizations using the grammar of graphics
+
+```
 install.packages("ggplot2")
 library("ggplot2")
+```
+
+# To draw the Pretty Heatmaps(pheatmap)
+
+```
+* First install the package and load the library, 
+
 install.packages("pheatmap") 
 library("pheatmap") 
-pheatmap(x7.df,treeheight_row = 0, treeheight_col = 0, 
-                                  color =colorRampPalette(c("white","orange","red"))(50), fontsize_row = 5)
+
+* Then run using the script
+
+pheatmap(dataframe_name,treeheight_row = 0, treeheight_col = 0, color =colorRampPalette(c("white","orange","red"))(50), fontsize_row = 5)
+```
