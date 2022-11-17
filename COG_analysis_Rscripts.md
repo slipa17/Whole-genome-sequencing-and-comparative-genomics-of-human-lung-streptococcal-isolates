@@ -31,20 +31,11 @@ strain2 <- read.csv("strain2_COG.csv")
 ```
 strain2 <- table(strain2$strain2_COG)
 ```
-# To view the particular table
 
-```
-View(strain2)
-```
 # To merge both the dataframe files
 
 ```
 dataframe_name = merge(strain1, strain2, by.x = "Var1", "Freq", by.y = "Var1", "Freq", all.x = TRUE, all.y =TRUE)
-```
-# To view the particular table
-
-```
-View(dataframe_name) 
 ```
 
 # Substituting 'NA' with '0'
@@ -89,6 +80,7 @@ write.csv(dataframe_name,"new_file_name.csv", row.names = TRUE)
 
 ```head(dataframe_name)
 ```
+
 # To view the structure of the dataframe
 
 ```
