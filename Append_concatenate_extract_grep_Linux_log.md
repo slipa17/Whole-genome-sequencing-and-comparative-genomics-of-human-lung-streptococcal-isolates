@@ -7,7 +7,7 @@
            
 
 
- # To concatenate the file
+ # Concatenating the file
        
             
             * Set up the directory containing the respective (.faa files), then run the command
@@ -16,7 +16,7 @@
              
 
      
- # To grep the following
+ # Grepping
      
           
           * Set up the directory first and then run:
@@ -52,7 +52,7 @@
                       Note:  >> is the symbol used for the extraction of the grepped output to a new file.
                       
 
- # To extract the desired sequences from the file containing the total sequences
+ #  Extracting the desired sequences from the file containing the total sequences
     
             
   ```
