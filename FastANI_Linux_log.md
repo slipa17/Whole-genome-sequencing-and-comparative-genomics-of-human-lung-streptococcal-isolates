@@ -13,16 +13,16 @@ conda create -n foo -c conda-forge -c bioconda fastani
      $ conda deactivate
 
      
-# For one-one genome:
+# For one-one genome
 
  ```
  fastANI -q genome1.fa -r genome2.fa --visualize -o file_name.out
  ```    
 
- # Calling R in Linux:    
+ # For one-one genome visualization grid   
  
  ```
- * For one-one genome visualization grid:
+  Calling R in Linux 
  
    Rscript Rscript.R query_file_name.fasta reference_file_name.fasta file_name.out.visual
  
@@ -58,10 +58,10 @@ plot_gene_map(dna_segs=list(Query, Ref), comparisons=list(comparison), main=plot
 dev.off()
 ```
           
- # Calling Python in Linux: 
+ # For one-one genome visualization grid
  
  ```
- * For one-one genome visualization grid:
+   Calling Python in Linux 
   
     python3 python3_scripts.py query_file_name.fasta reference_file_name.fasta file_name.out.visual file_name.png --cmap viridis --link_color red --curve 
       
@@ -217,19 +217,20 @@ if __name__ == "__main__":
 
   ```  
 
-```
- * For one-many genome:
+
+ # For one-many genome:
   
+  ```
   fastANI -q genome1.fa --rl genome_list.txt --visualize -o file_name.out 
      
 Reference = [./users/P2E5.fasta, ./users/P3B4.fasta, ./users/P3D4.fasta, ./users/P3E5.fasta, ./users/T369_3.fasta]
 Query = [P2D11.fasta]
 ``` 
 
-# Calling Python in Linux:  
+# For one-many genome clustermap  
 
  ```
- * For one-many genome clustermap: 
+  Calling Python in Linux 
 
 * First install the aniclustermap package: 
 
@@ -243,10 +244,10 @@ Query = [P2D11.fasta]
           users1 : folder containing the paths of both the query and reference list
    
 
-# Calling Python in Linux:  
+# For one-many genome visualization grid  
 
   ```
-  For one-many genome visualization grid: 
+  Calling Python in Linux 
   
 * First install the pygenomeviz mmseqs2 package: 
  
@@ -257,19 +258,20 @@ Query = [P2D11.fasta]
    pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --   feature_plotstyle arrow
    ```
    
-   ```
-   For many-many genome:
    
+ #  For many-many genome:
+   
+   ```
    fastANI --ql users/users.txt --rl ref/ref.txt --visualize -o file_name.out
    ```
              users : folder containing the paths of the query
              ref :  folder containing the paths of the references
              
     
-# Calling Python in Linux:  
+# For many-many genome clustermap  
 
   ```
-   For many-many genome clustermap:
+   Calling Python in Linux
     
     ANIclustermap -i ./users_ref/ -o ./output_file_name \--fig_width 15 --cmap_colors white,orange,red
    ```
@@ -278,10 +280,10 @@ Query = [P2D11.fasta]
                  
                     
                     
-# Calling Python in Linux: 
+# For many-many genome visualization grid 
 
    ```
-     For many-many genome visualization grid:
+     Calling Python in Linux
      
      pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --feature_plotstyle arrow     
     
