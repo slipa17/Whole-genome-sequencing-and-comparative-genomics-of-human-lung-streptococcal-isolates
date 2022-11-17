@@ -218,7 +218,7 @@ if __name__ == "__main__":
   ```  
 
 
- # For one-many genome:
+ # For one-many genome
   
   ```
   fastANI -q genome1.fa --rl genome_list.txt --visualize -o file_name.out 
@@ -259,7 +259,7 @@ Query = [P2D11.fasta]
    ```
    
    
- #  For many-many genome:
+ #  For many-many genome
    
    ```
    fastANI --ql users/users.txt --rl ref/ref.txt --visualize -o file_name.out
