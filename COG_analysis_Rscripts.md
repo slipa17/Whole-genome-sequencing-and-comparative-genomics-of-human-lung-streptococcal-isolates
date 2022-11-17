@@ -65,7 +65,7 @@ colnames(dataframe_name) = c("strain1", "strain2", "strain3", "strain4", "strain
 dataframe_name <- as.matrix(dataframe_name) 
 ```
 
-# To draw the heatmap: 
+# To draw the heatmap 
 
 ```
 heatmap(dataframe_name)
