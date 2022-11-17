@@ -52,7 +52,7 @@
                       Note:  >> is the symbol used for the extraction of the grepped output to a new file.
                       
 
- # To extract the desired sequences from the file containing the total sequences:
+ # To extract the desired sequences from the file containing the total sequences
     
             
   ```
