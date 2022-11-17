@@ -1,5 +1,4 @@
-
- # To append strain name to the FASTA headers
+# To append strain name to the FASTA headers
           
          
           * Set up the directory containing the respective (.faa files), then run the command
@@ -53,22 +52,17 @@
                       Note:  >> is the symbol used for the extraction of the grepped output to a new file.
                       
 
-
-   
-   # To extract the desired sequences from the file containing the total sequences:
+ # To extract the desired sequences from the file containing the total sequences:
     
             
-            *First install the package bioawk:
+  ```
+  * First install the package bioawk:
         
-            conda install -c bioconda bioawk
+    conda install -c bioconda bioawk
                 
-                
+  * Set up the directory and then run:
          
-         ```* Set up the directory and then run:
-         
-       
 bioawk -cfastx 'BEGIN{while((getline k <"list_protein_id_that is to be extracted.txt")>0)i[k]=1}{if(i[$name])print ">"$name"\n"$seq}'original_file_name.faa > the_new_file_name.faa
 ```
-            
 
 Note: protein_id list: write the name of the list that is to be extracted separately in a text file one after another and save it. Then pass that .txt file to the above code.
