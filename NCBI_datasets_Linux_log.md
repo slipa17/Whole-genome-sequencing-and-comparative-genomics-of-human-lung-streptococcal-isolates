@@ -1,145 +1,34 @@
-# To download biological sequence data from NCBI.(conda create -n ncbi_datasets)
+# To download biological sequence data from NCBI.
 
-(base) slipakanungo@Slipas-MacBook-Pro ncbi % conda create -n ncbi_datasets
-Collecting package metadata (current_repodata.json): done
-Solving environment: done
-
-
-==> WARNING: A newer version of conda exists. <==
-  current version: 4.12.0
-  latest version: 4.13.0
+```conda create -n ncbi_datasets
+```
 
 Please update conda by running
 
     $ conda update -n base conda
 
 
-
-## Package Plan ##
-
-  environment location: /Users/slipakanungo/anaconda3/envs/ncbi_datasets
-
-
-
-Proceed ([y]/n)? y
-
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-#
 # To activate this environment, use
-#
-#     $ conda activate ncbi_datasets
-#
+
+    $ conda activate ncbi_datasets
+
 # To deactivate an active environment, use
-#
-#     $ conda deactivate
 
-# To activate your new environment.(conda activate ncbi_datasets)
+     $ conda deactivate
 
-(base) slipakanungo@Slipas-MacBook-Pro ncbi % conda activate ncbi_datasets
+# To install the datasets conda package.
 
-# To install the datasets conda package.(conda install -c conda-forge ncbi-datasets-cli)
+```
+conda install -c conda-forge ncbi-datasets-cli
+```
 
-(ncbi_datasets) slipakanungo@Slipas-MacBook-Pro ncbi % conda install -c conda-forge ncbi-datasets-cli
-Collecting package metadata (current_repodata.json): done
-Solving environment: done
+# NCBI genome downloads:
 
+```
+For genomes:
 
-==> WARNING: A newer version of conda exists. <==
-  current version: 4.12.0
-  latest version: 4.13.0
-
-Please update conda by running
-
-    $ conda update -n base conda
-
-
-
-## Package Plan ##
-
-  environment location: /Users/slipakanungo/anaconda3/envs/ncbi_datasets
-
-  added / updated specs:
-    - ncbi-datasets-cli
-
-
-The following packages will be downloaded:
-
-    package                    |            build
-    ---------------------------|-----------------
-    ca-certificates-2022.6.15  |       h033912b_0         149 KB  conda-forge
-    libcxx-14.0.6              |       hce7ea42_0         1.3 MB  conda-forge
-    ncbi-datasets-cli-13.30.0  |       h1b54a9f_0        11.9 MB  conda-forge
-    ------------------------------------------------------------
-                                           Total:        13.4 MB
-
-The following NEW packages will be INSTALLED:
-
-  ca-certificates    conda-forge/osx-64::ca-certificates-2022.6.15-h033912b_0
-  libcxx             conda-forge/osx-64::libcxx-14.0.6-hce7ea42_0
-  ncbi-datasets-cli  conda-forge/osx-64::ncbi-datasets-cli-13.30.0-h1b54a9f_0
-
-
-Proceed ([y]/n)? y
-
-
-Downloading and Extracting Packages
-ca-certificates-2022 | 149 KB    | ############################################################################################################################################################### | 100% 
-libcxx-14.0.6        | 1.3 MB    | ############################################################################################################################################################### | 100% 
-ncbi-datasets-cli-13 | 11.9 MB   | ############################################################################################################################################################### | 100% 
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-(ncbi_datasets) slipakanungo@Slipas-MacBook-Pro datasets download genome accession --inputfile strep_ref_genome.txt --exclude-gff3 --exclude-protein --exclude-rna -filename strep_genome_db1.zip
-Error: Accepts either argument or file, not both
-Usage
-  datasets download genome accession <accession ...> [flags]
-
-Examples
-  datasets download genome accession GCF_000001405.40 --chromosomes X,Y --exclude-gff3 --exclude-rna
-  datasets download genome accession GCA_003774525.2 GCA_000001635 --chromosomes X,Y,Un.9
-  datasets download genome accession PRJNA289059 --exclude-seq
-
-Flags
-  -h, --help               help for accession
-      --inputfile string   read a list of NCBI Assembly accessions from a file to use as input
-
-
-Global Flags
-  -a, --annotated                only include genomes with annotation
-      --api-key string           NCBI Datasets API Key
-      --assembly-level string    restrict assemblies to a comma-separated list of one or more of: chromosome, complete_genome, contig, scaffold
-      --assembly-source string   restrict assemblies to refseq or genbank only
-      --chromosomes strings      limit to a specified, comma-delimited list of chromosomes (default [all])
-      --dehydrated               download a dehydrated zip archive including the data report and locations of data files (use the rehydrate command to retrieve data files).
-      --exclude-genomic-cds      exclude cds_from_genomic.fna (genomic cds file)
-      --exclude-gff3             exclude genomic.gff (gff3 annotation file)
-      --exclude-protein          exclude protein.faa (protein sequence file)
-      --exclude-rna              exclude rna.fna (transcript sequence file)
-      --exclude-seq              exclude genomic.fna (genomic sequence file)
-      --filename string          specify a custom file name for the downloaded dataset (default "ncbi_dataset.zip")
-      --include-gbff             include genomic.gbff (GenBank flat file sequence and annotation), if available
-      --include-gtf              include genomic.gtf (gtf annotation file), if available
-      --no-progressbar           hide progress bar
-      --reference                limit to reference and representative (GCF_ and GCA_) assemblies
-      --released-before string   only include genomes that have been released before a specified date (MM/DD/YYYY)
-      --released-since string    only include genomes that have been released after a specified date (MM/DD/YYYY)
-      --search strings           only include genomes that have the specified text in the
-                                 searchable fields: species and infraspecies, assembly name and submitter
-                                 To provide multiple strings '--search' can be included multiple times
-                                 
-
-
-#To download genome accession:()
-  
-(ncbi_datasets) slipakanungo@Slipas-MBP ncbi % datasets download genome accession --inputfile strep_ref_genome.txt --annotated --include-gbff
-Some of the assemblies provided ('GCA_000148585.1', 'GCA_000164675.1', 'GCA_000222765.1', 'GCA_000223295.1') are valid NCBI Assembly Accessions,
-but are not in scope for NCBI Datasets.
-
-
-Downloading: ncbi_dataset.zip    113MB done
-New version of client (13.41.0) available at https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/mac/datasets
+ datasets download genome accession --inputfile strep_ref_genome.txt --annotated --include-gbff
+```
 
 #To unzip the ncbi_dataset.zip:
 
