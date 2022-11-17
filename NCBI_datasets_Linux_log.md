@@ -19,7 +19,7 @@ Please update conda by running
 # To install the datasets conda package.
 
 ```
-conda install -c conda-forge ncbi-datasets-cli
+   conda install -c conda-forge ncbi-datasets-cli
 ```
 
 # NCBI genome downloads:
@@ -33,14 +33,14 @@ For genomes:
 # To unzip the ncbi_dataset.zip:
 
 ```
-* First install unzip
+* First install unzip:
 
-brew install unzip
+   brew install unzip
 
 
 * Then unzip the file ncbi_dataset.zip from the provided directory:
 
-unzip ncbi_dataset.zip
+   unzip ncbi_dataset.zip
 ```
  
   
