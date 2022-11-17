@@ -27,7 +27,7 @@ Please update conda by running
 ```
 For genomes:
 
- datasets download genome accession --inputfile strep_ref_genome.txt --annotated --include-gbff
+ datasets download genome accession --inputfile input_genome_files.txt --annotated --include-gbff
 ```
 
 # To unzip the ncbi_dataset.zip:
