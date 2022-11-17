@@ -78,7 +78,8 @@ write.csv(dataframe_name,"new_file_name.csv", row.names = TRUE)
 
 # To view the header of the dataframe
 
-```head(dataframe_name)
+```
+head(dataframe_name)
 ```
 
 # To view the structure of the dataframe
