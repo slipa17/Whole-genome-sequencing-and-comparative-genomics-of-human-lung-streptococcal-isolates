@@ -15,9 +15,9 @@ conda create -n foo -c conda-forge -c bioconda fastani
      
 # For one-one genome:
 
-    ```
-    fastANI -q genome1.fa -r genome2.fa --visualize -o file_name.out
-    ```    
+ ```
+ fastANI -q genome1.fa -r genome2.fa --visualize -o file_name.out
+ ```    
 
  # Calling R in Linux:    
  
