@@ -8,11 +8,11 @@ Please update conda by running
     $ conda update -n base conda
 
 
-# To activate this environment, use
+# To activate ncbi_datasets environment
 
     $ conda activate ncbi_datasets
 
-# To deactivate an active environment, use
+# To deactivate an active environment
 
      $ conda deactivate
 
