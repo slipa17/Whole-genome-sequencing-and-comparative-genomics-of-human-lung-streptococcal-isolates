@@ -108,7 +108,7 @@ Note:
 # Substituting NaN in the merged dataframe with 0
 
 ```python
-merge5.fillna(0)
+merge1.fillna(0)
 ```
 
 # Delete a particular column of the dataframe
@@ -126,7 +126,7 @@ new_file_name = dataframe_name.rename(index={0:'rename',1:'rename',2:'rename',3:
 # Exporting the particular csv file to the main folder
 
 ```python
-merge5.to_csv('COG.csv')
+merge1.to_csv('COG.csv')
 ```
 # Importing libraries for the heatmap
 
@@ -151,7 +151,7 @@ plt.show()
 
 ```python
 new_columns = ['P2E5','P3E5','P2D11','T369_3','P3B4','P3D4']
-merge6 = merge5[new_columns]
+merge2 = merge1[new_columns]
 ```
 
 
