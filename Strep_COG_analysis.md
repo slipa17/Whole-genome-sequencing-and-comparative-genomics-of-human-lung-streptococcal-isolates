@@ -150,7 +150,7 @@ plt.show()
 # Re-arranging the merged coloumns
 
 ```python
-new_columns = ['P2E5','P3E5','P2D11','T369_3','P3B4','P3D4']
+new_columns = ['column_2','column_5','column_1','column_6','column_3','column_4']
 merge2 = merge1[new_columns]
 ```
 
