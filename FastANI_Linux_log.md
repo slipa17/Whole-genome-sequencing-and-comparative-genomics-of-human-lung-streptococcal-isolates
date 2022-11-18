@@ -22,7 +22,7 @@ conda create -n foo -c conda-forge -c bioconda fastani
  # For one-one genome visualization grid   
  
  ```
-  Calling R in Linux 
+  * Calling R in Linux 
  
    Rscript Rscript.R query_file_name.fasta reference_file_name.fasta file_name.out.visual
  
@@ -61,7 +61,7 @@ dev.off()
  # For one-one genome visualization grid
  
  ```
-   Calling Python in Linux 
+   * Calling Python in Linux 
   
     python3 python3_scripts.py query_file_name.fasta reference_file_name.fasta file_name.out.visual file_name.png --cmap viridis --link_color red --curve 
       
@@ -230,7 +230,7 @@ Query = [P2D11.fasta]
 # For one-many genome clustermap  
 
  ```
-  Calling Python in Linux 
+  * Calling Python in Linux 
 
 * First install the aniclustermap package: 
 
@@ -247,7 +247,7 @@ Query = [P2D11.fasta]
 # For one-many genome visualization grid  
 
   ```
-  Calling Python in Linux 
+  * Calling Python in Linux 
   
 * First install the pygenomeviz mmseqs2 package: 
  
@@ -271,7 +271,7 @@ Query = [P2D11.fasta]
 # For many-many genome clustermap  
 
   ```
-   Calling Python in Linux
+   * Calling Python in Linux
     
     ANIclustermap -i ./users_ref/ -o ./output_file_name \--fig_width 15 --cmap_colors white,orange,red
    ```
@@ -283,7 +283,7 @@ Query = [P2D11.fasta]
 # For many-many genome visualization grid 
 
    ```
-     Calling Python in Linux
+     * Calling Python in Linux
      
      pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --feature_plotstyle arrow     
     
