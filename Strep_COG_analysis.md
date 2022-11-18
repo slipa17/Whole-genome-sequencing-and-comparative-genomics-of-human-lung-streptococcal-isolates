@@ -93,6 +93,8 @@ df2: name of the object
 merge1 = pd.merge(df1,df2,left_index=True,right_index=True,how='left')
 merge1
 ```
+Note:
+
 left_index: df1(1st data frame), right_index: df2(2nd data frame) 
 
 #In case the left_index dataframe has more elements, use:
@@ -104,7 +106,16 @@ how='right'; the left_index will be merged on the right_index
 #In case the left_index dataframe and right_index dataframe has equal number of elements, use:
 how='left' or how='right
 
+# Alternate command for merging both the data frames
 
+```python
+merge1 = pd.merge(df1,df2,how='left', on=["Pathway"])
+merge1
+```
+Note:
+
+* how= 'left' or how= 'right'; depends on which side of the "dataframe" you want to merge
+* on=["Pathway"]; depends on which "category" of the dataframe you want to merge
 
 # Substituting NaN in the merged dataframe with 0
 
@@ -112,6 +123,17 @@ how='left' or how='right
 merge5.fillna(0)
 ```
 
+# Delete a particular column of the dataframe
+
+```python
+del file_name['particular_column_name']
+```
+
+# Re-naming the index of the dataframe
+
+```python
+new_file_name = dataframe_name.rename(index={0:'rename',1:'rename',2:'rename',3:'rename',4:'rename',5:'rename'})
+```
 
 # Exporting the particular csv file to the main folder
 
@@ -142,8 +164,6 @@ plt.show()
 ```python
 new_columns = ['P2E5','P3E5','P2D11','T369_3','P3B4','P3D4']
 merge6 = merge5[new_columns]
-merge6
-merge6.fillna(0)
 ```
 
 
