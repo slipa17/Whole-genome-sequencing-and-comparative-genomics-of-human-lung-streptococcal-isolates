@@ -1,43 +1,31 @@
 # streptococcus COG category analysis
+
+# Importing pandas library
+
 ```
 import pandas as pd
 ```
 
                      
-
-```python
-pwd
-```
-
-
-
-
-    '/Users/slipakanungo'
-
-
-
+# Importing pandas module (to run the python script)
 
 ```python
 import os
 ```
 
 
+# setting the current working directory
+
 ```python
 os.getcwd()
 ```
 
-
-
-# setting the directory
-
-    '/Users/slipakanungo'
-
-
-
+# changing the current working directory to specified path
 
 ```python
-os.chdir("/Users/slipakanungo/Documents/Comparative_genomics/Python/")
+os.chdir(path)
 ```
+
 # reading the csv file
 
 ```python
