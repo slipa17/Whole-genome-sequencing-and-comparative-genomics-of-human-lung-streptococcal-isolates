@@ -95,15 +95,15 @@ merge1
 ```
 Note:
 
-left_index: df1(1st data frame), right_index: df2(2nd data frame) 
+* left_index: df1(1st data frame), right_index: df2(2nd data frame) 
 
-#In case the left_index dataframe has more elements, use:
+* In case the left_index dataframe has more elements, use:
 how='left'; the right_index will be merged on the left_index
 
-#In case the right_index dataframe has more elements, use:
+* In case the right_index dataframe has more elements, use:
 how='right'; the left_index will be merged on the right_index
 
-#In case the left_index dataframe and right_index dataframe has equal number of elements, use:
+* In case the left_index dataframe and right_index dataframe has equal number of elements, use:
 how='left' or how='right
 
 # Alternate command for merging both the data frames
