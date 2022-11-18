@@ -1,7 +1,7 @@
 # Setting the working directory
 
 ```
-setwd("~/Documents/Comparative_genomics/R") 
+setwd(path) 
 ```
 
 # reading the csv file
