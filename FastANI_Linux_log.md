@@ -253,7 +253,7 @@ Query = [P2D11.fasta]
  
    conda install -c conda-forge -c bioconda pygenomeviz mmseqs2 
 
-     Set up the directory and then run the script.
+ * Set up the directory and then run the script.
       
    pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --   feature_plotstyle arrow
    ```
