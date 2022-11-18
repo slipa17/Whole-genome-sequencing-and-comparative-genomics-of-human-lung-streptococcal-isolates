@@ -1,4 +1,4 @@
-# streptococcus COG category analysis
+# Reading the csv file, Merging the dataframe and Plotting the heatmap
 
 # Importing pandas library
 
