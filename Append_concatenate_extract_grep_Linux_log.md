@@ -62,7 +62,7 @@
                 
   * Set up the directory and then run:
          
-bioawk -cfastx 'BEGIN{while((getline k <"list_protein_id_that is to be extracted.txt")>0)i[k]=1}{if(i[$name])print ">"$name"\n"$seq}'original_file_name.faa > the_new_file_name.faa
+bioawk -c fastx -v names="$(tr '\n' '|' < protein_name_list.txt)" '$name ~ names {print ">"$name"\n"$seq}' proteins.faa > extracted_proteins.faa
 ```
 
 Note:  protein_id list: write the name of the list that is to be extracted separately in a text file one after another and save it. Then pass that .txt file to the above code.
