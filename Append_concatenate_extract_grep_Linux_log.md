@@ -84,4 +84,4 @@ for faa_file in *.faa; do
   
   bioawk -c fastx -v names="$names" '$name ~ names {print ">"$name"\n"$seq}' "$faa_file" > "extracted_$faa_file"
 done
-``
+
