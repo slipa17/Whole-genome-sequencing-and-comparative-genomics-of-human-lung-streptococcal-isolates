@@ -65,7 +65,7 @@
 bioawk -c fastx -v names="$(tr '\n' '|' < protein_name_list.txt)" '$name ~ names {print ">"$name"\n"$seq}' proteins.faa > extracted_proteins.faa
 ```
 
-Note:  protein_id list: write the name of the list that is to be extracted separately in a text file one after another and save it. Then pass that .txt file to the above code.
+Note:  protein_id list: write the name of the list that is to be extracted separately in a text file one after another and save it. Then pass that .txt file to the above code. The above code is for extracting a single or an individual file.
 
 Performing this using a loop:
 1. Loop through all .faa files in the current directory.
