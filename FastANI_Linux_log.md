@@ -292,6 +292,6 @@ Query = [P2D11.fasta]
     
                    -o : output_file_name
               
-       Note: visualize.py is designed to do comparative plots of prokaryotic genomes having the size less than 10Mb. 
+       Note: For every visualization grid, visualize.py is designed to do comparative plots of prokaryotic genomes having the size less than 10Mb. 
         
                 
