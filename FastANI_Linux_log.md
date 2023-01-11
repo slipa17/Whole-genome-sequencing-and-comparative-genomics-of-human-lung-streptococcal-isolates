@@ -291,5 +291,7 @@ Query = [P2D11.fasta]
      pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --feature_plotstyle arrow     
     
                    -o : output_file_name
+              
+       Note: visualize.py is designed to do comparative plots of prokaryotic genomes having the size less than 10Mb. 
         
                 
