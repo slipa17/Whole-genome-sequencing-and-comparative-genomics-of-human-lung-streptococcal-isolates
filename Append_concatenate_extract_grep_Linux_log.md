@@ -62,7 +62,7 @@
                 
   * Set up the directory and then run:
          
-    seqtk subseq original_fasta_file Protein_list > output_file_name
+    seqtk subseq original_fasta_file Protein_list.txt > output_file_name
 ```
 
 Note:  protein_id list: write the name of the list that is to be extracted separately in a text file one after another and save it. Then pass that .txt file to the above code. The above code is for extracting a single or an individual file.
