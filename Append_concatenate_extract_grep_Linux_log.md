@@ -56,13 +56,13 @@
     
             
   ```
-  * First install the package bioawk:
+  * First install the package seqtk :
         
-    conda install -c bioconda bioawk
+    conda install -c bioconda seqtk 
                 
   * Set up the directory and then run:
          
-bioawk -c fastx -v names="$(tr '\n' '|' < protein_name_list.txt)" '$name ~ names {print ">"$name"\n"$seq}' proteins.faa > extracted_proteins.faa
+    seqtk subseq original_fasta_file Protein_list > output_file_name
 ```
 
 Note:  protein_id list: write the name of the list that is to be extracted separately in a text file one after another and save it. Then pass that .txt file to the above code. The above code is for extracting a single or an individual file.
