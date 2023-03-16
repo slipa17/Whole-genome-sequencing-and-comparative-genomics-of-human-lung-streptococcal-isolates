@@ -42,6 +42,11 @@ For genomes:
 
    unzip ncbi_dataset.zip
 ```
- 
+# make local BLAST database for Streptococcus genomes / nucleotides / proteins (FASTA format):
+
+```
+cat * (all files).fasta > all_sequences.fasta
+makeblastdb -in all_sequences.fasta -input_type fasta -dbtype [TYPE] -out output_database_name
+```
   
                              
