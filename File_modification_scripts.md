@@ -32,3 +32,12 @@ awk '{match($0, />[^ ]+/); print substr($0, RSTART+1, RLENGTH-1)}' input_file.tx
 ```
 5. Replace "input_file.txt" with the name of your input file and "output_file.txt" with the desired name of your output file.
 6. Press Enter to execute the command. This will extract the desired text from each line of the file and output the result to a new file.
+
+For thiis using a loop:
+```
+for file in /path/to/folder/*.txt; do
+    awk '{match($0, />[^ ]+/); print substr($0, RSTART+1, RLENGTH-1)}' "$file" > "/path/to/output_folder/$(basename "$file" .txt)_output.txt"
+done
+```
+
+
