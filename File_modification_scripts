@@ -29,6 +29,6 @@ Steps:
 
 ```
 awk '{match($0, />[^ ]+/); print substr($0, RSTART+1, RLENGTH-1)}' input_file.txt > output_file.txt
-
+```
 5. Replace "input_file.txt" with the name of your input file and "output_file.txt" with the desired name of your output file.
 6. Press Enter to execute the command. This will extract the desired text from each line of the file and output the result to a new file.
