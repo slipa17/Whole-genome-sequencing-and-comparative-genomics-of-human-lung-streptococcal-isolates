@@ -39,5 +39,6 @@ for file in /path/to/folder/*.txt; do
     awk '{match($0, />[^ ]+/); print substr($0, RSTART+1, RLENGTH-1)}' "$file" > "/path/to/output_folder/$(basename "$file" .txt)_output.txt"
 done
 ```
+## 2. Convert .FASTA files to .txt files
 
 
