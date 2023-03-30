@@ -41,6 +41,10 @@ done
 ```
 ## 2. Convert .FASTA files to .txt files
 
+1. The script loops through all subfolders in the parent_dir using a for loop with a wildcard pattern.
+2. For each subfolder, the script uses the find command to locate the .fasta file in the subfolder.
+3. If a .fasta file is found in the subfolder, the script uses the sed command to convert the .fasta file to .txt and saves it in the same subfolder using parameter expansion to remove the .fasta extension and replace it with .txt.
+4. If no .fasta file is found in the subfolder, the loop moves on to the next subfolder.
 
 ```
 for dir in /Users/sdas/Documents/Research/Genomes_resource/Bacteria_capsule_extracted/*/; do
