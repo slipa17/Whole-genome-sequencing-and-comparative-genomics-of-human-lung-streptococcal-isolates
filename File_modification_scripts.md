@@ -47,7 +47,7 @@ done
 4. If no .fasta file is found in the subfolder, the loop moves on to the next subfolder.
 
 ```
-for dir in /Users/sdas/Documents/Research/Genomes_resource/Bacteria_capsule_extracted/*/; do
+for dir in PATH_to_PARENT_FOLDER; do
     fasta_file=$(find "$dir" -maxdepth 1 -type f -name "*.fasta")
     if [ -n "$fasta_file" ]; then
         sed 's/>.*/&\n/' "$fasta_file" > "${fasta_file%.*}.txt"
