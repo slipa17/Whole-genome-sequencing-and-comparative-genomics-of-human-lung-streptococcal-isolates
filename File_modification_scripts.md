@@ -39,6 +39,24 @@ for file in /path/to/folder/*.txt; do
     awk '{match($0, />[^ ]+/); print substr($0, RSTART+1, RLENGTH-1)}' "$file" > "/path/to/output_folder/$(basename "$file" .txt)_output.txt"
 done
 ```
+
+If this has to be done within subfolders then use this code:
+
+```
+find PATH_to_PARENT_FOLDER -type f -name "*.txt" | while read file; do
+
+    dir_path=$(dirname "$file")
+   
+    awk '{match($0, />[^ ]+/); print substr($0, RSTART+1, RLENGTH-1)}' "$file" > "$dir_path/$(basename "$file" .txt)_output.txt"
+done
+```
+1. The script search for .txt files the parent directory.
+2. The script uses the find command to locate all .txt files in the parent_dir and its subdirectories.
+3. The find command outputs the list of .txt files to the while loop, which reads each file name line by line.
+4. For each .txt file, the script uses the dirname command to get the directory path of the file, and stores it in the dir_path variable.
+5. The script uses the awk command to extract gene names from the file, and saves them in an output file in the same directory as the input file. The output file is named using parameter expansion to remove the .txt extension and append "_output.txt" to the end. 
+6. The loop continues until all .txt files in the parent_dir and its subdirectories have been processed.
+
 ## 2. Convert .FASTA files to .txt files
 
 1. The script loops through all subfolders in the PARENT_FOLDER using a for loop with a wildcard pattern.
