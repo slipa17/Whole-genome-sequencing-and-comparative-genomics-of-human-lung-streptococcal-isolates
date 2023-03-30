@@ -42,3 +42,10 @@ done
 ## 2. Convert .FASTA files to .txt files
 
 
+```
+for dir in /Users/sdas/Documents/Research/Genomes_resource/Bacteria_capsule_extracted/*/; do
+    fasta_file=$(find "$dir" -maxdepth 1 -type f -name "*.fasta")
+    if [ -n "$fasta_file" ]; then
+        sed 's/>.*/&\n/' "$fasta_file" > "${fasta_file%.*}.txt"
+    fi
+done
