@@ -1,3 +1,7 @@
+
+```
+awk '/^>/ {print $0;next} {gsub(/[^ACGTNacgtn]/,"N"); printf "%s\n",$0}' input.fasta > output.fasta
+
 ## To append strain name to the FASTA headers
           
            ```
