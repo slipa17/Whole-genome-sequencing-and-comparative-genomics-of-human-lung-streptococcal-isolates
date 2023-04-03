@@ -7,7 +7,7 @@
               ```
   ## To append a random string "XXXX" after each FASTA header
      ```
-    sed 's/>\(.*\)/\1_HOMD/' Strep_16S_sequences.fasta > Streptest.fasta
+   sed 's/>\(.*\)/&_HOMD/' Strep_16S_sequences.fasta > Streptest.fasta
    ```
            
 ## Concatenating the file
