@@ -21,7 +21,7 @@ cat *.faa > output_file_name
 This command creates a new fasta filethat contains only t he sequences from the original file without the header lines, and with a new header line at the beginning.
 
 ```
-grep -v "^>" INPUT.fasta | awk 'BEGIN { ORS=""; print "single_FASTA_header.fasta\n" } { print }' > OUTPUT.fasta
+grep -v "^>" INPUT.fasta | awk 'BEGIN { ORS=""; print ">single_FASTA_header.fasta\n" } { print }' > OUTPUT.fasta
 ```
 1. It takes a fasta file called "INPUT.fasta" and removes all lines that start with ">" (which are typically header lines in fasta format) using the grep -v "^>" command.
 2. It then pipes the output to awk, which adds a header line "single_FASTA_header" to the beginning of the output using the BEGIN { ORS=""; print ">Core_genome.fasta\n" } command. The ORS variable sets the output record separator to an empty string so that the lines are concatenated together without any spaces or line breaks. 
