@@ -39,6 +39,11 @@ done
 
 ```
 
+1. The mkdir -p output command creates a new directory called output if it doesn't exist.
+2. The output variable is set to the name of the output file, with the subfolder name output/ added to the beginning of the file name.
+3. The grep and awk commands are the same as before.
+4. The output of the command is redirected to a new file in the output subfolder with the name specified in the output variable.
+
 ## Grepping
      
           
