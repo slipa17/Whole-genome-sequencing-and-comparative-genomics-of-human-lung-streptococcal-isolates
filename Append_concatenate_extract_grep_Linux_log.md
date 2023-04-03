@@ -17,7 +17,11 @@ sed 's/>\(.*\)/&_HOMD/' Strep_16S_sequences.fasta > Streptest.fasta
               ```  
              cat *.faa > output_file_name
              ```
+### Self concantenation of a single multi-FASTA file from multiple header under a single header
+This command creates a new fasta filethat contains only t he sequences from the original file without the header lines, and with a new header line at the beginning.
 
+```
+grep -v "^>" INPUT.fasta | awk 'BEGIN { ORS=""; print "single_FASTA_header.fasta\n" } { print }' > OUTPUT.fasta
      
  # Grepping
      
