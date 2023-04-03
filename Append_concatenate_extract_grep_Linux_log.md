@@ -1,6 +1,13 @@
 
+## Replace ambiguities or non-ATGCN characters with N in the sequence lines
 ```
 awk '/^>/ {print $0;next} {gsub(/[^ACGTNacgtn]/,"N"); printf "%s\n",$0}' input.fasta > output.fasta
+```
+This command uses awk to process the input FASTA file. It does the following:
+
+1. If a line starts with >, it is a header line, so it is printed to the output file (output.fasta).
+2. If a line does not start with >, it is a sequence line. Any non-ATGCN characters are replaced with N using gsub, and the resulting line is printed to 3. the output file.
+4. The printf function is used to print the sequence lines with a newline character, regardless of whether or not the original sequence had line breaks. This ensures that the output file has the same sequence format as the input file.
 
 ## To append strain name to the FASTA headers
           
