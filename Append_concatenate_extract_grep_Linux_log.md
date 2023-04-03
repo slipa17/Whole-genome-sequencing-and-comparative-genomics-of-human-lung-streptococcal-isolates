@@ -6,8 +6,10 @@
            sed 's/>.*/&_file/' file.faa > output_file_name.faa
               ```
   ## To append a random string "XXXX" after each FASTA header
+     
      ```
    sed 's/>\(.*\)/&_HOMD/' Strep_16S_sequences.fasta > Streptest.fasta
+   
    ```
            
 ## Concatenating the file
