@@ -3,6 +3,8 @@
 ```
 clipkit ALIGNMENT.fasta
 ```
+For further details follow: https://jlsteenwyk.com/ClipKIT/advanced/index.html
+
 ## Phylogenetic tree after alignment
 Using RAxML to perform a rapid bootstrap analysis to infer a maximum likelihood tree based on molecular sequence data in PHYLIP format. 
 
