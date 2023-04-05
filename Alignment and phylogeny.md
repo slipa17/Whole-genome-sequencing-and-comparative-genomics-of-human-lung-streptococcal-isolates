@@ -17,3 +17,5 @@ raxmlHPC -f a -p 12345 -x 12345 -m PROTGAMMAAUTO -# 100 -s bacteria_capsule_outp
 * ```-# 100```: This sets the number of bootstrap replicates to perform.
 * ```-s INPUT_ALIGNMENT.phy```: This specifies the name of the input file containing the molecular sequence data in PHYLIP format.
 * ```-n T20```: This specifies the name of the output file. 
+
+For further details please follow: https://cme.h-its.org/exelixis/web/software/raxml/hands_on.html 
