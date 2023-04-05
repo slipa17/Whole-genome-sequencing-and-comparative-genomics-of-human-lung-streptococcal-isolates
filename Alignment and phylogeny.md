@@ -1,3 +1,8 @@
+## Masking alignment before phylogeny
+
+```
+clipkit bacteria_capsule_output.fasta
+```
 ## Phylogenetic tree after alignment
 Using RAxML to perform a rapid bootstrap analysis to infer a maximum likelihood tree based on molecular sequence data in PHYLIP format. 
 
