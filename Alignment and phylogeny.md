@@ -1,3 +1,9 @@
+## Performing alignment using MAFFT
+
+```
+mafft --auto INPUT.fasta > OUTPUT.fasta
+
+
 ## Masking alignment before phylogeny
 
 ```
