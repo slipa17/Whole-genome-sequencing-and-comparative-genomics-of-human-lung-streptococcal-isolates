@@ -3,6 +3,9 @@
 ```
 mafft --auto INPUT.fasta > OUTPUT.fasta
 
+```
+
+for more details on arguments, please follow: https://mafft.cbrc.jp/alignment/software/tips0.html
 
 ## Masking alignment before phylogeny
 
