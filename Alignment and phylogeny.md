@@ -1,3 +1,12 @@
+
+## Concatenation of FASTA sequences
+
+* Concatenate sequences with proper new lines after each sequence
+
+```
+for file in *.fasta; do echo "" >> output.fasta; cat "$file" >> output.fasta; done
+```
+
 ## Performing alignment using MAFFT
 
 ```
