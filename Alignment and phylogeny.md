@@ -1,8 +1,8 @@
 
-## Removal of duplicate FASTA sequences 
+## Removal of duplicate FASTA sequences / collapse identical sequences
 
 ```
-seqkit rmdup -s INPUT.fasta > OUTPUT.fasta 
+vsearch --derep_fulllength INPUT.fasta --minuniquesize 1 --sizeout --output OUTPUT.fasta                
 
 ```
 ## Concatenation of FASTA sequences
