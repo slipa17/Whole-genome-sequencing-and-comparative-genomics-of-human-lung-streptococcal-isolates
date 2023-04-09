@@ -10,7 +10,7 @@ vsearch --derep_fulllength INPUT.fasta --minuniquesize 1 --sizeout --output OUTP
 * Concatenate sequences with proper new lines after each sequence
 
 ```
-for file in *.fasta; do echo "" >> output.fasta; cat "$file" >> output.fasta; done
+cat *.fasta > all.fasta
 ```
 
 ## Performing alignment using MAFFT
