@@ -22,13 +22,7 @@ mafft --auto INPUT.fasta > OUTPUT.fasta
 
 for more details on arguments, please follow: https://mafft.cbrc.jp/alignment/software/tips0.html
 
-## Masking alignment before phylogeny
-
-```
-clipkit ALIGNMENT.fasta
-```
-For further details follow: https://jlsteenwyk.com/ClipKIT/advanced/index.html
-
+* No masking was used before alignment 
 ## Phylogenetic tree after alignment
 Using RAxML to perform a rapid bootstrap analysis to infer a maximum likelihood tree based on molecular sequence data in PHYLIP format. 
 
