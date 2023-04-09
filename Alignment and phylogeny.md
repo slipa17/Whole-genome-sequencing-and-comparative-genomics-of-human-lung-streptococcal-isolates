@@ -1,4 +1,10 @@
 
+## Removal of duplicate FASTA sequences 
+
+```
+seqkit rmdup -s INPUT.fasta > OUTPUT.fasta 
+
+```
 ## Concatenation of FASTA sequences
 
 * Concatenate sequences with proper new lines after each sequence
