@@ -14,7 +14,8 @@ cat *.fasta > all.fasta
 ```
 ## Formatting FASTA before alignment
 
-```fasta_formatter -i all_users_ref_homd_16s.fasta -o all_users_ref_homd_16s_formatted.fasta -w 0
+```
+fasta_formatter -i all_users_ref_homd_16s.fasta -o all_users_ref_homd_16s_formatted.fasta -w 0
 ```
 
 ## Performing alignment using MAFFT
