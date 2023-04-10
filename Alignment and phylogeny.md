@@ -13,7 +13,7 @@ vsearch --derep_fulllength INPUT.fasta --minuniquesize 1 --sizeout --output OUTP
 cat *.fasta > all.fasta
 ```
 ## Formatting FASTA before alignment
-
+* This is a quality assurance step to make sure the file is in FASTA format.
 ```
 fasta_formatter -i input.fasta -o output_formatted.fasta -w 0
 ```
