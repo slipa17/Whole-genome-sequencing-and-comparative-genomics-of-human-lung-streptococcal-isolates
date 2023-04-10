@@ -19,7 +19,7 @@ fasta_formatter -i input.fasta -o output_formatted.fasta -w 0
 ```
 
 ## Performing alignment using MAFFT
-
+* ```--auto```allows MAFFT to automatically decide the parameters to use based on the input file.
 ```
 mafft --auto INPUT.fasta > OUTPUT.fasta
 
