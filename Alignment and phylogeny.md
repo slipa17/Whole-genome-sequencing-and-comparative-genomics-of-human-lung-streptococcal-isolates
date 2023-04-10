@@ -22,6 +22,11 @@ cat *.fasta > all.fasta
 ```
 fasta_formatter -i input.fasta -o output_formatted.fasta -w 0
 ```
+## Trimming FASTA to size before alignment
+
+```
+fastx_trimmer -l N -i INPUT.fasta -o INPUT_trimmed.fasta
+```
 
 ## Performing alignment using MAFFT
 * ```--auto```allows MAFFT to automatically decide the parameters to use based on the input file.
