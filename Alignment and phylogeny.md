@@ -1,8 +1,13 @@
+## Rename of duplicate sequences names
+```
+ seqkit rename -n INPUT.fasta -o Input_renamed.fasta
+```
+
 
 ## Removal of duplicate FASTA sequences / collapse identical sequences
 
 ```
-vsearch --derep_fulllength INPUT.fasta --minuniquesize 1 --sizeout --output OUTPUT.fasta                
+seqkit rmdup -s INPUT.fasta -o INPUT_clean.fasta               
 
 ```
 ## Concatenation of FASTA sequences
