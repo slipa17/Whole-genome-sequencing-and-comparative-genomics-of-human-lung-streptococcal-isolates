@@ -38,7 +38,8 @@ mafft --auto INPUT.fasta > OUTPUT.fasta
 for more details on arguments, please follow: https://mafft.cbrc.jp/alignment/software/tips0.html
 
 * No masking was used after alignment 
-## Phylogenetic tree after alignment
+
+## Phylogenetic tree after alignment using RAxML 
 Using RAxML to perform a rapid bootstrap analysis to infer a maximum likelihood tree based on molecular sequence data in PHYLIP format. 
 
 ```
@@ -57,3 +58,9 @@ raxmlHPC -f a -p 12345 -x 12345 -m PROTGAMMAAUTO -# 100 -s bacteria_capsule_outp
 * Note:for nucleotide sequences it is recommended to use the model ```-m GTRGAMMA``` model for robust phylogenetic relationship. However, it can be computationally intensive.
 
 For further details please follow: https://cme.h-its.org/exelixis/web/software/raxml/hands_on.html 
+
+## Phylogenetic tree after alignment using FastTree (especially for non-complex large nucleotide alignments for e.g. 16S rRNA sequences phylogeny)
+
+```
+FastTree -nt -gtr -gamma -log homd_user_ref_align all_users_ref_homd_16s_clean_trimmed_aligned.fasta > all_users_ref_homd_16s_clean_trimmed_aligned_tree 
+```
