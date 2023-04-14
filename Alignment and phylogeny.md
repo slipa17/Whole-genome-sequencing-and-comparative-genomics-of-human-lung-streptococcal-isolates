@@ -39,6 +39,15 @@ for more details on arguments, please follow: https://mafft.cbrc.jp/alignment/so
 
 * No masking was used after alignment 
 
+## Calculation of distance matrix post alignment
+* Using EMBOSS ```distmat```function 
+* Since, alignment with MAFFT is performed already with appropriate correction algorithm. No further correction was applied indicated by ```-nucmethod 0```
+
+```
+distmat -sequence aligned.fasta -nucmethod 0 -outfile aligned_dist
+
+```
+
 ## Phylogenetic tree after alignment using RAxML 
 Using RAxML to perform a rapid bootstrap analysis to infer a maximum likelihood tree based on molecular sequence data in PHYLIP format. 
 
