@@ -92,8 +92,8 @@ done
                       
 
  ##  Extracting the desired sequences from the file containing the total sequences
- 
- ### Extraction of sequences from a single FASTA file with a identifier list
+
+### Extraction of sequences from a single FASTA file with a identifier list
  
 This code is using the bioawk utility to process a FASTA format file (INPUT.faa) and filter the sequences based on a list of sequence identifiers stored in a separate text file (IDs.txt).
             
@@ -106,7 +106,6 @@ This code is using the bioawk utility to process a FASTA format file (INPUT.faa)
 * Finally, the output is redirected to a new FASTA file named OUTPUT.faa. The > symbol indicates that the output will be written to a new file, rather than overwriting the input file.
 
 So overall, this code extracts a subset of sequences from the INPUT.faa file based on their sequence identifiers, and writes the filtered sequences to a new FASTA file OUTPUT.faa.
-
 
 ### Using a script to loop over a directory and perform FASTA extraction using multiple FASTA and identifiers files
 
