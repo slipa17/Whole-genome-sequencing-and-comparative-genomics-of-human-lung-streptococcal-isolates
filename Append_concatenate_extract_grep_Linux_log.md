@@ -97,8 +97,13 @@ This code is using the bioawk utility to process a FASTA format file (INPUT.faa)
  ```
  bioawk -cfastx 'BEGIN{while((getline k <"IDs.txt")>0)i[k]=1}{if(i[$name])print ">"$name"\n"$seq}' INPUT.faa > OUTPUT.faa
 ```
+* This calls the bioawk utility and specifies the input format as FASTA (-cfastx).
+* This is a BEGIN block, which is executed before processing the input file. It reads the identifiers from the IDs.txt file and stores them as keys in an associative array i
+* For each sequence in the input file, this code checks if its identifier ($name) is present in the i array. If it is, the sequence is printed in FASTA format to STDOUT with the > symbol followed by the sequence identifier ($name), and the sequence itself ($seq) on the following line.
+* Finally, the output is redirected to a new FASTA file named OUTPUT.faa. The > symbol indicates that the output will be written to a new file, rather than overwriting the input file.
 
-Note:  IDs.txt list: write the name of the list that is to be extracted separately in a text file one after another and save it. Then pass that .txt file to the above code. The above code is for extracting a single or an individual file.
+So overall, this code extracts a subset of sequences from the INPUT.faa file based on their sequence identifiers, and writes the filtered sequences to a new FASTA file OUTPUT.faa.
+
 
 Performing this using a loop:
 1. Loop through all .faa files in the current directory.
