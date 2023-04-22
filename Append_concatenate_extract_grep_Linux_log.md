@@ -91,20 +91,14 @@ done
                       Note:  >> is the symbol used for the extraction of the grepped output to a new file.
                       
 
- #  Extracting the desired sequences from the file containing the total sequences
-    
+ ##  Extracting the desired sequences from the file containing the total sequences
+This code is using the bioawk utility to process a FASTA format file (INPUT.faa) and filter the sequences based on a list of sequence identifiers stored in a separate text file (IDs.txt).
             
-  ```
-  * First install the package seqtk :
-        
-    conda install -c bioconda seqtk 
-                
-  * Set up the directory and then run:
-         
-    seqtk subseq original_fasta_file Protein_list.txt > output_file_name
+ ```
+ bioawk -cfastx 'BEGIN{while((getline k <"IDs.txt")>0)i[k]=1}{if(i[$name])print ">"$name"\n"$seq}' INPUT.faa > OUTPUT.faa
 ```
 
-Note:  protein_id list: write the name of the list that is to be extracted separately in a text file one after another and save it. Then pass that .txt file to the above code. The above code is for extracting a single or an individual file.
+Note:  IDs.txt list: write the name of the list that is to be extracted separately in a text file one after another and save it. Then pass that .txt file to the above code. The above code is for extracting a single or an individual file.
 
 Performing this using a loop:
 1. Loop through all .faa files in the current directory.
