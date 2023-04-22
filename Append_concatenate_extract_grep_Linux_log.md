@@ -40,7 +40,7 @@ grep -v "^>" INPUT.fasta | awk 'BEGIN { ORS=""; print ">single_FASTA_header\n" }
 
 To extract sequences from multiple input files, you can use a loop in a bash script that runs the command you provided for each file. Here's an example that modifies the command to add "_combined" to the output file name:
 ```
-mkdir -p output
+mkdir -p combined_output
 
 for file in *.fasta
 do
