@@ -107,10 +107,10 @@ This code is using the bioawk utility to process a FASTA format file (INPUT.faa)
 
 So overall, this code extracts a subset of sequences from the INPUT.faa file based on their sequence identifiers, and writes the filtered sequences to a new FASTA file OUTPUT.faa.
 
-### Extraction of sequences from multiple FASTA and identifiers files using protein_fasta_extraction.sh
+### Extraction of sequences from multiple FASTA and identifiers files using ```protein_fasta_extraction.sh```
 
 ```
-bash script_name.sh path/to/input_dir path/to/output_dir
+./protein_fasta_extraction.sh path/to/input_dir path/to/output_dir
 
 ```
 
