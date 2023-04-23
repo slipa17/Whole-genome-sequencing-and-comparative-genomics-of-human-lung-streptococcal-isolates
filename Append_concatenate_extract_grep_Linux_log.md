@@ -56,30 +56,29 @@ done
 4. The output of the command is redirected to a new file in the output subfolder with the name specified in the output variable.
 
 ## Grepping
-* Set up the directory first and then run:
+
 1. Sequence counting: 
 
 ```
 grep -c ">" file name
       
 ```
-    
-    2. Taking one list and subtracting it from another:
-       ```
-    grep -Fvw -f HEADERFILE.txt full_list.txt 
-       ```
-    
-    (The options -F and -w ensure that the entire word is utilized as a literal string, -v prevents the matching patterns from being printed, and -f filename.txt indicates that the input patterns are in the file.)
-     
-                Note:  HEADERFILE.txt : It is a set of lists written in a text file that is to be substracted from the main file
-                       full_list.txt : main file
+2. Taking one list and subtracting it from another:
+```
+grep -Fvw -f HEADERFILE.txt full_list.txt 
+
+```
+* The options ```-F``` and ```-w``` ensure that the entire word is utilized as a literal string.
+* ```-v``` prevents the matching patterns from being printed.
+* ```-f``` filename.txt indicates that the input patterns are in the file.
+Note:  HEADERFILE.txt : It is a set of lists written in a text file that is to be substracted from the main file 
                                             
+3. Finding the specific word/genes: 
+
+```
+grep -i "the word/genes you want to search in the file" file_name 
     
-    3. Finding the specific word/genes: 
-       ```
-    grep -i "the word/genes you want to search in the file" file_name 
-    
-       ```
+```
    
     4. Exporting the grep file to your main folder: 
        ```
