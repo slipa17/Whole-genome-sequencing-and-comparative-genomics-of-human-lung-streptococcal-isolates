@@ -56,15 +56,13 @@ done
 4. The output of the command is redirected to a new file in the output subfolder with the name specified in the output variable.
 
 ## Grepping
-     
-          
-          * Set up the directory first and then run:
-          
-    1. Sequence counting: 
-       ```
-       grep -c ">" file name
-       
-       ```
+* Set up the directory first and then run:
+1. Sequence counting: 
+
+```
+grep -c ">" file name
+      
+```
     
     2. Taking one list and subtracting it from another:
        ```
