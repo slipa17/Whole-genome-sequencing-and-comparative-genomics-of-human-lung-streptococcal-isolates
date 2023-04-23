@@ -44,7 +44,7 @@ mkdir -p combined_output
 
 for file in *.fasta
 do
-    output="output/${file%%.*}_combined.fasta"
+    output="combined_output/${file%%.*}_combined.fasta"
     grep -v "^>" "$file" | awk -v name="$file" 'BEGIN { ORS=""; print ">" name "\n" } { print }' > "$output"
 done
 
