@@ -61,15 +61,15 @@ done
           * Set up the directory first and then run:
           
     1. Sequence counting: 
-    
+       ```
        grep -c ">" file name
        
-    
+       ```
     
     2. Taking one list and subtracting it from another:
-    
+       ```
     grep -Fvw -f HEADERFILE.txt full_list.txt 
-    
+       ```
     
     (The options -F and -w ensure that the entire word is utilized as a literal string, -v prevents the matching patterns from being printed, and -f filename.txt indicates that the input patterns are in the file.)
      
@@ -78,18 +78,26 @@ done
                                             
     
     3. Finding the specific word/genes: 
-    
+       ```
     grep -i "the word/genes you want to search in the file" file_name 
     
-    
+       ```
    
     4. Exporting the grep file to your main folder: 
-    
+       ```
     grep -i "the word/genes you want to search in the file" file_name containing the word/genes you want to search >> new_grepped_file_name with an extension
-                 
+         ```           
                       New grepped_file_name extension: .txt, .faa etc
                       Note:  >> is the symbol used for the extraction of the grepped output to a new file.
-                      
+   5. Grepping multiple files at the same time
+   
+   ```
+
+for file in *.fasta; do
+  echo "Counting headers in $file"
+  grep -c ">" $file
+done
+```
 
  ##  Extracting the desired sequences from the file containing the total sequences
 
