@@ -30,6 +30,7 @@ fastx_trimmer -l N -i INPUT.fasta -o INPUT_trimmed.fasta
 
 ## Performing alignment using MAFFT
 * ```--auto```allows MAFFT to automatically decide the parameters to use based on the input file.
+* ```--nomemsave```for disabling memory save mode and make it faster.
 ```
 mafft --auto INPUT.fasta > OUTPUT.fasta
 
