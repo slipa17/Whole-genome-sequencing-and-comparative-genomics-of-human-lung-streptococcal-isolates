@@ -53,8 +53,13 @@ distmat -sequence aligned.fasta -nucmethod 0 -outfile aligned_dist
 Using RAxML to perform a rapid bootstrap analysis to infer a maximum likelihood tree based on molecular sequence data in PHYLIP format. 
 
 ```
-raxmlHPC -f a -p 12345 -x 12345 -m PROTGAMMAAUTO -# 100 -s bacteria_capsule_output_phylip.phy -n T20
+raxmlHPC -f a -p 12345 -x 12345 -m PROTGAMMAAUTO -# 100 -s INPUT_ALIGNMENT.phy -n OUTPUT.tre
 
+```
+RAxML will use low number of CPU threads by default based on the size of the sequences. However, to gain some speed increasing the ```raxmlHPC-PTHREADS``` version can be used to help with the speed.
+
+```
+raxmlHPC-PTHREADS -T 4 -f a -p 12345 -x 12345 -m PROTGAMMAAUTO -# 100 -s INPUT_ALIGNMENT.phy -n OUTPUT.tre
 ```
 
 * ```-f a```: This specifies the type of analysis and the ```a``` option indicates that you want to perform a rapid bootstrap analysis and search for the best-scoring maximum likelihood (ML) tree.
@@ -63,7 +68,7 @@ raxmlHPC -f a -p 12345 -x 12345 -m PROTGAMMAAUTO -# 100 -s bacteria_capsule_outp
 * ```-m PROTGAMMAAUTO```: This specifies the substitution model to be used. In this case, the PROTGAMMAAUTO model allows RAxML to automatically determine the best-fitting substitution model based on the input data.
 * ```-# 100```: This sets the number of bootstrap replicates to perform.
 * ```-s INPUT_ALIGNMENT.phy```: This specifies the name of the input file containing the molecular sequence data in PHYLIP format.
-* ```-n T20```: This specifies the name of the output file. 
+* ```-n OUTPUT.tre```: This specifies the name of the output file. 
 
 * Note:for nucleotide sequences it is recommended to use the model ```-m GTRGAMMA``` model for robust phylogenetic relationship. However, it can be computationally intensive.
 
