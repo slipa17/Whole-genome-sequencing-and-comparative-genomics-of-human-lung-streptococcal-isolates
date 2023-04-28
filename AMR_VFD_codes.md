@@ -1,4 +1,4 @@
-###### ABRICATE for antibiotic resistance and virulence genes
+## ABRICATE for antibiotic resistance and virulence genes
 
 ```
 * Install abricate
