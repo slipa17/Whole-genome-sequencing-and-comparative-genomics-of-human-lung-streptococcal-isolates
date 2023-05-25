@@ -11,10 +11,10 @@ This command uses awk to process the input FASTA file. It does the following:
 
 ## To append strain name to the FASTA headers
           
-    ```
-    sed 's/>.*/&_file/' file.faa > output_file_name.faa
+ ```
+ sed 's/>.*/&_file/' file.faa > output_file_name.faa
     
-    ```
+ ```
      
   ## To append a random string "XXXX" after each FASTA header
      
