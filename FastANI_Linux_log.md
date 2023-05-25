@@ -67,7 +67,7 @@ dev.off()
  
  ``` 
       
-      Note: python3 is my version of python; hence, it is to be named accordingly to your own python version. 
+      Note: python3 denotes my version of python; hence, it is to be named accordingly to your own python version. 
 
  *  First install the pygenomeviz package:
  
