@@ -83,14 +83,15 @@ grep -i "the word/genes you want to search in the file" file_name
 ```
    
     4. Exporting the grep file to your main folder: 
-       ```
-    grep -i "the word/genes you want to search in the file" file_name containing the word/genes you want to search >> new_grepped_file_name with an extension
-         ```           
+      
+```
+grep -i "the word/genes you want to search in the file" file_name containing the word/genes you want to search >> new_grepped_file_name with an extension
+```           
                       New grepped_file_name extension: .txt, .faa etc
                       Note:  >> is the symbol used for the extraction of the grepped output to a new file.
    5. Grepping multiple files at the same time
    
-   ```
+```
 
 for file in *.fasta; do
   echo "Counting headers in $file"
@@ -104,7 +105,7 @@ done
  
 This code is using the bioawk utility to process a FASTA format file (INPUT.faa) and filter the sequences based on a list of sequence identifiers stored in a separate text file (IDs.txt).
             
- ```
+```
  bioawk -cfastx 'BEGIN{while((getline k <"IDs.txt")>0)i[k]=1}{if(i[$name])print ">"$name"\n"$seq}' INPUT.faa > OUTPUT.faa
 ```
 * This calls the bioawk utility and specifies the input format as FASTA (-cfastx).
