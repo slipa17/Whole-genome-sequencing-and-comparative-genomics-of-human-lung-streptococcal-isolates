@@ -22,7 +22,7 @@ conda create -n foo -c conda-forge -c bioconda fastani
  # For one-one genome visualization grid   
  
  ```
-  * Calling R in Linux 
+ * Calling R in Linux 
  
    Rscript Rscript.R query_file_name.fasta reference_file_name.fasta file_name.out.visual
  
