@@ -60,21 +60,28 @@ dev.off()
           
  ## For one-one genome visualization grid
  
+ * Calling Python in Linux
+ 
  ```
- * Calling Python in Linux 
-  
-    python3 python3_scripts.py query_file_name.fasta reference_file_name.fasta file_name.out.visual file_name.png --cmap viridis --link_color red --curve 
+ python3 python3_scripts.py query_file_name.fasta reference_file_name.fasta file_name.out.visual file_name.png --cmap viridis --link_color red --curve 
+ 
+ ``` 
       
       Note: python3 is my version of python; hence, it is to be named accordingly to your own python version. 
 
  *  First install the pygenomeviz package:
  
+ ``` 
     conda install -c conda-forge -c bioconda pygenomeviz 
     
+  ``` 
+       
  *  Set up the directory and then run the script.
  
+    ``` 
     python3 FastANI.py genome1.fasta genome2.fna fastani.out.visual example01.png --cmap viridis --link_color red --curve 
-     
+    
+    ``` 
      
      Note: python3_scripts.py
      
