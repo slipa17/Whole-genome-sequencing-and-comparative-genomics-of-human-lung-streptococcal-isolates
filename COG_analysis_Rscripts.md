@@ -95,7 +95,6 @@ str(dataframe_name)
 ```
 install.packages("ggplot2")
 library("ggplot2")
-
 ```
 
 ### To draw the Pretty Heatmaps(pheatmap)
@@ -103,7 +102,6 @@ library("ggplot2")
 * First install the package and load the library 
 
 ```
-
 install.packages("pheatmap") 
 library("pheatmap")
 ```
