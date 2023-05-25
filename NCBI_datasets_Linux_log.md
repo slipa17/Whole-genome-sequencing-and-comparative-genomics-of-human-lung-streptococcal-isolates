@@ -1,5 +1,4 @@
 ### To download biological sequence data from NCBI
-
 ```conda create -n ncbi_datasets
 ```
 
