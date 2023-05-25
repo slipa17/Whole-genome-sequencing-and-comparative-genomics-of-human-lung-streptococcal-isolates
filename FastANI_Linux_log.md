@@ -22,7 +22,7 @@ conda create -n foo -c conda-forge -c bioconda fastani
  ## For one-one genome visualization grid   
  
  ```
- * Calling R in Linux 
+ . Calling R in Linux 
  
    Rscript Rscript.R query_file_name.fasta reference_file_name.fasta file_name.out.visual
  
@@ -61,13 +61,13 @@ dev.off()
  ## For one-one genome visualization grid
  
  ```
-   * Calling Python in Linux 
+ * Calling Python in Linux 
   
     python3 python3_scripts.py query_file_name.fasta reference_file_name.fasta file_name.out.visual file_name.png --cmap viridis --link_color red --curve 
       
       Note: python3 is my version of python; hence, it is to be named accordingly to your own python version. 
 
-*  First install the pygenomeviz package:
+ *  First install the pygenomeviz package:
  
     conda install -c conda-forge -c bioconda pygenomeviz 
     
@@ -233,7 +233,7 @@ Query = [P2D11.fasta]
 ## For one-many genome clustermap  
 
  ```
-  * Calling Python in Linux 
+* Calling Python in Linux 
 
 * First install the aniclustermap package: 
 
