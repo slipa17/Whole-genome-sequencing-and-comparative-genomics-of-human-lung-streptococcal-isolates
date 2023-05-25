@@ -4,6 +4,7 @@
 
 ```
  conda install -c conda-forge -c bioconda -c defaults abricate
+ 
  abricate --check
  abricate --list
  ```
