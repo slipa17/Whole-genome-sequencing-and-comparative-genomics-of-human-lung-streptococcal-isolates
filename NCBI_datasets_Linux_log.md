@@ -1,4 +1,4 @@
-## To download biological sequence data from NCBI.
+### To download biological sequence data from NCBI.
 
 ```conda create -n ncbi_datasets
 ```
@@ -8,21 +8,21 @@ Please update conda by running
     $ conda update -n base conda
 
 
-## To activate ncbi_datasets environment
+### To activate ncbi_datasets environment
 
     $ conda activate ncbi_datasets
 
-## To deactivate an active environment
+### To deactivate an active environment
 
      $ conda deactivate
 
-## To install the datasets conda package.
+### To install the datasets conda package.
 
 ```
    conda install -c conda-forge ncbi-datasets-cli
 ```
 
-## NCBI genome downloads:
+### NCBI genome downloads:
 
 * For genomes
 
@@ -30,7 +30,7 @@ Please update conda by running
 datasets download genome accession --inputfile input_genome_files.txt --annotated --include-gbff
 ```
 
-## To unzip the ncbi_dataset.zip:
+### To unzip the ncbi_dataset.zip:
 
 * First install unzip
 
@@ -43,7 +43,7 @@ brew install unzip
 ```
 unzip ncbi_dataset.zip
 ```
-## make local BLAST database for Streptococcus genomes / nucleotides / proteins (FASTA format) and performing BLAST:
+### make local BLAST database for Streptococcus genomes / nucleotides / proteins (FASTA format) and performing BLAST:
 
 ```
 cat * (all files).fasta > all_sequences.fasta
