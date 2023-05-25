@@ -13,7 +13,7 @@ This command uses awk to process the input FASTA file. It does the following:
           
            ```
            sed 's/>.*/&_file/' file.faa > output_file_name.faa
-              ```
+           ```
   ## To append a random string "XXXX" after each FASTA header
      
 ```
