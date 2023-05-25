@@ -19,7 +19,7 @@ conda create -n foo -c conda-forge -c bioconda fastani
  fastANI -q genome1.fa -r genome2.fa --visualize -o file_name.out
  ```    
 
- # For one-one genome visualization grid   
+ ## For one-one genome visualization grid   
  
  ```
  * Calling R in Linux 
