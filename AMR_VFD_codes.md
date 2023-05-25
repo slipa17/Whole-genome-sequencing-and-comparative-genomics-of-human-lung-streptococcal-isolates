@@ -1,8 +1,8 @@
 ## ABRICATE for antibiotic resistance and virulence genes
 
-```
 * Install abricate
 
+```
  conda install -c conda-forge -c bioconda -c defaults abricate
  abricate --check
  abricate --list
