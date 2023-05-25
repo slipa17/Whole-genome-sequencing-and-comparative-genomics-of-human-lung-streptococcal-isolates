@@ -1,32 +1,32 @@
-# Reading the csv file, Merging the dataframe and Plotting the heatmap
+### Reading the csv file, Merging the dataframe and Plotting the heatmap
 
-# Importing pandas library
+### Importing pandas library
 
 ```
 import pandas as pd
 ```
 
                      
-# Importing pandas module (to run the python script)
+### Importing pandas module (to run the python script)
 
 ```python
 import os
 ```
 
 
-# setting the current working directory
+### setting the current working directory
 
 ```python
 os.getcwd()
 ```
 
-# changing the current working directory to specified path
+### changing the current working directory to specified path
 
 ```python
 os.chdir(path)
 ```
 
-# reading the csv file
+### reading the csv file
 
 ```python
 strain = pd.read_csv("name of the file.csv")
@@ -34,14 +34,14 @@ strain
 ```
 strain: name of the microbial isolates
 
-# get a frequency table with value counts
+### get a frequency table with value counts
 ```
 frequency1 = strain["name of the category inside the csv file"].value_counts(ascending=True).sort_index()
 frequency1
 ```
 frequency1: name of the object
 
-# converting a frequency table into a data frame
+### converting a frequency table into a data frame
 ```
 df1 = pd.DataFrame(frequency1)
 df1
@@ -49,7 +49,7 @@ df1
 df1: name of the object
 
 
-# reading the csv file
+### reading the csv file
 
 ```python
 strain = pd.read_csv("name of the file.csv")
@@ -58,7 +58,7 @@ strain
 strain: name of the microbial isolates
 
 
-# get a frequency table with value counts
+### get a frequency table with value counts
 
 ```
 frequency2 = strain["name of the category inside the csv file"].value_counts(ascending=True).sort_index()
@@ -66,7 +66,7 @@ frequency2
 ```
 frequency2: name of the object
 
-# converting a frequency table into a data frame
+### converting a frequency table into a data frame
 
 ```
 df2 = pd.DataFrame(frequency2)
@@ -75,7 +75,7 @@ df2
 df2: name of the object
 
 
-# Merging both the data frames
+### Merging both the data frames
 
 ```python
 merge1 = pd.merge(df1,df2,left_index=True,right_index=True,how='left')
@@ -94,7 +94,7 @@ how='right'; the left_index will be merged on the right_index
 * In case the left_index dataframe and right_index dataframe has equal number of elements, use:
 how='left' or how='right
 
-# Alternate command for merging both the data frames
+### Alternate command for merging both the data frames
 
 ```python
 merge1 = pd.merge(df1,df2,how='left', on=["Pathway"])
@@ -105,30 +105,30 @@ Note:
 * how= 'left' or how= 'right'; depends on which side of the "dataframe" you want to merge
 * on=["Pathway"]; depends on which "category" of the dataframe you want to merge
 
-# Substituting NaN in the merged dataframe with 0
+### Substituting NaN in the merged dataframe with 0
 
 ```python
 merge1.fillna(0)
 ```
 
-# Delete a particular column of the dataframe
+### Delete a particular column of the dataframe
 
 ```python
 del file_name['particular_column_name']
 ```
 
-# Re-naming the index of the dataframe
+### Re-naming the index of the dataframe
 
 ```python
 new_file_name = dataframe_name.rename(index={0:'rename',1:'rename',2:'rename',3:'rename',4:'rename',5:'rename'})
 ```
 
-# Exporting the particular csv file to the main folder
+### Exporting the particular csv file to the main folder
 
 ```python
 merge1.to_csv('COG.csv')
 ```
-# Importing libraries for the heatmap
+### Importing libraries for the heatmap
 
 ```python
 import seaborn as sns
@@ -136,7 +136,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-# Plotting the heatmap
+### Plotting the heatmap
 
 ```python
 plt.figure(figsize=(9,9))
@@ -147,7 +147,7 @@ plt.show()
 ```
     
 
-# Re-arranging the merged coloumns
+### Re-arranging the merged coloumns
 
 ```python
 new_columns = ['column_2','column_5','column_1','column_6','column_3','column_4']
