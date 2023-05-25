@@ -33,12 +33,12 @@ For genomes:
 ## To unzip the ncbi_dataset.zip:
 
 ```
-* First install unzip:
+. First install unzip:
 
    brew install unzip
 
 
-* Then unzip the file ncbi_dataset.zip from the provided directory:
+. Then unzip the file ncbi_dataset.zip from the provided directory:
 
    unzip ncbi_dataset.zip
 ```
