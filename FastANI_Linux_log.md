@@ -81,9 +81,9 @@ dev.off()
     ``` 
     python3 FastANI.py genome1.fasta genome2.fna fastani.out.visual example01.png --cmap viridis --link_color red --curve 
     
-    ``` 
+  ``` 
      
-     Note: python3_scripts.py
+    Note: python3_scripts.py
      
      
     
