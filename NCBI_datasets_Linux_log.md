@@ -24,23 +24,24 @@ Please update conda by running
 
 ## NCBI genome downloads:
 
-```
-For genomes:
+* For genomes
 
- datasets download genome accession --inputfile input_genome_files.txt --annotated --include-gbff
+```
+datasets download genome accession --inputfile input_genome_files.txt --annotated --include-gbff
 ```
 
 ## To unzip the ncbi_dataset.zip:
 
+* First install unzip
+
 ```
-. First install unzip:
+brew install unzip
+```
 
-   brew install unzip
+* Then unzip the file ncbi_dataset.zip from the provided directory
 
-
-. Then unzip the file ncbi_dataset.zip from the provided directory:
-
-   unzip ncbi_dataset.zip
+```
+unzip ncbi_dataset.zip
 ```
 ## make local BLAST database for Streptococcus genomes / nucleotides / proteins (FASTA format) and performing BLAST:
 
