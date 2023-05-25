@@ -239,15 +239,18 @@ Query = [P2D11.fasta]
 
 ## For one-many genome clustermap  
 
- ```
 * Calling Python in Linux 
 
-* First install the aniclustermap package: 
+ ```
+ First install the aniclustermap package: 
 
    conda install -c bioconda -c conda-forge aniclustermap
+   
+  ```
 
  *  Set up the directory and then run the script.
         
+   ```
    ANIclustermap -i ./users1/ -o ./ANIclustermap_result \--fig_width 15 --cmap_colors white,orange,red 
    ```
           -i: input file and -o: output file
@@ -256,15 +259,17 @@ Query = [P2D11.fasta]
 
 ## For one-many genome visualization grid  
 
+* Calling Python in Linux
+
   ```
-  * Calling Python in Linux 
-  
-* First install the pygenomeviz mmseqs2 package: 
+    First install the pygenomeviz mmseqs2 package: 
  
    conda install -c conda-forge -c bioconda pygenomeviz mmseqs2 
+   ```
 
  * Set up the directory and then run the script.
-      
+   
+   ```
    pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --   feature_plotstyle arrow
    ```
    
@@ -280,9 +285,9 @@ Query = [P2D11.fasta]
     
 ## For many-many genome clustermap  
 
+ * Calling Python in Linux
+ 
   ```
-   * Calling Python in Linux
-    
     ANIclustermap -i ./users_ref/ -o ./output_file_name \--fig_width 15 --cmap_colors white,orange,red
    ```
                     -i: input file and -o: output file
@@ -291,13 +296,13 @@ Query = [P2D11.fasta]
                     
                     
 ## For many-many genome visualization grid 
-
+  * Calling Python in Linux
+  
    ```
-     * Calling Python in Linux
-     
-     pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --feature_plotstyle arrow --fig_width --track_labelsize --fig_track_height --arrow_shaft_ratio     
+   pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --feature_plotstyle arrow --fig_width --track_labelsize --fig_track_height --arrow_shaft_ratio     
     
                    -o : output_file_name
+   ```              
               
        Note: For every visualization grid, visualize.py is designed to do comparative plots of prokaryotic genomes having the size less than 10Mb. 
         
