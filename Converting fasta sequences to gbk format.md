@@ -18,7 +18,7 @@ input_handle = open("Documents/Comparative_genomics/Final_draft/PyGenomeviz_new/
 output_handle = open("Documents/Comparative_genomics/Final_draft/PyGenomeviz_new/P2D11_test/dnaA.gb","w")
 ```
 1- input_handle: set and read the path of the input files; in this case- input file is my fasta file
-2- output_handle: set and write the path of the output files; in this case- output file is the genbank file
+     2- output_handle: set and write the path of the output files; in this case- output file is the genbank file
 
 
 ```python
