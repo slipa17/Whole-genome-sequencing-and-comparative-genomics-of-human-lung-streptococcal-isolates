@@ -5,13 +5,13 @@ from Bio import SeqIO
 import OS
 ```
 
-* Set directory of the fasta sequence files
+* Either set directory of the fasta sequence files
 
 ```python
 file_path='/Users/slipakanungo/Documents/Comparative_genomics/Final_draft/PyGenomeviz_new/P2D11_test/'
 ```
 
-* Or set directory of the input and output files
+* Or else set directory of the input and output files
 
 ```python
 input_handle = open("Documents/Comparative_genomics/Final_draft/PyGenomeviz_new/P2D11_test/dnaA.fasta", "r")
