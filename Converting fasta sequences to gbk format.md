@@ -8,7 +8,7 @@ import OS
 ### Either set directory of the fasta sequence files
 
 ```python
-file_path= './file_name'
+file_path= './path_to_file_name'
 ```
 
 ### Or else set directory of the input and output files
