@@ -1,21 +1,21 @@
-* Import libraries
+### Import libraries
 
 ```python
 from Bio import SeqIO
 import OS
 ```
 
-* Either set directory of the fasta sequence files
+### Either set directory of the fasta sequence files
 
 ```python
-file_path='/Users/slipakanungo/Documents/Comparative_genomics/Final_draft/PyGenomeviz_new/P2D11_test/'
+file_path='./file_name'
 ```
 
-* Or else set directory of the input and output files
+### Or else set directory of the input and output files
 
 ```python
-input_handle = open("Documents/Comparative_genomics/Final_draft/PyGenomeviz_new/P2D11_test/dnaA.fasta", "r")
-output_handle = open("Documents/Comparative_genomics/Final_draft/PyGenomeviz_new/P2D11_test/dnaA.gb","w")
+input_handle = open("./dnaA.fasta", "r")
+output_handle = open("./dnaA.gb","w")
 
            input_handle: set and read the path of the input files. Here, input file is my fasta file
            output_handle: set and write the path of the output files. Here, output file is the genbank file
@@ -26,7 +26,7 @@ output_handle = open("Documents/Comparative_genomics/Final_draft/PyGenomeviz_new
 sequences = list(SeqIO.parse(input_handle, "fasta"))
 ```
 
-* Assign molecule type
+### Assign molecule type
 
 ```python
 for seq in sequences:
