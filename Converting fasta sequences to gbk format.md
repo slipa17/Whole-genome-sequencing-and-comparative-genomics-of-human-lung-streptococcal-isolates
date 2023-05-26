@@ -33,6 +33,12 @@ for seq in sequences:
     seq.annotations['molecule_type'] = 'DNA'
 ```
 
+* for seq in sequences:: This is a loop that iterates over each sequence in the sequences collection. The variable seq represents an individual sequence in each iteration of the loop.
+
+* seq.annotations['molecule_type'] = 'DNA': This line of code modifies the molecule_type annotation of the current sequence (seq) to be 'DNA'. Annotations are additional metadata or information associated with a sequence. In this case, the code is specifically targeting the molecule_type annotation, which typically specifies the type of molecule the sequence represents (e.g., DNA, RNA, protein).
+
+By setting seq.annotations['molecule_type'] to 'DNA', the code is explicitly assigning the value 'DNA' to the molecule_type annotation of each sequence in the sequences collection. This indicates that the sequences are DNA molecules.
+
 
 ```python
 count = SeqIO.write(sequences, output_handle, "genbank")
