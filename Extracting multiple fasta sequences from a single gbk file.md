@@ -1,8 +1,11 @@
+### Set the directory
+
 ```python
 genome_file='./genomic.gb'
 gene_list_file='./gene_name_list.txt'
 ```
 
+### Import libraries
 
 ```python
 from Bio import SeqIO
