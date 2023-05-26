@@ -53,7 +53,7 @@ count = SeqIO.write(sequences, output_handle, "genbank")
 
 * "genbank": This is the format specifier indicating that the sequences should be written in the GenBank format. Biopython's SeqIO module supports various file formats, and "genbank" specifies the GenBank format in this case.
 
-* The overall expression SeqIO.write(sequences, output_handle, "genbank") performs the writing operation, writing the sequences to the specified output file in the GenBank format. After executing this line of code, the variable count will hold the number of sequences that were successfully written to the output file in GenBank format.
+The overall expression SeqIO.write(sequences, output_handle, "genbank") performs the writing operation, writing the sequences to the specified output file in the GenBank format. After executing this line of code, the variable count will hold the number of sequences that were successfully written to the output file in GenBank format.
 
 ```python
 output_handle.close()
