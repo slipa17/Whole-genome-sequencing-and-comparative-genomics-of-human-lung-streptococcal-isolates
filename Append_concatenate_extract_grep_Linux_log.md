@@ -72,7 +72,7 @@ done
 
 ### Grepping
 
-**. Sequence counting 
+#### Sequence counting 
 
 ```
 grep -c ">" file name
@@ -87,7 +87,8 @@ The command grep -c ">" file_name is used to count the number of lines in a file
 
 In summary, the command searches for lines in the specified file that contain the ">" character (typically used as a header indicator) and returns the count of such lines. It provides a quick way to determine the number of headers or specific occurrences of the ">" character in a file.
 
-**. Taking one list and subtracting it from another
+#### Taking one list and subtracting it from another
+
 ```
 grep -Fvw -f HEADERFILE.txt full_list.txt 
 
@@ -97,7 +98,7 @@ grep -Fvw -f HEADERFILE.txt full_list.txt
 * ```-f``` filename.txt indicates that the input patterns are in the file.
 Note:  HEADERFILE.txt : It is a set of lists written in a text file that is to be substracted from the main file 
                                             
-**. Finding the specific word/genes 
+#### Finding the specific word/genes 
 
 ```
 grep -i "the word/genes you want to search in the file" file_name 
@@ -113,7 +114,7 @@ The command grep -i "the word/genes you want to search in the file" file_name is
 In summary, the command searches for occurrences of the specified word or pattern in the file, ignoring case sensitivity. It will return all lines in the file that contain a match, regardless of whether the letters are uppercase or lowercase. This command is useful for finding specific words or patterns within a file, regardless of their letter case.
 
 
-**Exporting the grep file to your main folder 
+#### Exporting the grep file to your main folder 
       
 ```
 grep -i "the word/genes you want to search in the file" file_name containing the word/genes you want to search >> new_grepped_file_name with an extension
@@ -121,7 +122,7 @@ grep -i "the word/genes you want to search in the file" file_name containing the
                       New grepped_file_name extension: .txt, .faa etc
                       Note:  >> is the symbol used for the extraction of the grepped output to a new file.
   
-  **Grepping multiple files at the same time
+#### Grepping multiple files at the same time
    
 ```
 
