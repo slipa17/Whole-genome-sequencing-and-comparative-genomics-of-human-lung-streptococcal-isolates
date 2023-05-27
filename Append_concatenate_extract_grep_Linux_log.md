@@ -15,6 +15,12 @@ This command uses awk to process the input FASTA file. It does the following:
  sed 's/>.*/&_file/' file.faa > output_file_name.faa
     
  ```
+* sed: The command-line utility for stream editing.
+* s/>.*/&_file/: The sed substitution command. It searches for a pattern that matches >.* (a line starting with ">") and replaces it with  &_file (appending "_file" to the matched pattern). The & represents the matched pattern itself.
+* file.faa: The input file on which the sed command is applied.
+* > output_file_name.faa: The output redirection symbol (>) followed by the output file name (output_file_name.faa). It redirects the modified output of the sed command to the specified file.
+
+In summary, the command takes an input file named file.faa and modifies its contents by appending "_file" to each line that starts with ">", and then saves the modified output to a new file named output_file_name.faa.
      
   ## To append a random string "XXXX" after each FASTA header
      
@@ -30,8 +36,15 @@ Set up the directory containing the respective (.faa files), then run the comman
 ```  
 cat *.faa > output_file_name
 ```
+* cat: The command used to concatenate and display the contents of files.
+* *.faa: The wildcard *.faa matches all files in the current directory with the ".faa" extension. It represents multiple input files to be concatenated.
+* > output_file_name: The output redirection symbol (>) followed by the output file name (output_file_name). It redirects the concatenated output of the cat command to the specified file.
+
+In summary, the command takes all the files in the current directory with the ".faa" extension and concatenates their contents into a single file named output_file_name. The resulting file will contain the combined contents of all the input files in the order they appear in the command.
+
 ## Self concantenation of a single multi-FASTA file from multiple header under a single header
-This command creates a new fasta filethat contains only the sequences from the original file without the header lines, and with a new header line at the beginning.
+
+This command creates a new fasta file that contains only the sequences from the original file without the header lines, and with a new header line at the beginning.
 
 ```
 grep -v "^>" INPUT.fasta | awk 'BEGIN { ORS=""; print ">single_FASTA_header\n" } { print }' > OUTPUT.fasta
@@ -65,6 +78,15 @@ done
 grep -c ">" file name
       
 ```
+The command grep -c ">" file_name is used to count the number of lines in a file that contain a specific pattern. Here's the breakdown of the command:
+
+* grep: The command-line utility for searching patterns in files.
+* ```-c``` : The option for counting the number of lines that match the pattern.
+* ```">"```: The pattern to search for. In this case, it is the ">" character, which is commonly used to denote header lines in some file formats.
+* file_name: The name of the file on which the grep command is applied. Replace file_name with the actual name or path of the file you want to search.
+
+In summary, the command searches for lines in the specified file that contain the ">" character (typically used as a header indicator) and returns the count of such lines. It provides a quick way to determine the number of headers or specific occurrences of the ">" character in a file.
+
 2. Taking one list and subtracting it from another:
 ```
 grep -Fvw -f HEADERFILE.txt full_list.txt 
@@ -81,15 +103,25 @@ Note:  HEADERFILE.txt : It is a set of lists written in a text file that is to b
 grep -i "the word/genes you want to search in the file" file_name 
     
 ```
-   
-    4. Exporting the grep file to your main folder: 
+The command grep -i "the word/genes you want to search in the file" file_name is used to perform a case-insensitive search for a specific word or pattern in a file. Here's the breakdown of the command:
+
+* grep: The command-line utility for searching patterns in files.
+* ```-i```: The option for performing a case-insensitive search, meaning it will match the search pattern regardless of uppercase or lowercase letters.
+* "the word/genes you want to search in the file": The word or pattern you want to search for within the file. Replace this with the actual word or pattern you want to search.
+* file_name: The name of the file on which the grep command is applied. Replace file_name with the actual name or path of the file you want to search.
+
+In summary, the command searches for occurrences of the specified word or pattern in the file, ignoring case sensitivity. It will return all lines in the file that contain a match, regardless of whether the letters are uppercase or lowercase. This command is useful for finding specific words or patterns within a file, regardless of their letter case.
+
+
+4. Exporting the grep file to your main folder: 
       
 ```
 grep -i "the word/genes you want to search in the file" file_name containing the word/genes you want to search >> new_grepped_file_name with an extension
 ```           
                       New grepped_file_name extension: .txt, .faa etc
                       Note:  >> is the symbol used for the extraction of the grepped output to a new file.
-   5. Grepping multiple files at the same time
+  
+  5. Grepping multiple files at the same time
    
 ```
 
