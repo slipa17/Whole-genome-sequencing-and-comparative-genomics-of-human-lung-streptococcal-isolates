@@ -1,3 +1,4 @@
+## The following codes have been run in the MacBook Terminal using the bash scripts.
 
 ### Replace ambiguities or non-ATGCN characters with N in the sequence lines
 ```
