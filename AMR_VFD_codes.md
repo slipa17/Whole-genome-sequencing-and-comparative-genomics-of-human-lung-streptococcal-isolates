@@ -1,5 +1,5 @@
 
-## The following codes have been run in the Mac Terminal using the bash scripts.
+## The following codes have been run in the MacBook Terminal using the bash scripts.
 
 # ABRICATE for antibiotic resistance 
 
