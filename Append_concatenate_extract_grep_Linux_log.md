@@ -38,7 +38,7 @@ cat *.faa > output_file_name
 ```
 * cat: The command used to concatenate and display the contents of files.
 * *.faa: The wildcard *.faa matches all files in the current directory with the ".faa" extension. It represents multiple input files to be concatenated.
-* > output_file_name: The output redirection symbol (>) followed by the output file name (output_file_name). It redirects the concatenated output of the cat command to the specified file.
+* ```> output_file_name```: The output redirection symbol (>) followed by the output file name (output_file_name). It redirects the concatenated output of the cat command to the specified file.
 
 In summary, the command takes all the files in the current directory with the ".faa" extension and concatenates their contents into a single file named output_file_name. The resulting file will contain the combined contents of all the input files in the order they appear in the command.
 
