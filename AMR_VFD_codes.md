@@ -41,9 +41,9 @@ Note that the specific functionalities and options of "abricate" may vary depend
 abricate -db resfinder *.fna > AMR_results.csv
 abricate --summary AMR_results.csv > new_file_name_summary.csv
 ```
-1-  * abricate: This is the command to execute the "abricate" tool.
+1 * abricate: This is the command to execute the "abricate" tool.
 
--db resfinder: This option specifies the database to be used for analysis. In this case, the "resfinder" database is specified, which contains information about antibiotic resistance genes.
+* -db resfinder: This option specifies the database to be used for analysis. In this case, the "resfinder" database is specified, which contains information about antibiotic resistance genes.
 
 * .fna: This is a wildcard that represents multiple genomic sequence files in FASTA format. The (*.fna) pattern matches all files with the .fna extension in the current directory.
 
@@ -56,7 +56,7 @@ By executing the command abricate -db resfinder *.fna > AMR_results.csv, the "ab
 Note that the specific options, databases, and output formats may vary depending on the version and configuration of the "abricate" tool. 
 
 
-2- * abricate: This is the command to execute the "abricate" tool.
+2 * abricate: This is the command to execute the "abricate" tool.
 
 * --summary: This option specifies that a summary report should be generated.
 
@@ -99,7 +99,7 @@ Note that the specific functionalities, options, and databases available in "abr
 abricate --db vfdb --quiet *.fna > new_file_name.csv
 abricate --db vfdb --summary new_file_name.csv > new_file_name_summary.csv
 ```
-1- * abricate: This is the command to execute the "abricate" tool.
+1 * abricate: This is the command to execute the "abricate" tool.
 
 * --db vfdb: This option specifies the database to be used for analysis. In this case, the "vfdb" database is specified, which contains information about virulence factors.
 
@@ -118,7 +118,7 @@ The resulting analysis results, which typically include information about the de
 Note that the specific options, databases, and output formats may vary depending on the version and configuration of the "abricate" tool. 
 
 
-2- * abricate: This is the command to execute the "abricate" tool.
+2 * abricate: This is the command to execute the "abricate" tool.
 
 * --db vfdb: This option specifies the database to be used for analysis. In this case, the "vfdb" database is specified, which contains information about virulence factors.
 
