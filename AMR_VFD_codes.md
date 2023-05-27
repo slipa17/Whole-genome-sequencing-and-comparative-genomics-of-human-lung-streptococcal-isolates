@@ -41,7 +41,7 @@ Note that the specific functionalities and options of "abricate" may vary depend
 abricate -db resfinder *.fna > AMR_results.csv
 abricate --summary AMR_results.csv > new_file_name_summary.csv
 ```
-1- * abricate: This is the command to execute the "abricate" tool.
+1-  * abricate: This is the command to execute the "abricate" tool.
 
 -db resfinder: This option specifies the database to be used for analysis. In this case, the "resfinder" database is specified, which contains information about antibiotic resistance genes.
 
