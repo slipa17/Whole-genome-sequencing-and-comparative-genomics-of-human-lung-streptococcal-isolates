@@ -1,14 +1,18 @@
+### Import libraries
+
 ```python
 from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
 import sys
 ```
 
+### Either set the path/directory
 
 ```python
 path = '/Users/slipakanungo/Documents/Comparative_genomics/Final_draft/Bacteria_capsule_extracted/T369_3/T369_3.gb'
 ```
 
+### Or else 
 
 ```python
 input_handle = open("Documents/Comparative_genomics/Final_draft/Bacteria_capsule_extracted/T369_3/T369_3.gb", "r")
