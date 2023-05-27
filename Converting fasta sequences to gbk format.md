@@ -15,11 +15,25 @@ file_path= './path_to_file_name'
 
 ```python
 input_handle = open("./dnaA.fasta", "r")
-output_handle = open("./dnaA.gb","w")
-
-           input_handle: set and read the path of the input files. Here, input file is my fasta file
-           output_handle: set and write the path of the output files. Here, output file is the genbank file
+output_handle = open("./dnaA.gb","w")          
 ```
+* input_handle: This is a file object that represents the input file "./dnaA.fasta". It is created by calling the open() function with the file path "./dnaA.fasta" and the mode "r", indicating that the file will be opened in read mode.
+
+* "./dnaA.fasta": This is the file path of the input file. It specifies the location and name of the file that you want to open for reading.
+
+* "r": This is the mode parameter passed to the open() function, indicating that the file should be opened in read mode.
+
+* output_handle: This is a file object that represents the output file "./dnaA.gb". It is created by calling the open() function with the file path "./dnaA.gb" and the mode "w", indicating that the file will be opened in write mode.
+
+* "./dnaA.gb": This is the file path of the output file. It specifies the location and name of the file that you want to open for writing.
+
+* "w": This is the mode parameter passed to the open() function, indicating that the file should be opened in write mode.
+
+By executing these lines of code, the input file "./dnaA.fasta" is opened in read mode and assigned to the variable input_handle, allowing you to read data from the file. Similarly, the output file "./dnaA.gb" is opened in write mode and assigned to the variable output_handle, enabling you to write data to the file.
+
+These file handles (input_handle and output_handle) can be used to read and write data from and to the respective files, allowing you to perform operations such as reading sequences, processing data, and saving results.
+
+In summary, these lines of code are used to open the input and output files for reading and writing, respectively, and assign the file objects (input_handle and output_handle) to handle the file operations.
 
 ### Parsing Sequences from a FASTA File
 
