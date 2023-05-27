@@ -1,4 +1,4 @@
-## The following codes have been run in the Jupyter Notebook using the Python scripts
+## The following codes have been run in the Jupyter Notebook using the Python scripts.
 
 
 ### Import libraries
