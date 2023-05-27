@@ -26,6 +26,20 @@ output_handle = open("./dnaA.gb","w")
 ```python
 sequences = list(SeqIO.parse(input_handle, "fasta"))
 ```
+* sequences: This is the variable that will store the parsed sequences from the FASTA file.
+
+* SeqIO.parse(): This function is from the Biopython SeqIO module and is used to read and parse sequences from a file. It takes two arguments: the input_handle, which represents the input file, and "fasta", which specifies the format of the file (in this case, FASTA).
+
+* input_handle: This is the file object representing the input file from which you want to read the sequences. It should have been opened in read mode using the open() function.
+
+* "fasta": This is the format specifier indicating that the sequences in the input file are in the FASTA format.
+
+By executing sequences = list(SeqIO.parse(input_handle, "fasta")), the code reads the sequences from the specified input file in the FASTA format and converts them into a list of SeqRecord objects or compatible sequence records. Each SeqRecord object typically contains the sequence itself, its identifier, description, and any additional annotations.
+
+The list() function is used to convert the generator returned by SeqIO.parse() into a list, allowing you to access and manipulate the sequences as needed. The resulting list, sequences, can be iterated over, searched, filtered, or subjected to further analysis.
+
+In summary, this line of code is responsible for reading and parsing the sequences from the input FASTA file and storing them in the sequences list for subsequent processing or analysis.
+
 
 ### Assign molecule type Annotation to DNA Sequences
 
