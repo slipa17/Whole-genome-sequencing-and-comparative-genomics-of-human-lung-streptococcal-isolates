@@ -6,7 +6,7 @@ from Bio.SeqRecord import SeqRecord
 import sys
 ```
 
-### Either set the path/directory of the genbank file
+### Either assign a File Path to a Variable
 
 ```python
 path = '/Users/slipakanungo/<Path>'
