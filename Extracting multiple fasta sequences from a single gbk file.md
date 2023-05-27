@@ -52,10 +52,10 @@ gb_object=SeqIO.read(genome_file,'gb')
 
 * SeqIO.read(): This is a function from Biopython's SeqIO module used for reading sequence records from a file. It takes two arguments:
 
-* genome_file: The first argument specifies the file to read from, which is the GenBank file in this case.
+1- genome_file: The first argument specifies the file to read from, which is the GenBank file in this case.
 'gb': The second argument is the format specifier, indicating that the file is in GenBank format. Biopython's SeqIO module supports various file formats, and 'gb' specifies the GenBank format in this case.
 
-* gb_object: This is the variable that stores the sequence record read from the GenBank file. The SeqIO.read() function returns a single SeqRecord object representing the sequence record, and it is assigned to the gb_object variable.
+2- gb_object: This is the variable that stores the sequence record read from the GenBank file. The SeqIO.read() function returns a single SeqRecord object representing the sequence record, and it is assigned to the gb_object variable.
 
 After executing this code, you can access various properties and methods of the gb_object to extract information about the sequence, such as the sequence itself, annotations, features, or any other metadata associated with the sequence in the GenBank file.
 
