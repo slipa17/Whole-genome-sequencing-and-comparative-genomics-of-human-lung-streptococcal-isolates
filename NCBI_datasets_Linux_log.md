@@ -78,6 +78,10 @@ In summary, the command installs the "unzip" utility on your macOS system using 
 ```
 unzip ncbi_dataset.zip
 ```
+* ```unzip```: The command-line utility used to extract files from ZIP archives.
+* ```ncbi_dataset.zip```: The name of the ZIP archive file you want to extract.
+
+In summary, the command instructs the "unzip" utility to extract the files and directories contained within the "ncbi_dataset.zip" archive. After running this command, the contents of the ZIP file will be extracted and placed in the current working directory.
 
 ### make local BLAST database for Streptococcus genomes / nucleotides / proteins (FASTA format) and performing BLAST
 
