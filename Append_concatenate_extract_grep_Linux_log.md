@@ -70,7 +70,7 @@ done
 3. The grep and awk commands are the same as before.
 4. The output of the command is redirected to a new file in the output subfolder with the name specified in the output variable.
 
-### Grepping
+## Grepping
 
 #### Sequence counting 
 
