@@ -1,3 +1,6 @@
+
+## The following codes are run in the Terminal using the bash scripts.
+
 # ABRICATE for antibiotic resistance 
 
 * Installing Abricate using Conda
