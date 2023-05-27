@@ -5,13 +5,13 @@ from Bio import SeqIO
 import OS
 ```
 
-### Either set directory of the fasta sequence files
+### Either assign a File Path to a Variable
 
 ```python
 file_path= './path_to_file_name'
 ```
 
-### Or else set directory of the input and output files
+### Or else set directory of the input and output files (Opening Input and Output Files for Sequence Conversion)
 
 ```python
 input_handle = open("./dnaA.fasta", "r")
@@ -21,12 +21,13 @@ output_handle = open("./dnaA.gb","w")
            output_handle: set and write the path of the output files. Here, output file is the genbank file
 ```
 
+### Parsing Sequences from a FASTA File
 
 ```python
 sequences = list(SeqIO.parse(input_handle, "fasta"))
 ```
 
-### Assign molecule type
+### Assign molecule type Annotation to DNA Sequences
 
 ```python
 for seq in sequences:
@@ -39,6 +40,7 @@ for seq in sequences:
 
 By setting seq.annotations['molecule_type'] to 'DNA', the code is explicitly assigning the value 'DNA' to the molecule_type annotation of each sequence in the sequences collection. This indicates that the sequences are DNA molecules.
 
+### Writing Sequences to a GenBank File
 
 ```python
 count = SeqIO.write(sequences, output_handle, "genbank")
@@ -54,6 +56,8 @@ count = SeqIO.write(sequences, output_handle, "genbank")
 * "genbank": This is the format specifier indicating that the sequences should be written in the GenBank format. Biopython's SeqIO module supports various file formats, and "genbank" specifies the GenBank format in this case.
 
 The overall expression SeqIO.write(sequences, output_handle, "genbank") performs the writing operation, writing the sequences to the specified output file in the GenBank format. After executing this line of code, the variable count will hold the number of sequences that were successfully written to the output file in GenBank format.
+
+### Closing Files and Displaying Conversion Summary
 
 ```python
 output_handle.close()
