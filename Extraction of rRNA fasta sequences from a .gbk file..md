@@ -12,7 +12,7 @@ import sys
 path = '/Users/slipakanungo/<Path>'
 ```
 
-### Or else set the path/directory of the input and output files
+### Or else set directory of the input and output files (Opening Input and Output Files for Sequence Conversion)
 
 ```python
 input_handle = open("./<Path_of_the_gb_file>", "r")
