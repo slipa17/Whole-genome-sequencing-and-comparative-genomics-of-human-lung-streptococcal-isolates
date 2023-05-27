@@ -47,7 +47,7 @@ abricate --summary AMR_results.csv > new_file_name_summary.csv
 
 * .fna: This is a wildcard that represents multiple genomic sequence files in FASTA format. The (*.fna) pattern matches all files with the .fna extension in the current directory.
 
-* >: This symbol is used for output redirection. It redirects the output of the command to a file instead of displaying it on the console.
+* (>): This symbol is used for output redirection. It redirects the output of the command to a file instead of displaying it on the console.
 
 AMR_results.csv: This is the file name specified after the redirection symbol (>). It represents the CSV file where the results of the "abricate" analysis will be saved. Replace AMR_results.csv with the desired file name or path.
 
@@ -62,7 +62,7 @@ Note that the specific options, databases, and output formats may vary depending
 
 * AMR_results.csv: This is the input AMR results file in CSV format. It represents the file from which the summary report will be generated. Replace AMR_results.csv with the actual name or path of your existing AMR results file.
 
-* >: This symbol is used for output redirection. It redirects the output of the command to a file instead of displaying it on the console.
+* (>): This symbol is used for output redirection. It redirects the output of the command to a file instead of displaying it on the console.
 
 * new_file_name_summary.csv: This is the file name specified after the redirection symbol (>). It represents the new file where the summary report will be saved. Replace new_file_name_summary.csv with the desired file name or path.
 
@@ -107,7 +107,7 @@ abricate --db vfdb --summary new_file_name.csv > new_file_name_summary.csv
 
 * *.fna: This is a wildcard that represents multiple genomic sequence files in FASTA format. The *.fna pattern matches all files with the .fna extension in the current directory.
 
-* >: This symbol is used for output redirection. It redirects the output of the command to a file instead of displaying it on the console.
+* (>): This symbol is used for output redirection. It redirects the output of the command to a file instead of displaying it on the console.
 
 * new_file_name.csv: This is the file name specified after the redirection symbol (>). It represents the CSV file where the results of the "abricate" analysis will be saved. Replace new_file_name.csv with the desired file name or path.
 
@@ -126,7 +126,7 @@ Note that the specific options, databases, and output formats may vary depending
 
 * new_file_name.csv: This is the input "abricate" results file in CSV format. It represents the file from which the summary report will be generated. Replace new_file_name.csv with the actual name or path of your existing "abricate" results file.
 
-* >: This symbol is used for output redirection. It redirects the output of the command to a file instead of displaying it on the console.
+* (>): This symbol is used for output redirection. It redirects the output of the command to a file instead of displaying it on the console.
 
 * new_file_name_summary.csv: This is the file name specified after the redirection symbol (>). It represents the new file where the summary report will be saved. Replace new_file_name_summary.csv with the desired file name or path.
 
