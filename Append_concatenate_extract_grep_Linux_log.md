@@ -18,7 +18,7 @@ This command uses awk to process the input FASTA file. It does the following:
 * sed: The command-line utility for stream editing.
 * s/>.*/&_file/: The sed substitution command. It searches for a pattern that matches >.* (a line starting with ">") and replaces it with  &_file (appending "_file" to the matched pattern). The & represents the matched pattern itself.
 * file.faa: The input file on which the sed command is applied.
-* > output_file_name.faa: The output redirection symbol (>) followed by the output file name (output_file_name.faa). It redirects the modified output of the sed command to the specified file.
+* ```> output_file_name.faa```: The output redirection symbol (>) followed by the output file name (output_file_name.faa). It redirects the modified output of the sed command to the specified file.
 
 In summary, the command takes an input file named file.faa and modifies its contents by appending "_file" to each line that starts with ">", and then saves the modified output to a new file named output_file_name.faa.
      
