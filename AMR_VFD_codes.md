@@ -1,5 +1,4 @@
 ## ABRICATE for antibiotic resistance 
-(The following codes have been run in the MacBook Terminal using the bash scripts.)
 
 * Installing Abricate using Conda
 
