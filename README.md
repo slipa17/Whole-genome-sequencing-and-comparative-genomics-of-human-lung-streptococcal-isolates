@@ -2,4 +2,4 @@
 
 ### Description of codes and scripts
 
-1. **AMR_VFD_codes.md:** The code performs antibiotic resistance gene and virulence factor identification using ```abricate and saves both the detailed results and a summary of the analysis in separate CSV files.
+1. **AMR_VFD_codes.md:** The code performs antibiotic resistance gene and virulence factor identification using ```abricate``` and saves both the detailed results and a summary of the analysis in separate CSV files.
