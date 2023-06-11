@@ -73,7 +73,7 @@ The resulting summary report will be saved in the specified file, "new_file_name
 Note that the specific options and formats may vary depending on the version and configuration of the "abricate" tool. 
 
 
-# ABRICATE for virulence factor genes
+## ABRICATE for virulence factor genes
 
 ### Running Abricate with VFDB Database in Quiet Mode on Genomic Sequence
 
