@@ -110,9 +110,9 @@ blastp -query all_queries.fasta -db output_database_name -out output_database_na
 The provided code is a command-line instruction to perform a BLASTP search using the blastp command and save the results in tabular format.
 
 * ```blastp```: This is the command used to perform a protein-protein BLAST search. It is part of the BLAST suite of bioinformatics tools.
-*```-query all_queries.fasta```: This option specifies the query file containing the protein sequences that you want to search against the database. Replace "all_queries.fasta" with the name of your query file in FASTA format.
-*```-db output_database_name```: This option specifies the name of the BLAST database to search against. For custom blast specify the path and basename to the database created in the previous step.
-*```-out output.tsv```: This option specifies the name of the output file where the BLAST results will be saved. The file extension ".tsv" indicates that the results will be saved in tab-separated values format.
-*```-outfmt 6```: This option specifies the output format for the BLAST results. The value "6" corresponds to tabular format, which is a structured format for easy parsing and analysis of the results. In tabular format, each line represents a pairwise alignment between a query sequence and a database hit.
+* ```-query all_queries.fasta```: This option specifies the query file containing the protein sequences that you want to search against the database. Replace "all_queries.fasta" with the name of your query file in FASTA format.
+* ```-db output_database_name```: This option specifies the name of the BLAST database to search against. For custom blast specify the path and basename to the database created in the previous step.
+* ```-out output.tsv```: This option specifies the name of the output file where the BLAST results will be saved. The file extension ".tsv" indicates that the results will be saved in tab-separated values format.
+* ```-outfmt 6```: This option specifies the output format for the BLAST results. The value "6" corresponds to tabular format, which is a structured format for easy parsing and analysis of the results. In tabular format, each line represents a pairwise alignment between a query sequence and a database hit.
   
                              
