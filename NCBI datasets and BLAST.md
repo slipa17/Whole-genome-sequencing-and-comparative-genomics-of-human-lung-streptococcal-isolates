@@ -2,7 +2,7 @@
 
 ## Working with biological sequence data from NCBI FTP server
 
-### 1. Creating environment for ncbi datasets
+### 1. Creating environment for ncbi datasets
 
 ```
 conda create -n ncbi_datasets
@@ -18,9 +18,10 @@ Make sure conda environment is updated by running
 conda update -n base conda
 ```
 
-### To activate ncbi_datasets environment
-
-    $ conda activate ncbi_datasets
+### 2. To activate ncbi_datasets environment
+```
+conda activate ncbi_datasets
+```
 
 * ```conda```: The command-line package and environment management system.
 * ```activate```: The command used to activate a conda environment.
@@ -29,11 +30,12 @@ conda update -n base conda
 In summary, the command activates the conda environment named "ncbi_datasets". Once activated, any subsequent package installations or commands executed will be performed within this environment. Activating an environment allows you to work within a specific software configuration and ensures that the packages and dependencies installed are isolated to that environment, avoiding conflicts with other environments or the system's default configuration.
 
 
-### To deactivate an active environment
+### 3. To deactivate an active environment
 
-     $ conda deactivate
-
-### To install the datasets conda package
+```
+conda deactivate
+```
+### 4. To install the datasets conda package
 
 ```
    conda install -c conda-forge ncbi-datasets-cli
@@ -45,7 +47,7 @@ In summary, the command activates the conda environment named "ncbi_datasets". O
 
 In summary, the command installs the "ncbi-datasets-cli" package into the currently active conda environment. The package provides a command-line interface (CLI) for accessing and downloading datasets from the National Center for Biotechnology Information (NCBI). Once installed, you can use the ncbi-datasets command to interact with the NCBI datasets using the provided CLI functionality.
 
-### NCBI genome downloads
+### 5. NCBI genome downloads
 
 * For genomes
 
@@ -62,7 +64,7 @@ datasets download genome accession --inputfile input_genome_files.txt --annotate
 In summary, the command uses the "datasets" tool to download genome data from NCBI based on specified accessions or identifiers listed in the input file. It ensures that the downloaded files are annotated and includes the GenBank Flat File (GBFF) format in the download.
 
 
-### To unzip the ncbi_dataset.zip
+### 6. To unzip the ncbi_dataset.zip
 
 * First install unzip
 
@@ -85,11 +87,21 @@ unzip ncbi_dataset.zip
 
 In summary, the command instructs the "unzip" utility to extract the files and directories contained within the "ncbi_dataset.zip" archive. After running this command, the contents of the ZIP file will be extracted and placed in the current working directory.
 
-### make local BLAST database for Streptococcus genomes / nucleotides / proteins (FASTA format) and performing BLAST
+## Make local BLAST database for genomes / nucleotides / proteins (FASTA format) and performing BLAST
+
+### 1. Making custom BLAST database on local machine
+```
+makeblastdb -in all_sequences.fasta -input_type fasta -dbtype [TYPE] -out output_database_name
+```
+The provided code is a command-line instruction to create a BLAST database using the makeblastdb command.
+
+* ```-in all_sequences.fasta```: This option specifies the input file for creating the database. In this case, it is set to "all_sequences.fasta", assuming that you have a file named "all_sequences.fasta" containing the sequences you want to include in the database.
+* ```-input_type fasta```: This option specifies the format of the input file. Here, it is set to "fasta" to indicate that the input file is in FASTA format, which is a commonly used format for representing biological sequence data.
+* ```-dbtype [TYPE]```: This option specifies the type of database to create. You need to replace [TYPE] with the desired database type. There are several options for [TYPE], such as "prot" for protein sequences, "nucl" for nucleotide sequences, or "rps" for reverse position-specific BLAST (RPS-BLAST) databases. Choose the appropriate type based on the nature of your sequences.
+* ```-out output_database_name```: This option specifies the name of the output database to be created. You need to replace "output_database_name" with the desired name for your database. It is recommended to provide a meaningful and descriptive name.
+
 
 ```
-cat * (all files).fasta > all_sequences.fasta
-makeblastdb -in all_sequences.fasta -input_type fasta -dbtype [TYPE] -out output_database_name
 blastp -query all_queries.fasta -db output_database_name -out output_database_name_blasted.tsv -outfmt 6
 ```
   
