@@ -95,14 +95,24 @@ makeblastdb -in all_sequences.fasta -input_type fasta -dbtype [TYPE] -out output
 ```
 The provided code is a command-line instruction to create a BLAST database using the makeblastdb command.
 
-* ```-in all_sequences.fasta```: This option specifies the input file for creating the database. In this case, it is set to "all_sequences.fasta", assuming that you have a file named "all_sequences.fasta" containing the sequences you want to include in the database.
-* ```-input_type fasta```: This option specifies the format of the input file. Here, it is set to "fasta" to indicate that the input file is in FASTA format, which is a commonly used format for representing biological sequence data.
+* ```makeblastdb```: This is the command used to create a BLAST database. It is part of the BLAST (Basic Local Alignment Search Tool) suite of bioinformatics tools.
+
+* ```-in```: This option specifies the input file containing the sequences you want to include in the database.
+* ```-input_type```: This option specifies the format of the input file. Here, it is set to "fasta" to indicate that the input file is in FASTA format, which is a commonly used format for representing biological sequence data.
 * ```-dbtype [TYPE]```: This option specifies the type of database to create. You need to replace [TYPE] with the desired database type. There are several options for [TYPE], such as "prot" for protein sequences, "nucl" for nucleotide sequences, or "rps" for reverse position-specific BLAST (RPS-BLAST) databases. Choose the appropriate type based on the nature of your sequences.
 * ```-out output_database_name```: This option specifies the name of the output database to be created. You need to replace "output_database_name" with the desired name for your database. It is recommended to provide a meaningful and descriptive name.
 
+### 2. Performing BLAST on local machine using custom database
 
 ```
 blastp -query all_queries.fasta -db output_database_name -out output_database_name_blasted.tsv -outfmt 6
 ```
+The provided code is a command-line instruction to perform a BLASTP search using the blastp command and save the results in tabular format.
+
+* ```blastp```: This is the command used to perform a protein-protein BLAST search. It is part of the BLAST suite of bioinformatics tools.
+*```-query all_queries.fasta```: This option specifies the query file containing the protein sequences that you want to search against the database. Replace "all_queries.fasta" with the name of your query file in FASTA format.
+*```-db output_database_name```: This option specifies the name of the BLAST database to search against. For custom blast specify the path and basename to the database created in the previous step.
+*```-out output.tsv```: This option specifies the name of the output file where the BLAST results will be saved. The file extension ".tsv" indicates that the results will be saved in tab-separated values format.
+*```-outfmt 6```: This option specifies the output format for the BLAST results. The value "6" corresponds to tabular format, which is a structured format for easy parsing and analysis of the results. In tabular format, each line represents a pairwise alignment between a query sequence and a database hit.
   
                              
