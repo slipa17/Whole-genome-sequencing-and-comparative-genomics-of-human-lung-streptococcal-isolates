@@ -1,6 +1,8 @@
 
 
-### 1. To download biological sequence data from NCBI FTP server
+## Working with biological sequence data from NCBI FTP server
+
+### 1. Creating environment for ncbi datasets
 
 ```
 conda create -n ncbi_datasets
