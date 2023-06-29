@@ -11,10 +11,10 @@ conda create -n ncbi_datasets
 
 In summary, the command creates a new conda environment with the name "ncbi_datasets". Conda environments allow you to isolate and manage different sets of packages and dependencies, making it easier to work with specific software configurations. Once created, you can activate the environment using conda activate ncbi_datasets and install packages and libraries specific to that environment.
 
-Please update conda by running
-
-    $ conda update -n base conda
-
+Make sure conda environment is updated by running
+```
+conda update -n base conda
+```
 
 ### To activate ncbi_datasets environment
 
