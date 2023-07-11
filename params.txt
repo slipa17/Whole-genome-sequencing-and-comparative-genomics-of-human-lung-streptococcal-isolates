@@ -1,0 +1,64 @@
+Command line: /home/gbonilla/Software/BioTools/SPAdes-3.14.0-Linux/bin/spades.py	-o	/home/gbonilla/Documents/Bifido/genomesDIC19/05_refinedAssembly/T369_3_refined	--pe1-1	/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L1_R1_cut_trim.fastq.gz	--pe1-2	/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L1_R2_cut_trim.fastq.gz	--pe2-1	/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L2_R1_cut_trim.fastq.gz	--pe2-2	/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L2_R2_cut_trim.fastq.gz	--pe3-1	/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L3_R1_cut_trim.fastq.gz	--pe3-2	/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L3_R2_cut_trim.fastq.gz	--pe4-1	/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L4_R1_cut_trim.fastq.gz	--pe4-2	/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L4_R2_cut_trim.fastq.gz	-k	21,33,55,77,99,127	--untrusted-contigs	/home/gbonilla/Documents/Bifido/genomesDIC19/04_assembly/T369_3_spades3.14_ALL_isolate/contigs_10Kb_2cov.fasta	--careful	-t	35	
+
+System information:
+  SPAdes version: 3.14.0
+  Python version: 3.7.4
+  OS: Linux-5.3.0-7625-generic-x86_64-with-debian-buster-sid
+
+Output dir: /home/gbonilla/Documents/Bifido/genomesDIC19/05_refinedAssembly/T369_3_refined
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Standard mode
+  For multi-cell/isolate data we recommend to use '--isolate' option; for single-cell MDA data use '--sc'; for metagenomic data use '--meta'; for RNA-Seq use '--rna'.
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L1_R1_cut_trim.fastq.gz']
+      right reads: ['/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L1_R2_cut_trim.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+    Library number: 2, library type: paired-end
+      orientation: fr
+      left reads: ['/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L2_R1_cut_trim.fastq.gz']
+      right reads: ['/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L2_R2_cut_trim.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+    Library number: 3, library type: paired-end
+      orientation: fr
+      left reads: ['/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L3_R1_cut_trim.fastq.gz']
+      right reads: ['/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L3_R2_cut_trim.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+    Library number: 4, library type: paired-end
+      orientation: fr
+      left reads: ['/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L4_R1_cut_trim.fastq.gz']
+      right reads: ['/home/gbonilla/Documents/Bifido/genomesDIC19/03_trimmo/T369_3_L4_R2_cut_trim.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+    Library number: 5, library type: untrusted-contigs
+      left reads: not specified
+      right reads: not specified
+      interlaced reads: not specified
+      single reads: ['/home/gbonilla/Documents/Bifido/genomesDIC19/04_assembly/T369_3_spades3.14_ALL_isolate/contigs_10Kb_2cov.fasta']
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: [21, 33, 55, 77, 99, 127]
+  Repeat resolution is enabled
+  Mismatch careful mode is turned ON
+  MismatchCorrector will be used
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /home/gbonilla/Documents/Bifido/genomesDIC19/05_refinedAssembly/T369_3_refined/tmp
+  Threads: 35
+  Memory limit (in Gb): 125
+
