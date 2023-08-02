@@ -1,6 +1,8 @@
 ## Extraction of the respective headers lists from the different multifasta files:
 
 ```
+#!/bin/bash
+
 # Specify the path to the directory containing the FASTA files
 fasta_dir="path/"
 
