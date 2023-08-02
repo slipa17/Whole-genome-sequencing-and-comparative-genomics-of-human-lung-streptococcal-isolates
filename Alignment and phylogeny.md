@@ -12,10 +12,10 @@ seqkit rmdup -s INPUT.fasta -o INPUT_clean.fasta
 ```
 ## Concatenation of FASTA sequences
 
-* Concatenate sequences with proper new lines after each sequence
+* Concatenate sequences with proper new lines after each sequence. The script is provided as separate file.
 
 ```
-cat *.fasta > all.fasta
+./concatenate.sh
 ```
 ## Formatting FASTA before alignment
 * This is a quality assurance step to make sure the file is in FASTA format.
