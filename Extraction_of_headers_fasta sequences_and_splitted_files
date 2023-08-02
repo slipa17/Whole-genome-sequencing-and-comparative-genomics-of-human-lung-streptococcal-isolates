@@ -1,6 +1,6 @@
 ## Extraction of the respective headers lists from the different multifasta files:
 
-```
+
 #!/bin/bash
 
 # Specify the path to the directory containing the FASTA files
@@ -17,14 +17,14 @@ for fasta_file in "${fasta_dir}"*.fa; do
   echo "Protein IDs extracted from ${fasta_file} and saved to ${output_file}."
 done
 
-```
+
 
 ## Extraction of multiple fasta sequences from a multiple headers text file:
 
 
 First make an output_directory:  
 
-```
+
 #!/bin/bash
 
 #Input files
@@ -47,13 +47,13 @@ for txt_file in *.txt; do
   echo "Sequences extracted from $txt_file and saved to $output_path"
 done
 
-```
+
 
 *Inside the headers directory add all the individual headers.txt files and the concatenated multi-FASTA file (source file), so that the code can search for the headers in the source file and extract the fasta sequences.
 
 ## Splitting the files into individual protein id's from a multi-fasta sequences:
 
-```
+
 #!/bin/bash
 
 input_directory="input_files"
@@ -139,4 +139,4 @@ Then, run the script:
 
  zsh split_multi_multi_fasta.sh
 
-```
+
