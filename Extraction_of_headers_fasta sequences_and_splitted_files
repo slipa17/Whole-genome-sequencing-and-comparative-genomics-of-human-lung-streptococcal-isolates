@@ -4,7 +4,7 @@
 #!/bin/bash
 
 # Specify the path to the directory containing the FASTA files
-fasta_dir="path/"
+fasta_dir="$PATH/to/genome FASTA files"
 
 # Loop through each FASTA file in the input directory
 for fasta_file in "${fasta_dir}"*.fa; do
