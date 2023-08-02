@@ -22,9 +22,7 @@ done
 ## Extraction of multiple fasta sequences from a multiple headers text file:
 
 
-First make an output_directory: 
-
-I have made an output_directory inside the headers directory as extracted_sequences.  
+First make an output_directory:  
 
 ```
 #!/bin/bash
