@@ -50,3 +50,90 @@ done
 ```
 
 *Inside the headers directory add all the individual headers.txt files and the concatenated multi-FASTA file (source file), so that the code can search for the headers in the source file and extract the fasta sequences.
+
+## Splitting the files into individual protein id's from a multi-fasta sequences:
+
+```
+#!/bin/bash
+
+input_directory="input_files"
+output_directory="output_sequences"
+
+# Create the output directory if it doesn't exist
+mkdir -p "$output_directory"
+
+# Function to split sequences and extract headers
+split_fasta() {
+    local input_file="$1"
+    local output_dir="$2"
+
+    # Create a subdirectory for each input file in the output directory
+    local file_basename=$(basename "$input_file")
+    local subdirectory="$output_dir/${file_basename%.*}"
+    mkdir -p "$subdirectory"
+
+    local header=""
+    local sequence_content=""
+
+    while IFS= read -r line; do
+        if [[ $line =~ ^\> ]]; then
+            # Save the previous sequence, if any
+            if [ -n "$header" ]; then
+                echo -e ">$header\n$sequence_content" > "$subdirectory/$header.fasta"
+            fi
+            # Extract the new header
+            header=${line:1}
+            sequence_content=""
+        else
+            # Append sequence content to the current sequence
+            sequence_content+="$line\n"
+        fi
+    done < "$input_file"
+
+    # Save the last sequence
+    if [ -n "$header" ]; then
+        echo -e ">$header\n$sequence_content" > "$subdirectory/$header.fasta"
+    fi
+}
+
+# Process each FASTA file in the input directory
+for fasta_file in "$input_directory"/*.fasta; do
+    split_fasta "$fasta_file" "$output_directory"
+done
+
+
+Make sure you have the following directory structure:
+
+markdown
+Copy code
+- Your_Script_Directory/
+  - script.sh
+  - input_files/
+    - file1.fasta
+    - file2.fasta
+    - ...
+  - output_sequences/
+    - file1/
+      - header1.fasta
+      - header2.fasta
+      - ...
+    - file2/
+      - header1.fasta
+      - header2.fasta
+      - ...
+    - ...
+The script assumes that your multi-FASTA files are stored in the "input_files" directory and creates a separate subdirectory for each input file in the "output_sequences" directory. Each subdirectory contains the individual header files for the corresponding input file.
+
+Save the script in a file, for example, "split_multi_multi_fasta.sh". Make sure the input files are in the "input_files" directory.
+
+To execute the script, make it executable using the following command:
+
+bash
+Copy code
+
+* chmod +x split_multi_multi_fasta.sh
+
+Then, run the script:
+
+* zsh split_multi_multi_fasta.sh
+```
