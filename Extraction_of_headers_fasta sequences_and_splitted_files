@@ -131,9 +131,12 @@ To execute the script, make it executable using the following command:
 bash
 Copy code
 
-* chmod +x split_multi_multi_fasta.sh
+ chmod +x split_multi_multi_fasta.sh
 
 Then, run the script:
 
-* zsh split_multi_multi_fasta.sh
+./split_multi_multi_fasta.sh (If this particular script shows any error, then try the script below)
+
+ zsh split_multi_multi_fasta.sh
+
 ```
