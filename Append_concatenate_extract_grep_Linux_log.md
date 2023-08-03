@@ -150,6 +150,23 @@ seqtk subseq filename_of_the_multi-FASTA_file_from_which_sequences_will_be_extra
 
 ```
 
+* ```seqtk``` : The command to invoke seqtk, a tool for processing FASTA/Q files.
+* ```subseq``` : The subcommand of seqtk used for subsetting sequences based on headers.
+* ```filename_of_the_multi-FASTA_file_from_which_sequences_will_be_extracted``` : Replace this with the actual filename or path of the multi-FASTA file from which you want to extract sequences.
+* ```Protein_headers_file_list.txt``` : Replace this with the actual filename or path of the text file that contains a list of protein headers (one header per line).
+* ```>``` : The output redirection symbol to save the extracted sequences to a file.
+* ```output_file_name.fasta``` : Replace this with the desired filename or path for the output file where the extracted sequences will be saved in FASTA format.
+
+Make sure to have seqtk installed on your system, which can be done using conda with the command ```conda install -c bioconda seqtk```, as mentioned earlier.
+
+After running the command, seqtk will read the protein headers from the Protein_headers_file_list.txt file and extract the corresponding sequences from the multi-FASTA file. The extracted sequences will be saved in the specified output file in FASTA format.
+
+
+
+
+
+
+
 ### Splitting the fasta headers of a single multi-fasta file
 
 * Installing pyfaidx using conda
