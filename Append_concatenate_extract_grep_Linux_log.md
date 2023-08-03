@@ -150,6 +150,21 @@ seqtk subseq filename_of_the_multi-FASTA_file_from_which_sequences_will_be_extra
 
 ```
 
+### Splitting the fasta headers of a single multi-fasta files
+
+* Installing pyfaidx using conda
+
+```
+install -c bioconda pyfaidx
+
+```
+Then run the script:
+
+```
+faidx --split-files filename_of_the_fasta_files
+
+```
+
 ### Extraction of sequences from multiple FASTA and identifiers files using ```protein_fasta_extraction.sh```
 
 ```
