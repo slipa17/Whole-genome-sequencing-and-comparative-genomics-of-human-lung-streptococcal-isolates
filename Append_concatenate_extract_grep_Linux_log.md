@@ -136,7 +136,9 @@ done
 ### Extraction of sequences from a single FASTA file with a identifier list
  
 This code is using the seqtk utility to process a FASTA format file (INPUT.faa) and filter the sequences based on a list of sequence identifiers stored in a separate text file (IDs.txt).
-            
+
+* Installing seqtk using Conda
+           
 ```
 conda install -c bioconda seqtk
 
