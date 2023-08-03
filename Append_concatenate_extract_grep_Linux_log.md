@@ -150,7 +150,7 @@ seqtk subseq filename_of_the_multi-FASTA_file_from_which_sequences_will_be_extra
 
 ```
 
-### Splitting the fasta headers of a single multi-fasta files
+### Splitting the fasta headers of a single multi-fasta file
 
 * Installing pyfaidx using conda
 
