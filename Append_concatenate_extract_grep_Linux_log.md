@@ -135,17 +135,18 @@ done
 
 ### Extraction of sequences from a single FASTA file with a identifier list
  
-This code is using the bioawk utility to process a FASTA format file (INPUT.faa) and filter the sequences based on a list of sequence identifiers stored in a separate text file (IDs.txt).
+This code is using the seqtk utility to process a FASTA format file (INPUT.faa) and filter the sequences based on a list of sequence identifiers stored in a separate text file (IDs.txt).
             
 ```
- bioawk -cfastx 'BEGIN{while((getline k <"IDs.txt")>0)i[k]=1}{if(i[$name])print ">"$name"\n"$seq}' INPUT.faa > OUTPUT.faa
-```
-* This calls the bioawk utility and specifies the input format as FASTA (-cfastx).
-* This is a BEGIN block, which is executed before processing the input file. It reads the identifiers from the IDs.txt file and stores them as keys in an associative array i
-* For each sequence in the input file, this code checks if its identifier ($name) is present in the i array. If it is, the sequence is printed in FASTA format to STDOUT with the > symbol followed by the sequence identifier ($name), and the sequence itself ($seq) on the following line.
-* Finally, the output is redirected to a new FASTA file named OUTPUT.faa. The > symbol indicates that the output will be written to a new file, rather than overwriting the input file.
+conda install -c bioconda seqtk
 
-So overall, this code extracts a subset of sequences from the INPUT.faa file based on their sequence identifiers, and writes the filtered sequences to a new FASTA file OUTPUT.faa.
+```
+Then run the script:
+
+```
+seqtk subseq filename_of_the_multi-FASTA_file_from_which_sequences_will_be_extracted Protein_headers_file_list.txt > output_file_name.fasta 
+
+```
 
 ### Extraction of sequences from multiple FASTA and identifiers files using ```protein_fasta_extraction.sh```
 
