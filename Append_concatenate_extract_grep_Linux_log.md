@@ -182,6 +182,10 @@ faidx --split-files filename_of_the_fasta_files
 
 ```
 
+* ```faidx``` : The command to invoke faidx, a tool for splitting FASTA/Q files.
+* ```--split-files``` : This option specifies to be used for splitting the fasta files.
+* ```filename_of_the_fasta_files``` : Replace this with the actual filename or path of the multi-FASTA file from which you want to split sequences.
+
 ### Extraction of sequences from multiple FASTA and identifiers files using ```protein_fasta_extraction.sh```
 
 ```
