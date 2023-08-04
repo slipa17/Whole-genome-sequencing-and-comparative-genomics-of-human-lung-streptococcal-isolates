@@ -78,7 +78,7 @@ print("Converted {} records".format(count))
 
 * ```input_handle.close()```: This line of code closes the file represented by the input_handle file object. It is responsible for releasing the system resources associated with the input file after reading the sequences. Closing the file is considered good practice to ensure proper handling of system resources.
 
-* ```print("Converted {} records".format(count))```: This line of code prints a formatted message to the console, indicating the number of records that were converted or written to the output file. The placeholder {} is used within the string, and the format() method is called to substitute the value of count into the placeholder. This allows the message to dynamically display the actual count of converted records.
+* ```print("Converted {} records".format(count))```: This line of code prints a formatted message to the console, indicating the number of records that were converted or written to the output file. The placeholder ```{}``` is used within the string, and the ```format()``` method is called to substitute the value of count into the placeholder. This allows the message to dynamically display the actual count of converted records.
 
 By executing these lines of code, you ensure that the input and output files are properly closed, and you get a message printed to the console indicating the number of records that were successfully converted or written to the output file.
 
