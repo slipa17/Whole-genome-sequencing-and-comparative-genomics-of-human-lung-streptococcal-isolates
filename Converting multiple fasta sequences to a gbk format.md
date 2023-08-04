@@ -23,6 +23,7 @@ output_handle = open("Documents/Comparative_genomics/Final_draft/PyGenomeviz_new
 sequences = list(SeqIO.parse(input_handle, "fasta"))
 ```
 
+### Assigning 'molecule_type' Annotation to DNA in FASTA Sequences
 
 ```python
 for seq in sequences:
