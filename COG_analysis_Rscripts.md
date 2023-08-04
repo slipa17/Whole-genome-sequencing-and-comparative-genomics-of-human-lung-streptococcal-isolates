@@ -4,7 +4,7 @@
 setwd(path) 
 ```
 
-*```setwd(path)``` : function is used to set the current working directory to the specified path. The working directory is the default location where R will look for files and where it will save files if no specific directory is provided. By changing the working directory, you can conveniently access and save files in the desired location.
+* ```setwd(path)``` : function is used to set the current working directory to the specified path. The working directory is the default location where R will look for files and where it will save files if no specific directory is provided. By changing the working directory, you can conveniently access and save files in the desired location.
 
 ### reading the csv file
 
