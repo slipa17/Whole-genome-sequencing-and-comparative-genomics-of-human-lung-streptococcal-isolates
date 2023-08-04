@@ -1,7 +1,10 @@
+### Import libraries
+
 ```python
 from Bio import SeqIO
 ```
 
+### Set the directory
 
 ```python
 file_path='/Users/slipakanungo/Documents/Comparative_genomics/Final_draft/PyGenomeviz_new/P2D11_test/'
