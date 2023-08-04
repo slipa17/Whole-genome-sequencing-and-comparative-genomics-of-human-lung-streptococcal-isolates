@@ -80,6 +80,8 @@ By executing allgenes = ```[feature for feature in gb_object.features if feature
 len(allgenes)
 ```
 
+* ```len(allgenes)``` is used to get the number of elements (length) in the object allgenes. The len() function is a built-in Python function that returns the number of items in various data structures like lists, strings, tuples, sets, and dictionaries.
+
 ```python
 gene_sequences=[]
 ```
@@ -125,10 +127,17 @@ The loop iterates over the genes, checks if they have a 'gene' key in the qualif
 len(gene_sequences)
 ```
 
+* ```len(gene_sequences)``` is used to get the number of elements in the object gene_sequences. The ```len()``` function is a built-in Python function that returns the number of items in various data structures like lists, strings, tuples, sets, and dictionaries.
+
 ```python
 output_file='./gene_name.fasta'
 ```
 
+```output_file``` : This is the name of the variable that will store the file path and name.
+
+``` './gene_name.fasta' ``` : This is a string literal representing the file path and name. In this case, it's set to './gene_name.fasta', which means the output file will be named gene_name.fasta and will be located in the current directory (./ denotes the current directory).
+
+If you are writing FASTA sequences to a file, you can use this output_file variable as the destination file when opening a file for writing
 
 ```python
 SeqIO.write(gene_sequences,output_file,'fasta')
