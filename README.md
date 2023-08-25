@@ -21,3 +21,4 @@
 * Inside the function, it iterates through files and subfolders within the given folder. If it encounters a file, it renames the file as before. If it encounters a subfolder, it recurses into that subfolder.
 * After defining the function, the script starts the renaming process by calling rename_files with the parent folder path.
 * This script will traverse through all subfolders within the provided parent folder and rename the files within each subfolder according to your original renaming operation. Just be cautious while renaming files, especially in recursive scenarios, to avoid unintended data loss.
+3. **```append_end_of_filename.sh```:** 
