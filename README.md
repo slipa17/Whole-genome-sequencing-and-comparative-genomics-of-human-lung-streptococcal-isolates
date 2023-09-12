@@ -25,4 +25,10 @@
 3. **```append_end_of_filename.sh```:** To add the "_HOMD" string to the end of the filename, just before the file extension, you can use the following approach in a Bash script. This script uses parameter expansion to separate the filename from its extension. Then, it constructs the new filename by appending "_HOMD" before the extension. Substitute the "_HOMD" with the required string.
 4. **```split_headers_by_gap.sh```:** The provided bash script reads text files from a user-specified input folder, processes the files by removing everything after the first space in each line, and saves the processed files in a subfolder within the input directory named "processed." It then loops through each text file in the input directory and performs the processing operation.
 
-
+5. ** ```scripts/extract_faa_from_subfolders.sh```:**
+In this script:
+* The user is prompted to provide the source folder containing subfolders with .faa files.
+* The script checks if the source folder exists.
+* The user is prompted to specify the destination folder where the .faa files will be extracted. If the destination folder doesn't exist, it's created.
+* The find command searches for .faa files within subfolders of the source folder, and the while loop iterates through them.
+* Each .faa file found is copied to the destination folder using the cp command. You can use mv instead of cp to move (cut/paste) the files if you prefer.
