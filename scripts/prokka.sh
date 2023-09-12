@@ -9,17 +9,21 @@ if [ ! -d "$fasta_folder" ]; then
     exit 1
 fi
 
+# Prompt the user for the path to the output folder
+read -p "Enter the path to the output folder: " output_folder
+
+# Create the output folder if it doesn't exist
+mkdir -p "$output_folder"
+
 # Find all .fna files recursively under the fasta_folder and process them
 find "$fasta_folder" -type f -name "*.fna" | while read -r fasta_file; do
     # Get the file name without extension to use as the Prokka output name
     output_name=$(basename "$fasta_file" .fna)
 
-    # Create a subdirectory within the same folder as the .fna file for Prokka output
-    output_folder="$(dirname "$fasta_file")/$output_name"
-
-    # Create the output folder if it doesn't exist
-    mkdir -p "$output_folder"
+    # Create a subdirectory within the output folder for Prokka output
+    output_subfolder="$output_folder/$output_name"
+    mkdir -p "$output_subfolder"
 
     # Run Prokka on the current FASTA file
-    prokka --outdir "$output_folder" --prefix "$output_name" "$fasta_file"
+    prokka --outdir "$output_subfolder" --prefix "$output_name" "$fasta_file"
 done
