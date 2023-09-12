@@ -26,9 +26,6 @@ fi
 # Initialize a counter for renaming duplicates
 counter=1
 
-# Create an associative array to store seen headers
-declare -A header_seen
-
 # Create a log file to record information about duplicates
 log_file="$output_directory/duplicate_log.txt"
 
@@ -40,11 +37,14 @@ for input_file in "$input_directory"/*.fasta; do
     # Set the output file path
     output_file="$output_directory/$filename"
 
+    # Create an array to track seen headers
+    seen_headers=()
+
     while read -r line; do
         # Check if the line is a header line (starts with ">")
         if [[ $line == ">"* ]]; then
             header="${line#>}"  # Remove the ">" character
-            if [[ -n "${header_seen[$header]}" ]]; then
+            if [[ "${seen_headers[@]}" =~ "$header" ]]; then
                 # Header is a duplicate; append a unique number
                 new_header="${header}_${counter}"
                 counter=$((counter+1))
@@ -54,8 +54,8 @@ for input_file in "$input_directory"/*.fasta; do
             else
                 # Header is not a duplicate; use it as is
                 new_header="$header"
+                seen_headers+=("$header")
             fi
-            header_seen["$header"]=1  # Mark the header as seen
             echo ">$new_header" >> "$output_file"
         else
             # Not a header line; write the sequence data as is
