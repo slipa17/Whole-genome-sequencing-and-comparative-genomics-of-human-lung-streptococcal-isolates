@@ -1,8 +1,3 @@
-## Extraction of multiple fasta sequences from a multiple headers text file:
-
-
-First make an output_directory:  
-
 
 #!/bin/bash
 
@@ -25,7 +20,3 @@ for txt_file in *.txt; do
   #Print status message
   echo "Sequences extracted from $txt_file and saved to $output_path"
 done
-
-
-
-*Inside the headers directory add all the individual headers.txt files and the concatenated multi-FASTA file (source file), so that the code can search for the headers in the source file and extract the fasta sequences.
