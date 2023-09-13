@@ -33,7 +33,7 @@ In this script:
 * The find command searches for .faa files within subfolders of the source folder, and the while loop iterates through them.
 * Each .faa file found is copied to the destination folder using the cp command. You can use mv instead of cp to move (cut/paste) the files if you prefer.
 
-6. **```multi_fasta_sequence_extract.sh``**
+6. **```multi_fasta_sequence_extract.sh```**
 This Bash script is designed to extract multiple FASTA sequences from a multi-FASTA file based on a list of protein IDs provided in multiple text files. It creates a new output directory to store the extracted sequences and processes each text file containing the protein IDs.
 
 Here's a step-by-step breakdown of the script:
