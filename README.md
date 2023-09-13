@@ -38,20 +38,20 @@ This Bash script is designed to extract multiple FASTA sequences from a multi-FA
 
 Here's a step-by-step breakdown of the script:
 
-* Setting Input Files and Output Directory**:
+* Setting Input Files and Output Directory:
    - You need to specify the name of the multi-FASTA file (`fasta_file`) from which sequences will be extracted.
    - You also need to specify the name of the output directory (`output_dir`) where the extracted sequences will be saved.
-* Loop Through Text Files**:
+* Loop Through Text Files:
    - The script uses a `for` loop to iterate through all `.txt` files in the current directory (`*.txt`).
-* Creating Output File Name**:
+* Creating Output File Name:
    - For each text file, it creates an output file name by removing the `.txt` extension and appending `_extracted.fasta`.
 
-* Loop Through Protein IDs in Text File**:
+* Loop Through Protein IDs in Text File:
    - It then enters a `while` loop to read each line (protein ID) from the current text file.
    - Inside the loop, it uses the `seqtk subseq` command to extract the sequence corresponding to the current protein ID from the `fasta_file`.
    - The `<()` syntax is used to pass the protein ID as input to the `seqtk subseq` command, and the extracted sequence is appended to the output file specified earlier.
 
-* Status Message**:
+* Status Message:
    - After processing all protein IDs in a text file, it prints a status message indicating that sequences have been extracted from the current text file and saved to the output file.
 
 Overall, this script automates the process of extracting sequences from a multi-FASTA file based on protein IDs provided in multiple text files. It performs this operation for each text file found in the directory and saves the extracted sequences in the specified output directory with appropriate file names.
