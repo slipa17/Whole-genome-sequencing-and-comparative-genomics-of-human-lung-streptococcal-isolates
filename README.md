@@ -92,3 +92,47 @@ Overall, this script automates the process of extracting sequences from a multi-
   - The individual FASTA files are named using the sequence headers.
 
 Overall, this script is useful for splitting multi-FASTA files into separate FASTA files, making it easier to work with individual sequences. Each sequence is saved as its own file within a subdirectory named after the original multi-FASTA file. This script is especially handy when you need to process or analyze sequences individually.
+
+7. **```move_files.sh```**
+   
+This Bash script is designed to move a specified number of files from multiple source folders into a single destination folder while generating unique filenames for each file. Here's an explanation of how the script works:
+
+* Source and Destination Directories:
+
+  - source_folder_parent: Specifies the parent directory containing the 241 source folders. Replace this with the actual path to your source folders.
+destination_folder: Specifies the path to the destination folder where the selected files will be moved. If this folder doesn't exist, the script creates it using mkdir -p.
+
+* Counter Initialization:
+
+  - count: This variable is used to keep track of the number of files moved. It starts at 0 and will be incremented as files are moved.
+
+* Main Loop:
+
+  - The script uses a nested for loop to iterate through each source folder within source_folder_parent.
+
+* Nested Loop for Files:
+
+ - Within each source folder, another loop iterates through each file.
+
+* Generating Unique Names:
+
+  - For each file in the source folder, the script generates a unique name for the file in the destination folder.
+unique_name is constructed by combining the source folder's name (obtained using ${folder##*/}) with the base name of the file ($(basename "$file")).
+
+* Moving Files:
+
+  - The script then uses the mv command to move the file from the source folder to the destination folder with the generated unique name.
+
+* Incrementing the Counter:
+
+  - After moving a file, the count variable is incremented.
+
+* Break Condition:
+
+  - There's a condition inside the nested loop that checks if count has reached a specific value (in this case, 16695). If this condition is met, it breaks out of both loops using break 2, effectively ending the process of moving files.
+
+* Completion Message:
+
+  - After all the files have been moved or the loop is broken, the script prints a message indicating the number of files successfully moved to the destination folder.
+
+In summary, this script is useful for batch moving a specified number of files from multiple source folders into a single destination folder while ensuring that the filenames remain unique. It's handy when you want to consolidate a specific number of files from various sources into a centralized location.
