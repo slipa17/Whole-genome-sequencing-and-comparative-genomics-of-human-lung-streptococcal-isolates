@@ -61,34 +61,34 @@ Overall, this script automates the process of extracting sequences from a multi-
 
 * Input and Output Directories:
 
-- input_directory: Specifies the directory where the input multi-FASTA files are located.
-- output_directory: Specifies the directory where the output individual FASTA files will be saved.
+  - input_directory: Specifies the directory where the input multi-FASTA files are located.
+  - output_directory: Specifies the directory where the output individual FASTA files will be saved.
 
 * Create Output Directory:
 
-- The script checks if the output_directory exists. If it doesn't, it creates the directory using the mkdir -p command.
+  - The script checks if the output_directory exists. If it doesn't, it creates the directory using the mkdir -p command.
 
 * split_fasta Function:
 
-- This function takes two arguments: input_file (a multi-FASTA file) and output_dir (the directory where individual sequences will be saved).
+  - This function takes two arguments: input_file (a multi-FASTA file) and output_dir (the directory where individual sequences will be saved).
 
 * Splitting and Extracting Headers:
 
-- Inside the split_fasta function, it creates a subdirectory within the output_dir for each input multi-FASTA file. The subdirectory is named after the base name of the input file without the extension.
-- It initializes variables header and sequence_content to store the current sequence's header and content.
-- It then reads the input file line by line, and for each line:
-- If the line starts with >, it indicates a new sequence header. It saves the previous sequence (if any) to an individual FASTA file and extracts the new header.
-- If the line doesn't start with >, it appends the line to the sequence_content.
-- After processing the entire input file, it saves the last sequence (if any) to an individual FASTA file.
+  - Inside the split_fasta function, it creates a subdirectory within the output_dir for each input multi-FASTA file. The subdirectory is named after the base name of the input file without the extension.
+  - It initializes variables header and sequence_content to store the current sequence's header and content.
+  - It then reads the input file line by line, and for each line:
+  - If the line starts with >, it indicates a new sequence header. It saves the previous sequence (if any) to an individual FASTA file and extracts the new header.
+  - If the line doesn't start with >, it appends the line to the sequence_content.
+  - After processing the entire input file, it saves the last sequence (if any) to an individual FASTA file.
 
 * Processing Multi-FASTA Files:
 
-- The script iterates through each multi-FASTA file in the input_directory using a for loop.
-- For each multi-FASTA file, it calls the split_fasta function, passing the input file and the output_directory as arguments.
+  - The script iterates through each multi-FASTA file in the input_directory using a for loop.
+  - For each multi-FASTA file, it calls the split_fasta function, passing the input file and the output_directory as arguments.
 
 * Saving Individual FASTA Files:
 
-- The split_fasta function saves each sequence as an individual FASTA file in the subdirectory corresponding to the input file.
-- The individual FASTA files are named using the sequence headers.
+  - The split_fasta function saves each sequence as an individual FASTA file in the subdirectory corresponding to the input file.
+  - The individual FASTA files are named using the sequence headers.
 
 Overall, this script is useful for splitting multi-FASTA files into separate FASTA files, making it easier to work with individual sequences. Each sequence is saved as its own file within a subdirectory named after the original multi-FASTA file. This script is especially handy when you need to process or analyze sequences individually.
