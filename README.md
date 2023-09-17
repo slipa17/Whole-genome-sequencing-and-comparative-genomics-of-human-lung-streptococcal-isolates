@@ -28,7 +28,59 @@
 
 ### Description of scripts
 
-1. **```FastANI.py```:** This script takes input genomes and a FastANI visualization output, generates a visual representation of conserved regions, and saves the plot in a user-specified format. It allows users to customize various aspects of the plot's appearance, such as colormap, link colors, and link style.
+1. **```FastANI.py```:** This script takes input genomes and a FastANI visualization output, generates a visual representation of conserved regions, and saves the plot in a user-specified format. It allows users to customize various aspects of the plot's appearance, such as colormap, link colors, and link style.  Let's break down the code step by step:
+
+* Importing Required Modules:
+
+  - The script starts by importing necessary Python modules. These modules include argparse for handling command-line arguments, csv for reading CSV files, pathlib.Path for working with file paths, Bio.SeqIO for parsing FASTA files, GenomeViz and related modules for creating the visualization, and ColorCycler for setting the color map.
+
+* Main Function:
+
+  - The main() function is the entry point of the script. It orchestrates the entire visualization workflow.
+
+* Parsing Command-Line Arguments:
+
+  - The argparse module is used to parse command-line arguments. These arguments specify input and output files, colormap settings, link colors, and whether to use curved-style links. The following arguments are expected:
+  - fasta_file1: Path to the first input genome in FASTA format.
+  - fasta_file2: Path to the second input genome in FASTA format.
+  - visual_file: Path to the FastANI visual result file.
+  - plot_outfile: Path to the output plot file (e.g., JPG, PNG, SVG, or PDF).
+  - --cmap: Optional argument for specifying the colormap for the plot (default is "hsv").
+  - --link_color: Optional argument for specifying the color of the links in the plot (default is "grey").
+  - --curve: Optional flag to enable curved-style links.
+
+* Loading Genome Fasta Information:
+
+  - Information about the two input genomes is loaded. This includes their names and total sequence lengths. The SeqIO.parse function is used to iterate through the sequences in the input FASTA files to calculate the total sequence lengths.
+
+* Loading FastANI Visual Result:
+
+  - The FastANI visual result file is loaded and parsed. The script reads the file line by line, extracting information about the conserved regions. Each line of the file contains tab-separated values that describe the conserved regions' positions and identities between the two genomes.
+
+* Creating the GenomeViz Object:
+
+  - The GenomeViz object (gv) is created to prepare for generating the visualization. Various parameters are set to configure the plot's appearance, including figure width, track heights, tick styles, and more.
+
+* Setting Colormap and Colors:
+
+  - The script sets the colormap (color palette) to be used for the visualization using ColorCycler.set_cmap(). This can be customized by the user.
+Colors for conserved regions are generated based on the number of regions detected.
+
+* Generating Features and Links:
+
+  - The script iterates through the detected conserved regions and generates features and links for the visualization. Features represent regions on the genomes, and links connect these regions.
+Features for both genomes are added to their respective tracks (track1 and track2) on the plot.
+Links are added to connect corresponding regions on the two genomes. The links' color, style, and curvature are determined by the FastANI results.
+
+* Creating and Saving the Plot:
+
+  - The final plot is generated using gv.plotfig(), which creates the visualization of conserved regions.
+A colorbar is added to the plot to provide a color scale for the links.
+The generated plot is saved to the specified output file.
+
+* Command Line Execution:
+
+  - The get_args() function retrieves the command-line arguments, and if the script is run as the main program (not imported as a module), the main() function is executed.
 
 2. **```FastANI.R```:** This R script reads FastANI output, loads the query and subject sequences, and generates a visualization of the core-genome comparison between the two sequences. The resulting visualization is saved as a PDF file with a name based on the original FastANI visualization filename.
 
