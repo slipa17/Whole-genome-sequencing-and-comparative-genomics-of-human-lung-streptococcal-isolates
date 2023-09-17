@@ -28,9 +28,13 @@
 
 ### Description of scripts
 
-1. **```concatenate.sh```:** The provided bash script is a concatenation script that takes all the fasta files (*.fasta) present in the current directory and concatenates them into a single output file specified by the user. It ensures that each sequence starts on a new line in the output file.
+1. **```FastANI.py```:** 
 
-2. **```name_files_with_folder_name.sh```:** This script will rename files within subfolders of a given parent folder, you can use the following script. This script will recursively search for files in subfolders of the specified parent folder and perform the renaming operation. Here's how this script works:
+2. **```FastANI.R```:** This R script reads FastANI output, loads the query and subject sequences, and generates a visualization of the core-genome comparison between the two sequences. The resulting visualization is saved as a PDF file with a name based on the original FastANI visualization filename.
+
+3. **```concatenate.sh```:** The provided bash script is a concatenation script that takes all the fasta files (*.fasta) present in the current directory and concatenates them into a single output file specified by the user. It ensures that each sequence starts on a new line in the output file.
+
+4. **```name_files_with_folder_name.sh```:** This script will rename files within subfolders of a given parent folder, you can use the following script. This script will recursively search for files in subfolders of the specified parent folder and perform the renaming operation. Here's how this script works:
 
 * It asks the user for the parent folder path where subfolders and files are located.
 * It checks if the parent folder exists.
@@ -39,10 +43,11 @@
 * After defining the function, the script starts the renaming process by calling rename_files with the parent folder path.
 * This script will traverse through all subfolders within the provided parent folder and rename the files within each subfolder according to your original renaming operation.
   
-3. **```append_end_of_filename.sh```:** To add the "_HOMD" string to the end of the filename, just before the file extension, you can use the following approach in a Bash script. This script uses parameter expansion to separate the filename from its extension. Then, it constructs the new filename by appending "_HOMD" before the extension. Substitute the "_HOMD" with the required string.
-4. **```split_headers_by_gap.sh```:** The provided bash script reads text files from a user-specified input folder, processes the files by removing everything after the first space in each line, and saves the processed files in a subfolder within the input directory named "processed." It then loops through each text file in the input directory and performs the processing operation.
+5. **```append_end_of_filename.sh```:** To add the "_HOMD" string to the end of the filename, just before the file extension, you can use the following approach in a Bash script. This script uses parameter expansion to separate the filename from its extension. Then, it constructs the new filename by appending "_HOMD" before the extension. Substitute the "_HOMD" with the required string.
+   
+6. **```split_headers_by_gap.sh```:** The provided bash script reads text files from a user-specified input folder, processes the files by removing everything after the first space in each line, and saves the processed files in a subfolder within the input directory named "processed." It then loops through each text file in the input directory and performs the processing operation.
 
-5. **```extract_faa_from_subfolders.sh```:**
+7. **```extract_faa_from_subfolders.sh```:**
 In this script:
 * The user is prompted to provide the source folder containing subfolders with .faa files.
 * The script checks if the source folder exists.
@@ -50,7 +55,7 @@ In this script:
 * The find command searches for .faa files within subfolders of the source folder, and the while loop iterates through them.
 * Each .faa file found is copied to the destination folder using the cp command. You can use mv instead of cp to move (cut/paste) the files if you prefer.
 
-6. **```multi_fasta_sequence_extract.sh```**
+8. **```multi_fasta_sequence_extract.sh```**
 This Bash script is designed to extract multiple FASTA sequences from a multi-FASTA file based on a list of protein IDs provided in multiple text files. It creates a new output directory to store the extracted sequences and processes each text file containing the protein IDs.
 
 Here's a step-by-step breakdown of the script:
@@ -73,7 +78,7 @@ Here's a step-by-step breakdown of the script:
 
 Overall, this script automates the process of extracting sequences from a multi-FASTA file based on protein IDs provided in multiple text files. It performs this operation for each text file found in the directory and saves the extracted sequences in the specified output directory with appropriate file names.
 
-7. **```split_multi_multi_fasta.sh```**
+9. **```split_multi_multi_fasta.sh```**
    This Bash script is designed to split multi-FASTA files into individual FASTA files based on their sequence headers. Here's a breakdown of how it works:
 
 * Input and Output Directories:
@@ -110,7 +115,7 @@ Overall, this script automates the process of extracting sequences from a multi-
 
 Overall, this script is useful for splitting multi-FASTA files into separate FASTA files, making it easier to work with individual sequences. Each sequence is saved as its own file within a subdirectory named after the original multi-FASTA file. This script is especially handy when you need to process or analyze sequences individually.
 
-7. **```move_files.sh```**
+10. **```move_files.sh```**
    
 This Bash script is designed to move a specified number of files from multiple source folders into a single destination folder while generating unique filenames for each file. Here's an explanation of how the script works:
 
