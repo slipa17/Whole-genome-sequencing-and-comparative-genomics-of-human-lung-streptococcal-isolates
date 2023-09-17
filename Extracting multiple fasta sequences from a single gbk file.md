@@ -1,16 +1,17 @@
-### Set the directory
+### Define the paths to the input GenBank file and the gene name list file
 
 ```python
 genome_file='./genomic.gb'
 gene_list_file='./gene_name_list.txt'
 ```
 
-### Import libraries
+### Import the SeqIO module from Biopython
 
 ```python
 from Bio import SeqIO
 ```
 
+### Open the gene name list file for reading
 
 ```python
 with open(gene_list_file,'r') as input_file:
@@ -24,6 +25,7 @@ with open(gene_list_file,'r') as input_file:
 * ```line.strip('\n')``` : The strip('\n') method is used to remove the newline character (\n) from the end of each line. This ensures that the resulting elements in the gene_names list do not contain trailing newline characters.
 The modified line is then added as an element to the gene_names list.
 
+### Calculate the number of gene names in the list
 
 ```python
 len(gene_names)
@@ -34,6 +36,7 @@ len(gene_names)
 
 By calling len(gene_names), you will get an integer value representing the number of gene names in the gene_names list. 
 
+### Display the first 6 gene names
 
 ```python
 gene_names[0:6]
@@ -44,6 +47,7 @@ gene_names[0:6]
 
 By executing gene_names[0:6], you will obtain a new list that includes the elements at indices 0, 1, 2, 3, 4, and 5 from the gene_names list. In other words, it retrieves the first six elements of the list. The original gene_names list remains unchanged.
 
+### Read the GenBank file into a SeqRecord object
 
 ```python
 gb_object=SeqIO.read(genome_file,'gb')
@@ -59,6 +63,7 @@ gb_object=SeqIO.read(genome_file,'gb')
 
 After executing this code, you can access various properties and methods of the gb_object to extract information about the sequence, such as the sequence itself, annotations, features, or any other metadata associated with the sequence in the GenBank file.
 
+### Extract all features of type 'gene' from the GenBank file
 
 ```python
 allgenes=[feature for feature in gb_object.features if feature.type =='gene']
@@ -75,12 +80,15 @@ allgenes=[feature for feature in gb_object.features if feature.type =='gene']
 
 By executing allgenes = ```[feature for feature in gb_object.features if feature.type =='gene']``` , you create a new list (allgenes) that contains only the features of type 'gene' from the GenBank sequence record. This allows you to specifically access and work with the gene features present in the sequence.
 
+### Calculate the number of gene features found in the GenBank file
 
 ```python
 len(allgenes)
 ```
 
 * ```len(allgenes)``` is used to get the number of elements (length) in the object allgenes. The len() function is a built-in Python function that returns the number of items in various data structures like lists, strings, tuples, sets, and dictionaries.
+
+### Create an empty list to store gene sequences 
 
 ```python
 gene_sequences=[]
@@ -90,6 +98,8 @@ gene_sequences=[]
 * ```[]``` : The empty brackets represent an empty list literal. By assigning it to the variable gene_sequences, you create an empty list that can be used to store gene sequences or any other relevant information.
 
 After executing this code, you have a list named gene_sequences that does not contain any elements. You can subsequently populate this list by adding gene sequences or any other desired data to it.
+
+### Loop through each gene feature in the GenBank file
 
 ```python
 for gene in allgenes:
@@ -122,12 +132,15 @@ for gene in allgenes:
 
 The loop iterates over the genes, checks if they have a 'gene' key in the qualifiers, matches their names with the gene_names list, extracts their sequences, assigns IDs, adds them to the gene_sequences list, and provides feedback on each found gene.
 
+### Calculate the number of gene sequences extracted
 
 ```python
 len(gene_sequences)
 ```
 
 * ```len(gene_sequences)``` is used to get the number of elements in the object gene_sequences. The ```len()``` function is a built-in Python function that returns the number of items in various data structures like lists, strings, tuples, sets, and dictionaries.
+
+### Define the path to the output FASTA file
 
 ```python
 output_file='./gene_name.fasta'
@@ -138,6 +151,8 @@ output_file='./gene_name.fasta'
 ``` './gene_name.fasta' ``` : This is a string literal representing the file path and name. In this case, it's set to './gene_name.fasta', which means the output file will be named gene_name.fasta and will be located in the current directory (./ denotes the current directory).
 
 If you are writing FASTA sequences to a file, you can use this output_file variable as the destination file when opening a file for writing
+
+### Write the gene sequences to the output FASTA file
 
 ```python
 SeqIO.write(gene_sequences,output_file,'fasta')
