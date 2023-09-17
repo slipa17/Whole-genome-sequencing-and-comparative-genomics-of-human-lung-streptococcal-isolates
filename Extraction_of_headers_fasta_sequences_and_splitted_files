@@ -125,7 +125,7 @@ Copy code
     - ...
 The script assumes that your multi-FASTA files are stored in the "input_files" directory and creates a separate subdirectory for each input file in the "output_sequences" directory. Each subdirectory contains the individual header files for the corresponding input file.
 
-Save the script in a file, for example, "split_multi_multi_fasta.sh". Make sure the input files are in the "input_files" directory.
+Save the script in a file, for example, "split_multi_multi_fasta.sh" in fasta_headers directory. Make sure the input files are in the "input_files" directory.
 
 To execute the script, make it executable using the following command:
 
