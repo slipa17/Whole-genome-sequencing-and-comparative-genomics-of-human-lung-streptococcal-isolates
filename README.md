@@ -19,7 +19,9 @@
 
  - Extraction of multiple fasta sequences from a multiple headers text file.md: This Bash script is designed to extract multiple FASTA sequences from a multi-FASTA file based on a list of protein IDs provided in text files.
 
- - Splitting the files into individual protein id's from a multi-fasta sequences.md: This Bash script is designed to split a multi-FASTA file into individual files based on protein IDs (headers). It creates a separate file for each protein sequence and stores them in an organized directory structure. 
+ - Splitting the files into individual protein id's from a multi-fasta sequences.md: This Bash script is designed to split a multi-FASTA file into individual files based on protein IDs (headers). It creates a separate file for each protein sequence and stores them in an organized directory structure.
+
+7. **FastANI.md**: This script orchestrates the use of FastANI to calculate the Average Nucleotide Identity between genome sequences and then uses custom R and Python scripts to create visualizations of conserved regions based on FastANI results. 
                                               
 
 ### Description of scripts
