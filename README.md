@@ -12,7 +12,11 @@
 
 5. **Extraction of rRNA fasta sequences from a .gbk file..md:**  This script reads a GenBank file, extracts rRNA features along with their locus tags and product descriptions, creates SeqRecord objects for each rRNA feature, and writes them to a new FASTA file. It's a useful tool for extracting specific features from GenBank files and converting them to FASTA format for downstream analysis.
 
-6. **Extraction of the respective headers lists from the different multifasta files:** This Bash script is designed to process a directory containing multiple FASTA files. It extracts protein IDs from each FASTA file and saves them in separate text files.                
+6. **Extraction of the respective headers lists from the different multifasta files:** This Bash script is designed to process a directory containing multiple FASTA files. It extracts protein IDs from each FASTA file and saves them in separate text files.
+
+   **Extraction of multiple fasta sequences from a multiple headers text file:** This Bash script is designed to extract multiple FASTA sequences from a multi-FASTA file based on a list of protein IDs provided in text files.
+
+                  
                                                 
 
 ### Description of scripts
