@@ -1,6 +1,6 @@
-## The following codes have been run in the Jupyter Notebook using the Python scripts.
+#### The following codes have been run in the Jupyter Notebook using the Python scripts.
 
-### Import libraries
+#### Import libraries
 
 ```python
 from Bio import SeqIO
@@ -8,13 +8,13 @@ from Bio.SeqRecord import SeqRecord
 import sys
 ```
 
-### Either assign a File Path to a Variable
+#### Either assign a File Path to a Variable
 
 ```python
 path = '/Users/slipakanungo/<Path>'
 ```
 
-### Or else set directory of the input and output files (Opening Input and Output Files for Sequence Conversion)
+#### Or else set directory of the input and output files (Opening Input and Output Files for Sequence Conversion)
 
 ```python
 input_handle = open("./<Path_of_the_gb_file>", "r")
@@ -28,7 +28,7 @@ The ```open()``` function is a built-in Python function that provides file handl
 
 After executing these lines of code, you can use input_handle to read the contents of the input file, and output_handle to write or save data to the output file. Remember to close these file objects using the close() method when you have finished working with them to ensure proper handling and release of system resources.
 
-### Parsing GenBank File and Storing Sequences
+#### Parsing GenBank File and Storing Sequences
 
 ```python
 sequences = list(SeqIO.parse(input_handle, "genbank"))
@@ -47,7 +47,7 @@ By executing ```sequences = list(SeqIO.parse(input_handle, "genbank"))```, you r
 
 Remember to close the input_handle file object using the close() method when you have finished working with it to ensure proper handling and release of system resources.
 
-### Initializing an Empty List for Products
+#### Initializing an Empty List for Products
 
 ```python
 product= []
@@ -58,7 +58,7 @@ product= []
 
 After executing this code, you have a list named product that does not contain any elements. 
 
-### Initializing an Empty List for Locus Tags
+#### Initializing an Empty List for Locus Tags
 
 ```python
 locus_tag= []
@@ -69,7 +69,7 @@ locus_tag= []
 
 After executing this code, you have a list named locus_tag that does not contain any elements. 
 
-### Initializing an Empty List for rRNA
+#### Initializing an Empty List for rRNA
 
 ```python
 rRNA = []
@@ -80,7 +80,7 @@ rRNA = []
 
 After executing this code, you have a list named rRNA that does not contain any elements. 
 
-### Extracting rRNA Features and Creating SeqRecord Objects
+#### Extracting rRNA Features and Creating SeqRecord Objects
 
 ```python
 for genome in sequences :
@@ -110,7 +110,7 @@ for genome in sequences :
 
 The loop iterates over the sequences, examines each feature, extracts rRNA features, retrieves their locus tag and product description, extracts the associated sequence, creates SeqRecord objects, and appends them to the rRNA list. As a result, the rRNA list will contain the rRNA sequences with their corresponding IDs and descriptions extracted from the GenBank file.
 
-### Writing rRNA Sequences to a FASTA File
+#### Writing rRNA Sequences to a FASTA File
 
 ```python
 count = SeqIO.write(rRNA, output_handle, "fasta")
@@ -129,7 +129,7 @@ After running this code, the rRNA sequences will be saved in the specified outpu
 
 Remember to close the output_handle file object using the close() method when you have finished writing to it to ensure proper handling and release of system resources.
 
-### Closing Files and Displaying Conversion Summary
+#### Closing Files and Displaying Conversion Summary
 
 ```python
 output_handle.close()
