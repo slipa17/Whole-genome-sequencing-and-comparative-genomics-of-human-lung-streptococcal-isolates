@@ -28,7 +28,7 @@
 
 ### Description of scripts
 
-1. **```FastANI.py```:** 
+1. **```FastANI.py```:** This script takes input genomes and a FastANI visualization output, generates a visual representation of conserved regions, and saves the plot in a user-specified format. It allows users to customize various aspects of the plot's appearance, such as colormap, link colors, and link style.
 
 2. **```FastANI.R```:** This R script reads FastANI output, loads the query and subject sequences, and generates a visualization of the core-genome comparison between the two sequences. The resulting visualization is saved as a PDF file with a name based on the original FastANI visualization filename.
 
