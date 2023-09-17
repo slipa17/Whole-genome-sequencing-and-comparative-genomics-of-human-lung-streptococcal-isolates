@@ -6,7 +6,9 @@
 
 2. **Converting fasta sequences to gbk format.md:** The provided Python code demonstrates how to convert FASTA sequences to GenBank (GBK) format using the BioPython library.
 
-3. **Converting multiple fasta sequences to a gbk format.md:** The provided Python code is an example of how to convert multiple FASTA sequences to GenBank (GBK) format using the BioPython library. The code reads the input FASTA file, converts each sequence to a SeqRecord object in GenBank format, stores them in a list, and then writes all the SeqRecord objects to the output GenBank file.                        
+3. **Converting multiple fasta sequences to a gbk format.md:** The provided Python code is an example of how to convert multiple FASTA sequences to GenBank (GBK) format using the BioPython library. The code reads the input FASTA file, converts each sequence to a SeqRecord object in GenBank format, stores them in a list, and then writes all the SeqRecord objects to the output GenBank file.
+
+4. **Extracting multiple fasta sequences from a single gbk file.md:** The provided Python code uses the Biopython library to extract gene sequences from a GenBank file (genome.gb) based on a list of gene names provided in a text file (gene_name_list.txt). It then creates a new FASTA file (gene_name.fasta) containing the extracted gene sequences.                      
  
 
 ### Description of scripts
