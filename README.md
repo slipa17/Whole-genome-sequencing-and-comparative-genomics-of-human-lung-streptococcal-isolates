@@ -81,8 +81,42 @@ The generated plot is saved to the specified output file.
 * Command Line Execution:
 
   - The get_args() function retrieves the command-line arguments, and if the script is run as the main program (not imported as a module), the main() function is executed.
+ 
+In summary, this script takes input genomes and a FastANI visualization output, generates a visual representation of conserved regions, and saves the plot in a user-specified format. It allows users to customize various aspects of the plot's appearance, such as colormap, link colors, and link style.
 
-2. **```FastANI.R```:** This R script reads FastANI output, loads the query and subject sequences, and generates a visualization of the core-genome comparison between the two sequences. The resulting visualization is saved as a PDF file with a name based on the original FastANI visualization filename.
+2. **```FastANI.R```:** This R script reads FastANI output, loads the query and subject sequences, and generates a visualization of the core-genome comparison between the two sequences. The resulting visualization is saved as a PDF file with a name based on the original FastANI visualization filename. Let's break down the code step by step:
+
+* Script Purpose and Usage Comment:
+
+  - The script begins with comments that describe its purpose, usage, and expected output.
+  - It specifies that the script is intended for visualizing the core-genome comparison produced by FastANI.
+
+* Parsing Command Line Arguments:
+
+  - The script extracts command line arguments using the commandArgs(TRUE) function. It expects three arguments: <query sequence in fasta format>, <subject sequence>, and <fastANI visualization output>. These arguments represent file paths.
+  - The extracted arguments are assigned to variables: query_fasta, subject_fasta, and fastANI_visual_file.
+
+* Loading Required Libraries:
+
+  - The script loads the genoPlotR library, which is used for generating genome comparison plots.
+ 
+* Reading FastANI Output:
+
+  - The read_comparison_from_blast() function is used to read the FastANI visualization output file (fastANI_visual_file) and assign it to the variable comparison. The try() function is used to handle any potential errors that may occur during reading.
+ 
+* Reading Sequences:
+
+  - The read_dna_seg_from_file() function is used to read the query and subject sequences from their respective FASTA files (query_fasta and subject_fasta).
+  - The query sequence is assigned to the variable Query, and the subject sequence is assigned to Ref. The try() function is again used to handle any potential errors.
+ 
+* Plotting Core-Genome Comparison:
+
+  - The variable plotTitle is created by concatenating the names of the query and subject sequences with " v/s " in between.
+  - A PDF device is opened using pdf() with a filename that includes the original visualization filename (fastANI_visual_file) and ".pdf" as the extension.
+  - The plot_gene_map() function is called to generate the core-genome comparison plot. It takes parameters such as DNA segments (Query and Ref), comparisons (comparison), plot title (plotTitle), and other plot settings.
+  - The dev.off() function is called to close the PDF device.
+ 
+In summary, this R script reads FastANI output, loads the query and subject sequences, and generates a visualization of the core-genome comparison between the two sequences. The resulting visualization is saved as a PDF file with a name based on the original FastANI visualization filename.
 
 3. **```concatenate.sh```:** The provided bash script is a concatenation script that takes all the fasta files (*.fasta) present in the current directory and concatenates them into a single output file specified by the user. It ensures that each sequence starts on a new line in the output file.
 
