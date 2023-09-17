@@ -1,32 +1,32 @@
 ### Reading the csv file, Merging the dataframe and Plotting the heatmap
 
-### Importing pandas library
+#### Importing pandas library
 
 ```
 import pandas as pd
 ```
 
                      
-### Importing pandas module (to run the python script)
+#### Importing pandas module (to run the python script)
 
 ```python
 import os
 ```
 
 
-### setting the current working directory
+#### Setting the current working directory
 
 ```python
 os.getcwd()
 ```
 
-### changing the current working directory to specified path
+#### Changing the current working directory to specified path
 
 ```python
 os.chdir(path)
 ```
 
-### reading the csv file
+#### Reading the csv file
 
 ```python
 strain = pd.read_csv("name of the file.csv")
@@ -43,7 +43,7 @@ Assuming that the CSV file "name of the file.csv" contains data organized in row
 
 strain: name of the microbial isolates
 
-### get a frequency table with value counts
+#### get a frequency table with value counts
 ```
 frequency1 = strain["name of the category inside the csv file"].value_counts(ascending=True).sort_index()
 frequency1
@@ -59,7 +59,7 @@ Assuming that the CSV file "name of the file.csv" contains data organized in row
 
 frequency1: name of the object
 
-### converting a frequency table into a data frame
+#### Converting a frequency table into a data frame
 ```
 df1 = pd.DataFrame(frequency1)
 df1
@@ -73,7 +73,7 @@ The resulting DataFrame df1 will have two columns: one for the index (representi
 df1: name of the object
 
 
-### reading the csv file
+#### Reading the csv file
 
 ```python
 strain = pd.read_csv("name of the file.csv")
@@ -91,7 +91,7 @@ Assuming that the CSV file "name of the file.csv" contains data organized in row
 strain: name of the microbial isolates
 
 
-### get a frequency table with value counts
+#### get a frequency table with value counts
 
 ```
 frequency2 = strain["name of the category inside the csv file"].value_counts(ascending=True).sort_index()
@@ -108,7 +108,7 @@ frequency2
 
 frequency2: name of the object
 
-### converting a frequency table into a data frame
+#### Converting a frequency table into a data frame
 
 ```
 df2 = pd.DataFrame(frequency2)
@@ -124,7 +124,7 @@ The resulting DataFrame df2 will have two columns: one for the index (representi
 df2: name of the object
 
 
-### Merging both the data frames
+#### Merging both the data frames
 
 ```python
 merge1 = pd.merge(df1,df2,left_index=True,right_index=True,how='left')
@@ -155,7 +155,7 @@ how='right'; the left_index will be merged on the right_index
 * In case the left_index dataframe and right_index dataframe has equal number of elements, use:
 how='left' or how='right
 
-### Alternate command for merging both the data frames
+#### Alternate command for merging both the data frames
 
 ```python
 merge1 = pd.merge(df1,df2,how='left', on=["Pathway"])
@@ -176,7 +176,7 @@ Note:
 * how= 'left' or how= 'right'; depends on which side of the "dataframe" you want to merge
 * on=["Pathway"]; depends on which "category" of the dataframe you want to merge
 
-### Substituting NaN in the merged dataframe with 0
+#### Substituting NaN in the merged dataframe with 0
 
 ```python
 merge1.fillna(0)
@@ -187,7 +187,7 @@ merge1.fillna(0)
 
 By executing merge1.fillna(0), any NaN values present in the DataFrame merge1 will be replaced with 0. This is useful for cases where there are missing values in the merged DataFrame, and you want to treat those missing values as zeros for further analysis or calculations.
 
-### Delete a particular column of the dataframe
+#### Delete a particular column of the dataframe
 
 ```python
 del file_name['particular_column_name']
@@ -195,7 +195,7 @@ del file_name['particular_column_name']
 
 * The del statement in Python is used to delete an object or a specific item from a list or dictionary. When used with pandas DataFrames, del can be used to remove a specific column (referred to as a "particular_column_name") from the DataFrame. 
 
-### Re-naming the index of the dataframe
+#### Re-naming the index of the dataframe
 
 ```python
 new_file_name = dataframe_name.rename(index={0:'rename',1:'rename',2:'rename',3:'rename',4:'rename',5:'rename'})
@@ -208,7 +208,7 @@ new_file_name = dataframe_name.rename(index={0:'rename',1:'rename',2:'rename',3:
 
 The rename() method in pandas is used to change row and/or column labels of a DataFrame. In this case, it is being used to modify the row labels. The index parameter takes a dictionary where the keys are the current row index positions, and the values are the new row labels you want to assign to those positions.
 
-### Exporting the particular csv file to the main folder
+#### Exporting the particular csv file to the main folder
 
 ```python
 merge1.to_csv('COG.csv')
@@ -221,7 +221,7 @@ When you execute this line of code, the DataFrame merge1 will be saved as a CSV 
 
 The CSV file will have the content of the DataFrame merge1, including the columns, rows, and any index labels present in the DataFrame. The data in the CSV file will be comma-separated, with each row representing a row from the DataFrame and each column representing a column from the DataFrame.
 
-### Importing libraries for the heatmap
+#### Importing libraries for the heatmap
 
 ```python
 import seaborn as sns
@@ -237,7 +237,7 @@ import matplotlib.pyplot as plt
 
 By importing these libraries, you can utilize their functionalities to create visualizations and perform data manipulation and analysis efficiently. For example, you can use seaborn to create sophisticated statistical plots, numpy to work with arrays and perform numerical computations, and matplotlib.pyplot to generate a wide range of plots for your data.
 
-### Plotting the heatmap
+#### Plotting the heatmap
 
 ```python
 plt.figure(figsize=(9,9))
@@ -260,7 +260,7 @@ plt.show()
 The resulting heatmap will be displayed with the specified labels on the axes and colored according to the data in the DataFrame merge5. The 'rocket_r' colormap will be used to map the values in merge5 to corresponding colors on the heatmap. The larger values will appear in darker colors, and smaller values will appear in lighter colors, allowing you to quickly identify patterns and trends in the data. The heatmap is a useful visualization tool for understanding relationships between variables in large datasets.
     
 
-### Re-arranging the merged coloumns
+#### Re-arranging the merged coloumns
 
 ```python
 new_columns = ['column_2','column_5','column_1','column_6','column_3','column_4']
