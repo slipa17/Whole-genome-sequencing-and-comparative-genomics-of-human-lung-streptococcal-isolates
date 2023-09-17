@@ -1,4 +1,4 @@
-### Define the paths to the input GenBank file and the gene name list file
+## Define the paths to the input GenBank file and the gene name list file
 
 ```python
 genome_file='./genomic.gb'
