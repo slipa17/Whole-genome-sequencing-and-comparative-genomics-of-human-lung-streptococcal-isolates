@@ -1,4 +1,6 @@
-## To install fastani packages
+### To install fastani packages
+
+#### Conda Environment Setup
 
 ```
 conda create -n foo -c conda-forge -c bioconda fastani
@@ -11,7 +13,7 @@ conda create -n foo -c conda-forge -c bioconda fastani
 
 In summary, the command creates a new conda environment named "foo" and installs the "fastani" package from the Conda Forge and Bioconda channels into that environment. Once created, you can activate the environment using conda activate foo and use the "fastani" package within that environment for your analysis or computations.
 
-## To activate foo environment
+#### To activate foo environment
 
      $ conda activate foo
      
@@ -21,12 +23,13 @@ In summary, the command creates a new conda environment named "foo" and installs
 
 In summary, the command activates the conda environment named "foo", which means that the environment becomes the active environment in your current shell session. Once activated, any subsequent package installations or commands will be performed within the "foo" environment, isolating them from other environments on your system. 
 
-## To deactivate an active environment
+#### To deactivate an active environment
 
      $ conda deactivate
 
-     
-## For one-one genome
+### For one-one genome
+
+#### Running FastANI
 
  ```
  fastANI -q genome1.fa -r genome2.fa --visualize -o file_name.out
@@ -39,7 +42,9 @@ In summary, the command activates the conda environment named "foo", which means
 
 In summary, the command uses fastANI to compare the nucleotide sequences of two genomes (query and reference) provided in FASTA format. It calculates the Average Nucleotide Identity (ANI) between the genomes and produces an output file ("file_name.out") containing the ANI results. The ```--visualize``` option indicates that a visualization of the ANI results should also be generated.
 
- ## For one-one genome visualization grid   
+ ### For one-one genome visualization grid 
+
+ #### Running an R Script (Rscript.R)
  
  * Calling R in Linux
  
@@ -78,7 +83,9 @@ plot_gene_map(dna_segs=list(Query, Ref), comparisons=list(comparison), main=plot
 dev.off()
 ```
           
- ## For one-one genome visualization grid
+ ### For one-one genome visualization grid
+
+ #### Running a Python Script (python3_scripts.py)
  
  * Calling Python in Linux
  
@@ -282,7 +289,10 @@ if __name__ == "__main__":
   ```  
 
 
- ## For one-many genome
+ ### For one-many genome
+
+ #### Additional FastANI and ANIclustermap Commands
+
   
   ```
   fastANI -q genome1.fa --rl genome_list.txt --visualize -o file_name.out 
@@ -300,7 +310,7 @@ Query = [P2D11.fasta]
 In summary, the command is using the "fastANI" program to calculate the Average Nucleotide Identity (ANI) between the query genome specified in "genome1.fa" and the reference genomes listed in the "genome_list.txt" file. It also generates a visualization of the ANI results, and the output is saved in the "file_name.out" file.
 
 
-## For one-many genome clustermap  
+#### For one-many genome clustermap  
 
 * Calling Python in Linux 
 
@@ -331,7 +341,7 @@ In summary, the command is using the "ANIclustermap" tool to generate a clusterm
 
 
 
-## For one-many genome visualization grid  
+#### For one-many genome visualization grid  
 
 * Calling Python in Linux
 
@@ -357,7 +367,7 @@ In summary, the command is using the "ANIclustermap" tool to generate a clusterm
 In summary, the command is using the "pgv-mmseqs" program to generate a visualization of genomic features from multiple GenBank files. The output is saved in the "mmseqs_new" directory. Various options are provided to customize the visualization, such as tick style, alignment type, and feature plot style using arrows.
    
    
- ##  For many-many genome
+ ####  For many-many genome
    
    ```
    fastANI --ql users/users.txt --rl ref/ref.txt --visualize -o file_name.out
@@ -374,7 +384,7 @@ In summary, the command is using the "pgv-mmseqs" program to generate a visualiz
 In summary, the command is using the "fastANI" program to calculate the Average Nucleotide Identity (ANI) between query genomes listed in the "users/users.txt" file and reference genomes listed in the "ref/ref.txt" file. Additionally, it generates a visualization of the ANI results, and the output is saved in the "file_name.out" file.
 
     
-## For many-many genome clustermap  
+#### For many-many genome clustermap  
 
  * Calling Python in Linux
  
@@ -393,7 +403,7 @@ In summary, the command is using the "fastANI" program to calculate the Average 
 In summary, the command is using the "ANIclustermap" program to generate a clustermap visualization based on the ANI values or reference genomes stored in the "./users_ref/" directory. The resulting clustermap is saved in the "./output_file_name" file or directory. Additional options are provided to customize the figure width and colormap colors used in the visualization.
                   
                     
-## For many-many genome visualization grid 
+#### For many-many genome visualization grid 
   * Calling Python in Linux
   
    ```
