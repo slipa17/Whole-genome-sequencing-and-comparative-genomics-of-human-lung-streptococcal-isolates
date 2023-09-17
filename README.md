@@ -21,7 +21,9 @@
 
  - Splitting the files into individual protein id's from a multi-fasta sequences.md: This Bash script is designed to split a multi-FASTA file into individual files based on protein IDs (headers). It creates a separate file for each protein sequence and stores them in an organized directory structure.
 
-7. **FastANI.md**: This script orchestrates the use of FastANI to calculate the Average Nucleotide Identity between genome sequences and then uses custom R and Python scripts to create visualizations of conserved regions based on FastANI results. 
+7. **FastANI.md**: This script orchestrates the use of FastANI to calculate the Average Nucleotide Identity between genome sequences and then uses custom R and Python scripts to create visualizations of conserved regions based on FastANI results.
+
+8. **Strep_COG_analysis.md**: This code reads data from a CSV file, calculates value counts, creates DataFrames, merges them, and then visualizes the data in the form of a heatmap. The script also provides flexibility in selecting specific columns for analysis and visualization.
                                               
 
 ### Description of scripts
