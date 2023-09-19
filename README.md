@@ -245,6 +245,6 @@ unique_name is constructed by combining the source folder's name (obtained using
 
 In summary, this script is useful for batch moving a specified number of files from multiple source folders into a single destination folder while ensuring that the filenames remain unique. It's handy when you want to consolidate a specific number of files from various sources into a centralized location.
 
-**```rename_fasta_headers_when_duplicates.sh```**
+**11.```rename_fasta_headers_when_duplicates.sh```**
 If duplication occurs in FASTA headers. This script allows you to rename FASTA headers in a batch for all FASTA files in a specified input directory and save the modified files in an output directory. The renaming is based on a pattern that adds a numerical suffix to headers with the same prefix.
 
