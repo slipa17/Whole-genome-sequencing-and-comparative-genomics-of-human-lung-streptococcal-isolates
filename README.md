@@ -248,4 +248,4 @@ In summary, this script is useful for batch moving a specified number of files f
 11. **```rename_fasta_headers_when_duplicates.sh```**
 If duplication occurs in FASTA headers. This script allows you to rename FASTA headers in a batch for all FASTA files in a specified input directory and save the modified files in an output directory. The renaming is based on a pattern that adds a numerical suffix to headers with the same prefix.
 
-12. **```split_fasta_byid_seqkit```** This script allows the user to split multiple input FASTA files into smaller FASTA files based on their sequence IDs using the seqkit tool. The split files are saved in the specified output directory.
+12. **```split_fasta_byid_seqkit.sh```** This script allows the user to split multiple input FASTA files into smaller FASTA files based on their sequence IDs using the seqkit tool. The split files are saved in the specified output directory.
