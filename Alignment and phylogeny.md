@@ -1,34 +1,34 @@
-## Rename of duplicate sequences names
+#### Rename of duplicate sequences names
 ```
  seqkit rename -n INPUT.fasta -o Input_renamed.fasta
 ```
 
 
-## Removal of duplicate FASTA sequences / collapse identical sequences
+#### Removal of duplicate FASTA sequences / collapse identical sequences
 
 ```
 seqkit rmdup -s INPUT.fasta -o INPUT_clean.fasta               
 
 ```
-## Concatenation of FASTA sequences
+#### Concatenation of FASTA sequences
 
 * Concatenate sequences with proper new lines after each sequence. The script is provided as separate file.
 
 ```
 ./concatenate.sh
 ```
-## Formatting FASTA before alignment
+#### Formatting FASTA before alignment
 * This is a quality assurance step to make sure the file is in FASTA format.
 ```
 fasta_formatter -i input.fasta -o output_formatted.fasta -w 0
 ```
-## Trimming FASTA to size before alignment
+#### Trimming FASTA to size before alignment
 
 ```
 fastx_trimmer -l N -i INPUT.fasta -o INPUT_trimmed.fasta
 ```
 
-## Performing alignment using MAFFT
+#### Performing alignment using MAFFT
 * ```--auto```allows MAFFT to automatically decide the parameters to use based on the input file.
 * ```--nomemsave```for disabling memory save mode and make it faster.
 ```
@@ -40,7 +40,7 @@ for more details on arguments, please follow: https://mafft.cbrc.jp/alignment/so
 
 * No masking was used after alignment 
 
-## Calculation of distance matrix post alignment
+#### Calculation of distance matrix post alignment
 * Using EMBOSS ```distmat```function 
 * Since, alignment with MAFFT is performed already with appropriate correction algorithm. No further correction was applied indicated by ```-nucmethod 0```
 
@@ -49,7 +49,7 @@ distmat -sequence aligned.fasta -nucmethod 0 -outfile aligned_dist
 
 ```
 
-## Phylogenetic tree after alignment using RAxML 
+#### Phylogenetic tree after alignment using RAxML 
 Using RAxML to perform a rapid bootstrap analysis to infer a maximum likelihood tree based on molecular sequence data in PHYLIP format. 
 
 ```
@@ -74,7 +74,7 @@ raxmlHPC-PTHREADS -T 4 -f a -p 12345 -x 12345 -m PROTGAMMAAUTO -# 100 -s INPUT_A
 
 For further details please follow: https://cme.h-its.org/exelixis/web/software/raxml/hands_on.html 
 
-## Phylogenetic tree after alignment using FastTree (especially for non-complex large nucleotide alignments for e.g. 16S rRNA sequences phylogeny)
+#### Phylogenetic tree after alignment using FastTree (especially for non-complex large nucleotide alignments for e.g. 16S rRNA sequences phylogeny)
 
 ```
 FastTree -nt -gtr -gamma -log homd_user_ref_align all_users_ref_homd_16s_clean_trimmed_aligned.fasta > all_users_ref_homd_16s_clean_trimmed_aligned_tree 
