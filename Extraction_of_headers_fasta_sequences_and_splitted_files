@@ -141,8 +141,6 @@ Then, run the script:
  zsh split_multi_multi_fasta.sh
 
 
-
-
 ## Splitting the fasta headers of a single multi-fasta file
 
 * Installing pyfaidx using conda
