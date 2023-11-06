@@ -52,16 +52,27 @@ In summary, the command installs the "ncbi-datasets-cli" package into the curren
 * For genomes
 
 ```
-datasets download genome accession --inputfile input_genome_files.txt --annotated --include-gbff
+datasets download genome accession --inputfile input_genome_files.txt --annotated  --include gbff,genome,rna,protein,cds,gff3,gtf,seq-report
 ```
 * ```datasets```: The command-line tool for accessing and downloading data from NCBI datasets.
 * ```download genome```: Specifies that you want to download genome data.
 * ```accession```: Refers to the type of identifier you are using to specify the genomes you want to download. Replace "accession" with the actual identifier (e.g., GenBank accession number) you want to use to download specific genomes.
 * ```--inputfile input_genome_files.txt```: Specifies the name of the input file that contains a list of genome accessions or identifiers. Replace "input_genome_files.txt" with the actual name of your input file.
 * ```--annotated```: Includes annotated genome data in the download. This option ensures that the downloaded genome files contain annotation information.
-* ```--include-gbff```: Specifies that the download should include the GenBank Flat File (GBFF) format for the genome data. GBFF is a richly annotated file format that provides detailed information about the genome sequence, features, and annotations.
+* ```--include gbff,genome,rna,protein,cds,gff3,gtf,seq-report```: This part of the command specifies the data types you want to include in the download. Each data type is separated by a comma, and they represent different components of the genomic data:
 
-In summary, the command uses the "datasets" tool to download genome data from NCBI based on specified accessions or identifiers listed in the input file. It ensures that the downloaded files are annotated and includes the GenBank Flat File (GBFF) format in the download.
+'''gbff''': GenBank flat file format, which provides comprehensive information about the genome.
+'''genome''': The genome sequence itself.
+'''rna''': RNA sequences.
+'''protein''': Protein sequences.
+'''cds''': Coding sequence data, which includes information about the protein-coding genes.
+'''gff3''': A standard format for genomic feature annotations.
+'''gtf''': Gene Transfer Format, another format for gene and other feature annotations.
+'''seq-report''': A report of the sequence and annotations for the requested genome.
+
+By including these data types, you are specifying what types of genomic data files you want to download for the given accession numbers. This allows you to obtain a comprehensive set of data related to the genomes you're interested in, making it easier to work with and analyze the genetic information.
+
+The '''datasets download genome accession''' command will read the accession numbers from the specified input file, download the selected data types for each genome, and save the files in the current working directory or a location you specify. This can be a useful command for researchers and bioinformaticians who need to access and analyze genomic data from the NCBI databases.
 
 
 ### 6. To unzip the ncbi_dataset.zip
