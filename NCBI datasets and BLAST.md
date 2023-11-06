@@ -61,18 +61,18 @@ datasets download genome accession --inputfile input_genome_files.txt --annotate
 * ```--annotated```: Includes annotated genome data in the download. This option ensures that the downloaded genome files contain annotation information.
 * ```--include gbff,genome,rna,protein,cds,gff3,gtf,seq-report```: This part of the command specifies the data types you want to include in the download. Each data type is separated by a comma, and they represent different components of the genomic data:
 
-'''gbff''': GenBank flat file format, which provides comprehensive information about the genome.
-'''genome''': The genome sequence itself.
-'''rna''': RNA sequences.
-'''protein''': Protein sequences.
-'''cds''': Coding sequence data, which includes information about the protein-coding genes.
+```gbff```: GenBank flat file format, which provides comprehensive information about the genome.
+```genome```: The genome sequence itself.
+```rna```: RNA sequences.
+```protein```: Protein sequences.
+```cds```: Coding sequence data, which includes information about the protein-coding genes.
 '''gff3''': A standard format for genomic feature annotations.
 '''gtf''': Gene Transfer Format, another format for gene and other feature annotations.
 '''seq-report''': A report of the sequence and annotations for the requested genome.
 
 By including these data types, you are specifying what types of genomic data files you want to download for the given accession numbers. This allows you to obtain a comprehensive set of data related to the genomes you're interested in, making it easier to work with and analyze the genetic information.
 
-The '''datasets download genome accession''' command will read the accession numbers from the specified input file, download the selected data types for each genome, and save the files in the current working directory or a location you specify. This can be a useful command for researchers and bioinformaticians who need to access and analyze genomic data from the NCBI databases.
+The "datasets download genome accession" command will read the accession numbers from the specified input file, download the selected data types for each genome, and save the files in the current working directory or a location you specify. This can be a useful command for researchers and bioinformaticians who need to access and analyze genomic data from the NCBI databases.
 
 
 ### 6. To unzip the ncbi_dataset.zip
