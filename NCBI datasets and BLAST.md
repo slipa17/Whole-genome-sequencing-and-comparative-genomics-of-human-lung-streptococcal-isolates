@@ -72,7 +72,7 @@ datasets download genome accession --inputfile input_genome_files.txt --annotate
 
 By including these data types, you are specifying what types of genomic data files you want to download for the given accession numbers. This allows you to obtain a comprehensive set of data related to the genomes you're interested in, making it easier to work with and analyze the genetic information.
 
-The "datasets download genome accession" command will read the accession numbers from the specified input file, download the selected data types for each genome, and save the files in the current working directory or a location you specify. This can be a useful command for researchers and bioinformaticians who need to access and analyze genomic data from the NCBI databases.
+The ```datasets download genome accession``` command will read the accession numbers from the specified input file, download the selected data types for each genome, and save the files in the current working directory or a location you specify. This can be a useful command for researchers and bioinformaticians who need to access and analyze genomic data from the NCBI databases.
 
 
 ### 6. To unzip the ncbi_dataset.zip
