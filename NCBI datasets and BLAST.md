@@ -80,9 +80,9 @@ The ```datasets download genome accession``` command will read the accession num
 * First install unzip
 
 ```
-brew install unzip
+conda install unzip
 ```
-* ```brew```: The command-line package manager for macOS.
+* ```conda```: The command-line package manager for macOS.
 * ```install```: The command used to install packages.
 * ```unzip```: The name of the package you want to install. In this case, it is the "unzip" utility, which is used to extract files from ZIP archives.
 
