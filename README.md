@@ -1,4 +1,4 @@
-# Comparative genomics analysis of whole genome sequencing of human lung streptococcal isolates.
+# Whole genome sequencing and comparative genomics of human lung streptococcal isolates.
 
 ### Description of codes 
 
