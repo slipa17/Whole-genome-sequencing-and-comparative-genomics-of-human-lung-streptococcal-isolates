@@ -1,4 +1,4 @@
-# LuMiCol
+# Comparative genomics analysis of whole genome sequencing of human lung streptococcal isolates.
 
 ### Description of codes 
 
