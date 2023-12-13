@@ -141,7 +141,31 @@ In this script:
 * The find command searches for .faa files within subfolders of the source folder, and the while loop iterates through them.
 * Each .faa file found is copied to the destination folder using the cp command. You can use mv instead of cp to move (cut/paste) the files if you prefer.
 
-8. **```multi_fasta_sequence_extract.sh```**
+8. **```move_files.sh```**
+   
+This Bash script is designed to move a specified number of files from multiple source folders into a single destination folder while generating unique filenames for each file. Here's an explanation of how the script works:
+* Source and Destination Directories:
+  - source_folder_parent: Specifies the parent directory containing the 241 source folders. Replace this with the actual path to your source folders.
+destination_folder: Specifies the path to the destination folder where the selected files will be moved. If this folder doesn't exist, the script creates it using mkdir -p.
+* Counter Initialization:
+  - count: This variable is used to keep track of the number of files moved. It starts at 0 and will be incremented as files are moved.
+* Main Loop:
+  - The script uses a nested for loop to iterate through each source folder within source_folder_parent.
+* Nested Loop for Files:
+ - Within each source folder, another loop iterates through each file.
+* Generating Unique Names:
+  - For each file in the source folder, the script generates a unique name for the file in the destination folder.
+unique_name is constructed by combining the source folder's name (obtained using ${folder##*/}) with the base name of the file ($(basename "$file")).
+* Moving Files:
+  - The script then uses the mv command to move the file from the source folder to the destination folder with the generated unique name.
+* Incrementing the Counter:
+  - After moving a file, the count variable is incremented.
+* Break Condition:
+  - There's a condition inside the nested loop that checks if count has reached a specific value (in this case, 16695). If this condition is met, it breaks out of both loops using break 2, effectively ending the process of moving files.
+* Completion Message:
+  - After all the files have been moved or the loop is broken, the script prints a message indicating the number of files successfully moved to the destination folder.
+
+9. **```multi_fasta_sequence_extract.sh```**
 This Bash script is designed to extract multiple FASTA sequences from a multi-FASTA file based on a list of protein IDs provided in multiple text files. It creates a new output directory to store the extracted sequences and processes each text file containing the protein IDs.
 
 Here's a step-by-step breakdown of the script:
@@ -164,7 +188,7 @@ Here's a step-by-step breakdown of the script:
 
 Overall, this script automates the process of extracting sequences from a multi-FASTA file based on protein IDs provided in multiple text files. It performs this operation for each text file found in the directory and saves the extracted sequences in the specified output directory with appropriate file names.
 
-9. **```name_files_with_folder_name.sh```**
+10. **```name_files_with_folder_name.sh```**
     This Bash script accomplishes the following tasks:
 * User Input:
    - Asks the user to input the path to the parent folder.
@@ -183,8 +207,27 @@ Overall, this script automates the process of extracting sequences from a multi-
    - Calls the `rename_files` function with the specified parent folder as an argument, initiating the renaming operation.
 
 
+11. **```prokka.sh```**
 
-11. **```split_multi_multi_fasta.sh```**
+This script automates the annotation of ".fna" files using the Prokka tool by performing the following tasks:
+
+*User Input:
+   - Requests the user to input the path to a folder containing files with the ".fna" extension.
+   - Checks if the specified input folder exists; if not, it displays an error message and exits the script.
+*Output Folder Input:
+   - Asks the user to input the path to an output folder.
+*Output Folder Creation:
+   - Creates the specified output folder if it doesn't already exist.
+*File Processing:
+   - Loops through each ".fna" file in the input folder.
+   - Extracts the base name of each file (without the path or extension).
+   - Runs the Prokka tool on each ".fna" file, specifying the output directory and file prefix based on the base name.
+*Completion Message:
+   - Prints a message indicating the completion of Prokka annotation for ".fna" files in the specified input folder.
+   - States that the results are saved in the specified output folder.
+
+
+12.  **```split_multi_multi_fasta.sh```**
    This Bash script is designed to split multi-FASTA files into individual FASTA files based on their sequence headers. Here's a breakdown of how it works:
 
 * Input and Output Directories:
@@ -219,53 +262,8 @@ Overall, this script automates the process of extracting sequences from a multi-
   - The split_fasta function saves each sequence as an individual FASTA file in the subdirectory corresponding to the input file.
   - The individual FASTA files are named using the sequence headers.
 
-Overall, this script is useful for splitting multi-FASTA files into separate FASTA files, making it easier to work with individual sequences. Each sequence is saved as its own file within a subdirectory named after the original multi-FASTA file. This script is especially handy when you need to process or analyze sequences individually.
 
-10. **```move_files.sh```**
-   
-This Bash script is designed to move a specified number of files from multiple source folders into a single destination folder while generating unique filenames for each file. Here's an explanation of how the script works:
-
-* Source and Destination Directories:
-
-  - source_folder_parent: Specifies the parent directory containing the 241 source folders. Replace this with the actual path to your source folders.
-destination_folder: Specifies the path to the destination folder where the selected files will be moved. If this folder doesn't exist, the script creates it using mkdir -p.
-
-* Counter Initialization:
-
-  - count: This variable is used to keep track of the number of files moved. It starts at 0 and will be incremented as files are moved.
-
-* Main Loop:
-
-  - The script uses a nested for loop to iterate through each source folder within source_folder_parent.
-
-* Nested Loop for Files:
-
- - Within each source folder, another loop iterates through each file.
-
-* Generating Unique Names:
-
-  - For each file in the source folder, the script generates a unique name for the file in the destination folder.
-unique_name is constructed by combining the source folder's name (obtained using ${folder##*/}) with the base name of the file ($(basename "$file")).
-
-* Moving Files:
-
-  - The script then uses the mv command to move the file from the source folder to the destination folder with the generated unique name.
-
-* Incrementing the Counter:
-
-  - After moving a file, the count variable is incremented.
-
-* Break Condition:
-
-  - There's a condition inside the nested loop that checks if count has reached a specific value (in this case, 16695). If this condition is met, it breaks out of both loops using break 2, effectively ending the process of moving files.
-
-* Completion Message:
-
-  - After all the files have been moved or the loop is broken, the script prints a message indicating the number of files successfully moved to the destination folder.
-
-In summary, this script is useful for batch moving a specified number of files from multiple source folders into a single destination folder while ensuring that the filenames remain unique. It's handy when you want to consolidate a specific number of files from various sources into a centralized location.
-
-11. **```rename_fasta_headers_when_duplicates.sh```**
+12. **```rename_fasta_headers_when_duplicates.sh```**
 If duplication occurs in FASTA headers. This script allows you to rename FASTA headers in a batch for all FASTA files in a specified input directory and save the modified files in an output directory. The renaming is based on a pattern that adds a numerical suffix to headers with the same prefix.
 
-12. **```split_fasta_byid_seqkit.sh```** This script allows the user to split multiple input FASTA files into smaller FASTA files based on their sequence IDs using the seqkit tool. The split files are saved in the specified output directory.
+13. **```split_fasta_byid_seqkit.sh```** This script allows the user to split multiple input FASTA files into smaller FASTA files based on their sequence IDs using the seqkit tool. The split files are saved in the specified output directory.
