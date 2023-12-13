@@ -164,7 +164,27 @@ Here's a step-by-step breakdown of the script:
 
 Overall, this script automates the process of extracting sequences from a multi-FASTA file based on protein IDs provided in multiple text files. It performs this operation for each text file found in the directory and saves the extracted sequences in the specified output directory with appropriate file names.
 
-9. **```split_multi_multi_fasta.sh```**
+9. **```name_files_with_folder_name.sh```**
+    This Bash script accomplishes the following tasks:
+* User Input:
+   - Asks the user to input the path to the parent folder.
+
+* Parent Folder Existence Check:
+   - Checks if the specified parent folder exists; if not, it displays an error message and exits the script.
+
+*Renaming Function:
+   - Defines a function named `rename_files` that takes a folder path as an argument.
+   - Extracts the name of the folder.
+   - Iterates through each file in the specified folder:
+      - If the item is a file (`-f` check), it renames the file by appending the folder name as a prefix and displays a message.
+      - If the item is a subfolder (`-d` check), it recursively calls the `rename_files` function for the subfolder.
+
+*Initiation of Renaming:
+   - Calls the `rename_files` function with the specified parent folder as an argument, initiating the renaming operation.
+
+
+
+11. **```split_multi_multi_fasta.sh```**
    This Bash script is designed to split multi-FASTA files into individual FASTA files based on their sequence headers. Here's a breakdown of how it works:
 
 * Input and Output Directories:
