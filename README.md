@@ -211,18 +211,19 @@ Overall, this script automates the process of extracting sequences from a multi-
 
 This script automates the annotation of ".fna" files using the Prokka tool by performing the following tasks:
 
-*User Input:
+* User Input:
    - Requests the user to input the path to a folder containing files with the ".fna" extension.
    - Checks if the specified input folder exists; if not, it displays an error message and exits the script.
-*Output Folder Input:
+     
+* Output Folder Input:
    - Asks the user to input the path to an output folder.
-*Output Folder Creation:
+* Output Folder Creation:
    - Creates the specified output folder if it doesn't already exist.
-*File Processing:
+* File Processing:
    - Loops through each ".fna" file in the input folder.
    - Extracts the base name of each file (without the path or extension).
    - Runs the Prokka tool on each ".fna" file, specifying the output directory and file prefix based on the base name.
-*Completion Message:
+* Completion Message:
    - Prints a message indicating the completion of Prokka annotation for ".fna" files in the specified input folder.
    - States that the results are saved in the specified output folder.
 
