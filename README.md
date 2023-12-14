@@ -23,9 +23,8 @@
 
 7. **FastANI.md**: This script orchestrates the use of FastANI to calculate the Average Nucleotide Identity between genome sequences and then uses custom R and Python scripts to create visualizations of conserved regions based on FastANI results.
 
-8. **Strep_COG_analysis.md**: This code reads data from a CSV file, calculates value counts, creates DataFrames, merges them, and then visualizes the data in the form of a heatmap. The script also provides flexibility in selecting specific columns for analysis and visualization.
-                                              
 
+   
 ### Description of scripts
 
 1. **```FastANI.py```:** This script takes input genomes and a FastANI visualization output, generates a visual representation of conserved regions, and saves the plot in a user-specified format. It allows users to customize various aspects of the plot's appearance, such as colormap, link colors, and link style.  Let's break down the code step by step:
