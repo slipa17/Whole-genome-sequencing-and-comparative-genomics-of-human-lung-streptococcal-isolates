@@ -407,7 +407,7 @@ In summary, the command is using the "ANIclustermap" program to generate a clust
   * Calling Python in Linux
   
    ```
-pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --feature_plotstyle arrow --fig_width --track_labelsize --fig_track_height --arrow_shaft_ratio     
+pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --feature_plotstyle arrow --fig_width 15 --track_labelsize 20 --fig_track_height 1.0 --arrow_shaft_ratio 0.5    
     
                    -o : output_file_name
    ```  
