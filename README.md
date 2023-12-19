@@ -1,3 +1,8 @@
+
+
+
+![WGS-4](https://github.com/slipa17/Whole-genome-sequencing-and-comparative-genomics-of-human-lung-streptococcal-isolates/assets/55438047/40fcd49e-7f12-4542-b962-2c9593d33151)
+
 # Whole genome sequencing and comparative genomics of human lung streptococcal isolates
 
 ### Description of codes 
