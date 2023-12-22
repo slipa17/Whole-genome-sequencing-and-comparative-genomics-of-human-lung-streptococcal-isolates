@@ -2,8 +2,10 @@
 
 ![WGS-4](https://github.com/slipa17/Whole-genome-sequencing-and-comparative-genomics-of-human-lung-streptococcal-isolates/assets/55438047/40fcd49e-7f12-4542-b962-2c9593d33151)
 
+- **All raw data were deposited to NCBI SRA**: https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1001255
+- **Resulting Datasets were deposited to Zenodo** : https://doi.org/10.5281/zenodo.10220079 
 
-Resulting Datasets were deposited to : https://doi.org/10.5281/zenodo.10220079 
+
 
 ### Description of codes 
 
