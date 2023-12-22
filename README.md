@@ -5,7 +5,7 @@
 - **All raw data were deposited to NCBI SRA**: https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1001255
 - **Resulting Datasets were deposited to Zenodo** : https://doi.org/10.5281/zenodo.10220079 
 
-Contributors:
+**Contributors:**
 - Slipa Kanungo [ORCID](https://orcid.org/0000-0003-2402-9396)
 - Germán Bonilla-Rosso [ORCID](https://orcid.org/0000-0003-0929-2890)
 - Garance Sarton-Lohéac [ORCID](https://orcid.org/0000-0002-6012-1600) 
