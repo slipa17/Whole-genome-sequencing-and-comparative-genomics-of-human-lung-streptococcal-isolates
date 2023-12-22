@@ -2,6 +2,9 @@
 
 ![WGS-4](https://github.com/slipa17/Whole-genome-sequencing-and-comparative-genomics-of-human-lung-streptococcal-isolates/assets/55438047/40fcd49e-7f12-4542-b962-2c9593d33151)
 
+
+Resulting Datasets were deposited to : https://doi.org/10.5281/zenodo.10220079 
+
 ### Description of codes 
 
 1. **Antimicrobial_resistance_virulence_gene_search.md:** The code performs antibiotic resistance gene and virulence factor identification using ```abricate``` and saves both the detailed results and a summary of the analysis in separate CSV files.
