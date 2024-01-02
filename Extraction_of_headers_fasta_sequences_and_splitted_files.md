@@ -2,19 +2,24 @@
 ## Extraction of the respective headers lists from the different multifasta files:
 
 ### Specify the path to the directory containing the FASTA files
-´´´ fasta_dir="$PATH/to/genome FASTA files" ´´´
+
+```fasta_dir="$PATH/to/genome FASTA files"´´´
 
 ### Loop through each FASTA file in the input directory and create an output file name based on the input file name
-´´´ for fasta_file in "${fasta_dir}"*.fa; do
-    output_file="${fasta_file}.txt"´´´
+
+```
+for fasta_file in "${fasta_dir}"*.fa; do
+    output_file="${fasta_file}.txt"
+    ```
 
   ### Extract protein IDs from the FASTA file
- ´´´ 
+
+``` 
  grep -oE "^>(.+)" "${fasta_file}" | cut -d' ' -f1 | sed 's/^>//g' > "${output_file}"
 
 echo "Protein IDs extracted from ${fasta_file} and saved to ${output_file}."
 done 
-´´´
+```
 
 
 
