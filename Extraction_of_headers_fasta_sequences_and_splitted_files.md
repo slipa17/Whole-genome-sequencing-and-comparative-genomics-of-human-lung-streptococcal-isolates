@@ -54,23 +54,16 @@ done
 ```
 input_directory="input_files"
 output_directory="output_sequences"
-```
 
-## Create the output directory if it doesn't exist
-```
-mkdir -p "$output_directory"
-```
+#Create the output directory if it doesn't exist
+mkdir -p "$output_directory" 
 
-### Function to split sequences and extract headers
-```
-split_fasta() {
+split_fasta() {  #Function to split sequences and extract headers
     local input_file="$1"
     local output_dir="$2"
-```
 
-    Create a subdirectory for each input file in the output directory
-    
-    ```
+#Create a subdirectory for each input file in the output directory
+       
     local file_basename=$(basename "$input_file")
     local subdirectory="$output_dir/${file_basename%.*}"
     mkdir -p "$subdirectory"
@@ -80,12 +73,8 @@ split_fasta() {
 
     while IFS= read -r line; do
         if [[ $line =~ ^\> ]]; then
-
-        ```
     
-    Save the previous sequence, if any
-
-    ```
+    # Save the previous sequence, if any
             if [ -n "$header" ]; then
                 echo -e ">$header\n$sequence_content" > "$subdirectory/$header.fasta"
             fi
@@ -97,18 +86,18 @@ split_fasta() {
             sequence_content+="$line\n"
         fi
     done < "$input_file"
-```
-Save the last sequence
-```
+#Save the last sequence
     if [ -n "$header" ]; then
         echo -e ">$header\n$sequence_content" > "$subdirectory/$header.fasta"
     fi
-} ```
+} 
 
-### Process each FASTA file in the input directory
-´´´for fasta_file in "$input_directory"/*.fasta; do
+
+# Process each FASTA file in the input directory
+for fasta_file in "$input_directory"/*.fasta; do
     split_fasta "$fasta_file" "$output_directory"
-done´´´
+done
+```
 
 
 Make sure you have the following directory structure:
@@ -136,9 +125,6 @@ The script assumes that your multi-FASTA files are stored in the "input_files" d
 Save the script in a file, for example, "split_multi_multi_fasta.sh" in fasta_headers directory. Make sure the input files are in the "input_files" directory.
 
 To execute the script, make it executable using the following command:
-
-bash
-Copy code
 ```
  chmod +x split_multi_multi_fasta.sh
 ```
