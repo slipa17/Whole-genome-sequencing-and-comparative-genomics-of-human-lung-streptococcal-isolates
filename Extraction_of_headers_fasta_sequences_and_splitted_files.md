@@ -1,70 +1,76 @@
 
 ## Extraction of the respective headers lists from the different multifasta files:
 
-### Specify the path to the directory containing the FASTA files
+Specify the path to the directory containing the FASTA files
 
-```fasta_dir="$PATH/to/genome FASTA files"´´´
+```fasta_dir="$PATH/to/genome FASTA files"```
 
-### Loop through each FASTA file in the input directory and create an output file name based on the input file name
+Loop through each FASTA file in the input directory and create an output file name based on the input file name
 
 ```
 for fasta_file in "${fasta_dir}"*.fa; do
     output_file="${fasta_file}.txt"
-    ```
-
-  ### Extract protein IDs from the FASTA file
-
-``` 
- grep -oE "^>(.+)" "${fasta_file}" | cut -d' ' -f1 | sed 's/^>//g' > "${output_file}"
-
-echo "Protein IDs extracted from ${fasta_file} and saved to ${output_file}."
-done 
 ```
 
+Extract protein IDs from the FASTA file
 
+``` 
+grep -oE "^>(.+)" "${fasta_file}" | cut -d' ' -f1 | sed 's/^>//g' > "${output_file}"
+echo "Protein IDs extracted from ${fasta_file} and saved to ${output_file}."
+done
+```
 
 ## Extraction of multiple fasta sequences from a multiple headers text file:
 
 
 First make an output_directory:  
+Input files
+```
+fasta_file="filename of the multi-FASTA file from which sequences will be extracted"
+output_dir="output_directory_name"
+```
+Loop through .txt files
+```for txt_file in *.txt; do```
 
-
-### Input files
-´´´fasta_file="filename of the multi-FASTA file from which sequences will be extracted"
-output_dir="output_directory_name"´´´
-
- ### Loop through .txt files
-´´´for txt_file in *.txt; do´´´
-  ### Create output file name
- ´´´ output_file="${txt_file%.txt}_extracted.fasta"
-  output_path="$output_dir/$output_file"´´´
-
-   ### Execute seqtk subseq command for each .txt file
-  ´´´seqtk subseq "$fasta_file" "$txt_file" >> "$output_path"´´´
-
-  ### Print status message
- ´´´ echo "Sequences extracted from $txt_file and saved to $output_path"
-done´´´
-
-
+Create output file name
+```
+output_file="${txt_file%.txt}_extracted.fasta"
+output_path="$output_dir/$output_file"
+```
+Execute seqtk subseq command for each .txt file
+```
+seqtk subseq "$fasta_file" "$txt_file" >> "$output_path"
+```
+Print status message
+```
+echo "Sequences extracted from $txt_file and saved to $output_path"
+done
+```
 
 * Inside the headers directory add all the individual headers.txt files and the concatenated multi-FASTA file (source file), so that the code can search for the headers in the source file and extract the fasta sequences.
 
 ## Splitting the files into individual protein id's from a multi-fasta sequences:
 
-´´´ input_directory="input_files"
-output_directory="output_sequences"´´´
+```
+input_directory="input_files"
+output_directory="output_sequences"
+```
 
-# Create the output directory if it doesn't exist
-´´´mkdir -p "$output_directory"´´´
+## Create the output directory if it doesn't exist
+```
+mkdir -p "$output_directory"
+```
 
 ### Function to split sequences and extract headers
-´´´
+```
 split_fasta() {
     local input_file="$1"
     local output_dir="$2"
+```
 
-    ### Create a subdirectory for each input file in the output directory
+    Create a subdirectory for each input file in the output directory
+    
+    ```
     local file_basename=$(basename "$input_file")
     local subdirectory="$output_dir/${file_basename%.*}"
     mkdir -p "$subdirectory"
@@ -74,7 +80,12 @@ split_fasta() {
 
     while IFS= read -r line; do
         if [[ $line =~ ^\> ]]; then
-            ### Save the previous sequence, if any
+
+        ```
+    
+    Save the previous sequence, if any
+
+    ```
             if [ -n "$header" ]; then
                 echo -e ">$header\n$sequence_content" > "$subdirectory/$header.fasta"
             fi
@@ -86,12 +97,13 @@ split_fasta() {
             sequence_content+="$line\n"
         fi
     done < "$input_file"
-
-    ### Save the last sequence
+```
+Save the last sequence
+```
     if [ -n "$header" ]; then
         echo -e ">$header\n$sequence_content" > "$subdirectory/$header.fasta"
     fi
-} ´´´
+} ```
 
 ### Process each FASTA file in the input directory
 ´´´for fasta_file in "$input_directory"/*.fasta; do
@@ -127,14 +139,14 @@ To execute the script, make it executable using the following command:
 
 bash
 Copy code
-
+```
  chmod +x split_multi_multi_fasta.sh
-
+```
 Then, run the script:
-
+```
 ./split_multi_multi_fasta.sh (If this particular script shows any error, then try the script below)
-
- zsh split_multi_multi_fasta.sh
+zsh split_multi_multi_fasta.sh
+```
 
 
 ## Splitting the fasta headers of a single multi-fasta file
