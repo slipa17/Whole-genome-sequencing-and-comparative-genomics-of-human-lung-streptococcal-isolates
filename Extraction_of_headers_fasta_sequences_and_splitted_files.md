@@ -54,7 +54,8 @@ output_directory="output_sequences"´´´
 ´´´mkdir -p "$output_directory"´´´
 
 ### Function to split sequences and extract headers
-´´´ split_fasta() {
+´´´
+split_fasta() {
     local input_file="$1"
     local output_dir="$2"
 
