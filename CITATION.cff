@@ -1,0 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Whole genome sequencing and comparative genomics of human
+  lung streptococcal isolates
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Slipa
+    family-names: Kanungo
+  - given-names: 'Germán '
+    family-names: Bonilla-Rosso
+  - given-names: 'Garance '
+    family-names: Sarton-Lohéac
+  - given-names: Philipp
+    family-names: Engel
+  - given-names: Sudip
+    family-names: Das
+identifiers:
+  - type: url
+    value: >-
+      https://www.biorxiv.org/node/3563045.external-links.html
+    description: Linked article
+repository-code: 'https://zenodo.org/records/10439125'
