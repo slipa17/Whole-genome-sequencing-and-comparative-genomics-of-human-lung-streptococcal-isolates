@@ -131,7 +131,7 @@ for file in *.fasta; do
 done
 ```
 
-#### Finding sub-directories in a directory
+#### Finding (Counting) sub-directories in a directory
 
 ```
 find directory_name -type d | wc -l
