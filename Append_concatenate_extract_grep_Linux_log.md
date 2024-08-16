@@ -131,6 +131,18 @@ for file in *.fasta; do
 done
 ```
 
+#### Finding sub-directories in a directory
+
+```
+find directory_name -type d | wc -l
+```
+* ```find /path/to/directory``` : Searches within the specified directory.
+* ```-type d``` : Limits the search to directories only.
+* ```wc -l``` : Counts the number of lines, which corresponds to the number of directories found.
+
+This command will return the total count of folders in the specified directory, including any subdirectories if they exist.
+
+
  ##  Extracting the desired sequences from the file containing the total sequences
 
 ### Extraction of sequences from a single FASTA file with a identifier list
