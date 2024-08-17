@@ -142,6 +142,16 @@ find directory_name -type d | wc -l
 
 This command will return the total count of folders in the specified directory, including any subdirectories if they exist.
 
+#### Creating a duplicate/backup of the directory
+
+```
+cp -r main_folder duplicate_folder
+```
+*```cp```: The copy command.
+*```-r```: This option stands for "recursive" and is necessary when copying directories. It tells cp to copy the entire directory tree, including all subdirectories and files.
+*```main_folder```: The directory you want to copy.
+*```duplicate_folder```: The name of the new directory where the contents of main_folder will be copied.
+
 
  ##  Extracting the desired sequences from the file containing the total sequences
 
