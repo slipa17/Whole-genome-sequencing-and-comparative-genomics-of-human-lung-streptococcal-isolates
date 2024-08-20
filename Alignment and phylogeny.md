@@ -28,6 +28,14 @@ fasta_formatter -i input.fasta -o output_formatted.fasta -w 0
 fastx_trimmer -l N -i INPUT.fasta -o INPUT_trimmed.fasta
 ```
 
+#### Removing unwanted characters from the sequences
+
+For example, ensure that there are no > characters in the sequence lines:
+
+```
+awk '/^>/ {print} !/^>/ {gsub(/>/, ""); print}' input.faa > cleaned_input.faa
+```
+
 #### Performing alignment using MAFFT
 * ```--auto```allows MAFFT to automatically decide the parameters to use based on the input file.
 * ```--nomemsave```for disabling memory save mode and make it faster.
