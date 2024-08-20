@@ -30,7 +30,7 @@ fastx_trimmer -l N -i INPUT.fasta -o INPUT_trimmed.fasta
 
 #### Removing unwanted characters from the sequences
 
-For example, ensure that there are no > characters in the sequence lines:
+For example, ensure that there are no ">" characters in the sequence lines:
 
 ```
 awk '/^>/ {print} !/^>/ {gsub(/>/, ""); print}' input.faa > cleaned_input.faa
