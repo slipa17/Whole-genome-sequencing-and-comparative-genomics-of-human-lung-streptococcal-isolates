@@ -142,6 +142,17 @@ find directory_name -type d | wc -l
 
 This command will return the total count of folders in the specified directory, including any subdirectories if they exist.
 
+#### Finding (Counting) number of files in a directory
+
+```
+find directory_name -maxdepth 1 -type f | wc -l
+```
+* ```find``` : searches for files.
+* ```-maxdepth 1``` : ensures it only searches the top level of the directory.
+* ```-type f``` : specifies to look for files only.
+* ```wc -l``` : counts the lines.
+
+
 #### Creating a duplicate/backup of the directory
 
 ```
