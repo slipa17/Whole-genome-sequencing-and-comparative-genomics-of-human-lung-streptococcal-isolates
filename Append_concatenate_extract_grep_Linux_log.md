@@ -20,33 +20,7 @@ This command uses awk to process the input FASTA file. It does the following:
 * ```> output_file_name.faa```: The output redirection symbol (>) followed by the output file name (output_file_name.faa). It redirects the modified output of the sed command to the specified file.
 
 In summary, the command takes an input file named file.faa and modifies its contents by appending "_file" to each line that starts with ">", and then saves the modified output to a new file named output_file_name.faa.
-
-### To append strain name to the FASTA headers (for a multiple multi-fasta file)
-
- #!/bin/bash
-
-### Define the directory containing your FASTA files
-input_directory="./fasta_folder"
-output_directory="./appended_fasta_folder"
-
-### Create output directory if it doesn't exist
-mkdir -p $output_directory
-
-### Loop through all multi-fasta files in the input directory
-for fasta_file in $input_directory/*.faa; do
-    # Extract the base filename (without the path and extension)
-    filename=$(basename -- "$fasta_file")
-    strain_name="${filename%.*}"  # Get strain name by removing file extension
     
-    # Append strain name to each header line in the file
-    sed "s/>.*/&_${strain_name}/" "$fasta_file" > "$output_directory/${filename}"
-    
-    echo "Processed: $fasta_file -> $output_directory/${filename}"
-done
-
-echo "All files processed."
-
-     
   ### To append a random string "XXXX" after each FASTA header
      
 ```
