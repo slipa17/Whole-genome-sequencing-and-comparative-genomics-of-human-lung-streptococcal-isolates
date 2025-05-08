@@ -354,7 +354,7 @@ In summary, the command is using the "ANIclustermap" tool to generate a clusterm
  * Set up the directory and then run the script.
    
    ```
-   pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --   feature_plotstyle arrow
+   pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis --align_type left --feature_plotstyle arrow
    ```
    
 * ```pgv-mmseqs```: The name of the program or command you're executing. It is likely a tool for visualizing genomic features.
