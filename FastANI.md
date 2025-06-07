@@ -407,13 +407,12 @@ In summary, the command is using the "ANIclustermap" program to generate a clust
   * Calling Python in Linux
   
    ```
-pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis
+pgv-mmseqs filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf -o mmseqs_new --tick_style axis
 --align_type left --feature_plotstyle arrow --fig_width 15 --track_labelsize 20 --fig_track_height 1.0 --arrow_shaft_ratio 0.5
 
    ```  
    
 * ```pgv-mmseqs```: The name of the program or command you're executing. It is likely a tool for visualizing genomic features.
-* ```--gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.gbf filename5.gbf```: Specifies multiple GenBank file resources (filename1.gbf, filename2.gbf, etc.) to be used for visualization.
 * ```-o mmseqs_new```: Specifies the output directory or file name for the generated visualization. In this case, the output is saved in the "mmseqs_new" directory.
 * ```--tick_style axis```: Specifies the style of tick marks on the axis of the visualization.
 * ```--align_type left```: Specifies the alignment type for the genomic features, in this case, "left" alignment.
@@ -422,6 +421,8 @@ pgv-mmseqs --gbk_resources filename1.gbf filename2.gbf filename3.gbf filename4.g
 * ```--track_labelsize```: Specifies the font size of the track labels.
 * ```--fig_track_height```: Specifies the height of the track in the figure or visualization.
 * ```--arrow_shaft_ratio```: Specifies the ratio of the arrow shaft thickness to the arrow length.
+
+### Updated script of Pygenomeviz (pgv-mmseqs). The script keeps on being updated, hence, always type "pgv-mmseqs -h/--help" before the start of your program.
 
 In summary, the command is using the "pgv-mmseqs" program to generate a visualization of genomic features from multiple GenBank files. The output is saved in the "mmseqs_new" directory. Various options are provided to customize the visualization, such as tick style, alignment type, feature plot style, figure width, track label size, track height, and arrow shaft ratio.
 
